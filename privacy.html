@@ -117,7 +117,7 @@
 
     <!-- English Block -->
     <div id="lang-en" class="lang-block active">
-      <div class="version-meta">Version: 2.5.0 | Last updated: October 25, 2026</div>
+      <div class="version-meta">Version: 2.6.0 | Last updated: November 3, 2026</div>
       <div class="section">
         <h2>1. Who Operates MyBoatAI</h2>
         <p>MyBoatAI is operated by uzaydenizlabs, an individual developer based in Türkiye. Contact: uzaydeniz@gmail.com.</p>
@@ -142,7 +142,9 @@ Acceptance records: for each legal document you accept, we store its version, th
 
 Technical data: our hosting provider and the services listed below receive technical data such as your IP address, the time and the requested address when you use the app.
 
-We do not use advertising, analytics or tracking tools.</p>
+We do not use advertising, analytics or tracking tools.
+
+Place suggestions (optional): when you add your own place and tick "Help add this place to our global map", the place name, type, coordinates and date are emailed to us, without your email address or account ID. We review the suggestion and may add the place to the public destination list. If you used "Use my location", these coordinates may be your current position. Please do not include personal information in the place name.</p>
       </div>
       <div class="section">
         <h2>3. Local vs. Cloud Data</h2>
@@ -150,29 +152,33 @@ We do not use advertising, analytics or tracking tools.</p>
       </div>
       <div class="section">
         <h2>4. Service Providers Who Receive Data</h2>
-        <p>Google Firebase and Google Cloud (authentication, database, hosting): email address, account ID, acceptance records and technical logs.
+        <p>Google Firebase and Google Cloud (sign-in, database, hosting of our server): email address, account ID, acceptance records and technical logs such as IP address.
 
-Google Gemini API: safety briefings (weather values and boat details), maintenance and engine-hour entries (the text you type or dictate) and nearby dining search (destination name and coordinates). We do not send your email address or account ID. We use the free tier of the Gemini API, and Google's terms for the free tier may allow Google to use submitted content to improve its products. Please do not include sensitive personal information in dictated text.
+Cloudflare (data.myboatai.com): region packages, maps, region boundaries and official warning files are downloaded from Cloudflare's servers, which receive your IP address and the requested file names. No account data is sent.
 
-Google Maps Platform: map display and place search. Google receives your IP address, the map area you view, and any place names you search for.
+Open-Meteo: weather and marine forecasts. It receives the coordinates of the places and route points you request and your IP address.
 
-Open-Meteo: weather and marine forecasts. It receives the exact coordinates you request and your IP address.
+Google Places: restaurant and cafe suggestions. Our server sends only the destination's coordinates; your IP address and account data are not sent to Google.
+
+Google Gemini API: used only for AI features when they are available in the app and you use them. Only the data needed for that feature is sent, never your email address or account ID. We use the free tier of the Gemini API, and Google's terms for the free tier may allow Google to use submitted content to improve its products. Please do not include sensitive personal information in text you type or dictate.
+
+Resend: delivery of welcome, security and feedback emails (email address and message) and of place suggestions you choose to send (without account data).
 
 Unsplash: destination photos load from its servers, which receive your IP address.
 
 Google Fonts: fonts load from Google servers, which receive your IP address.
 
-Resend: delivery of welcome, security and feedback emails (email address and message).
+GitHub Pages: legal documents and their version information load from GitHub's servers, which receive your IP address.
 
 Your browser or device speech service: converts voice to text under its own privacy policy.</p>
       </div>
       <div class="section">
       <h2>4a. Public Marine Data Sources</h2>
-      <p>Weather alerts and navigational warnings are compiled from public publications of maritime authorities in Türkiye, Finland and Greece. Not official navigational data.</p>
+      <p>Navigational warnings are collected automatically by our systems from the public publications of the maritime authorities of Türkiye, Finland and Greece and delivered to the app through Cloudflare. The app does not contact these authorities and sends them no data. These warnings are not official navigational data.</p>
       </div>
       <div class="section">
         <h2>5. Data Usage Purposes</h2>
-        <p>Data is used to provide the features you use (safety briefings, maintenance logs, dining search, feedback and account emails), to keep the service secure, and to meet legal obligations. We do not sell user data for advertising.</p>
+        <p>Data is used to provide the features you use (route planning, weather, official warnings, dining suggestions, maintenance logs, place suggestions, feedback and account emails, and AI features when available), to keep the service secure, and to meet legal obligations. We do not sell user data for advertising.</p>
       </div>
       <div class="section">
         <h2>6. Deleting Your Data</h2>
@@ -204,7 +210,7 @@ Server logs: 30 days. They do not contain message content.</p>
       </div>
       <div class="section">
         <h2>11. Contact</h2>
-        <p>For inquiries, contact: uzaydeniz@gmail.com. Governing law: Republic of Türkiye / Turkish law. Last updated: October 25, 2026.</p>
+        <p>For inquiries, contact: uzaydeniz@gmail.com. Governing law: Republic of Türkiye / Turkish law. Last updated: November 3, 2026.</p>
       </div>
       <div class="section">
         <h2>12. Your Rights, Legal Basis and Transfers</h2>
@@ -214,7 +220,7 @@ Server logs: 30 days. They do not contain message content.</p>
 
     <!-- Turkish Block -->
     <div id="lang-tr" class="lang-block">
-      <div class="version-meta">Sürüm: 2.5.0 | Son Güncelleme: 25 Ekim 2026</div>
+      <div class="version-meta">Sürüm: 2.6.0 | Son Güncelleme: 3 Kasım 2026</div>
       <div class="section">
         <h2>1. MyBoatAI'ı Kim İşletiyor</h2>
         <p>MyBoatAI, Türkiye merkezli bireysel geliştirici uzaydenizlabs tarafından işletilmektedir. İletişim: uzaydeniz@gmail.com.</p>
@@ -239,7 +245,9 @@ Kabul kayıtları: Kabul ettiğiniz her yasal belge için belgenin sürümünü,
 
 Teknik veriler: Barındırma sağlayıcımız ve aşağıda listelenen servisler, uygulamayı kullandığınızda IP adresiniz, saat ve talep edilen adres gibi teknik verileri alır.
 
-Reklam, analitik veya takip araçları kullanmıyoruz.</p>
+Reklam, analitik veya takip araçları kullanmıyoruz.
+
+Yer önerileri (isteğe bağlı): Kendi yerinizi eklerken "Bu yeri global haritamıza eklememize yardımcı olun" kutusunu işaretlerseniz yerin adı, türü, koordinatları ve tarih, e-posta adresiniz ve hesap kimliğiniz olmadan bize e-postayla gönderilir. Öneriyi inceler ve yeri herkese açık destinasyon listesine ekleyebiliriz. "Konumumu kullan" seçeneğini kullandıysanız bu koordinatlar o anki konumunuz olabilir. Lütfen yer adına kişisel bilgi yazmayın.</p>
       </div>
       <div class="section">
         <h2>3. Yerel ve Bulut Verileri</h2>
@@ -247,29 +255,33 @@ Reklam, analitik veya takip araçları kullanmıyoruz.</p>
       </div>
       <div class="section">
         <h2>4. Veri Alan Servis Sağlayıcıları</h2>
-        <p>Google Firebase ve Google Cloud (kimlik doğrulama, veritabanı, barındırma): e-posta adresi, hesap kimliği, kabul kayıtları ve teknik günlükler.
+        <p>Google Firebase ve Google Cloud (giriş, veritabanı, sunucumuzun barındırılması): e-posta adresi, hesap kimliği, onay kayıtları ve IP adresi gibi teknik kayıtlar.
 
-Google Gemini API: güvenlik bilgilendirmeleri (hava durumu değerleri ve tekne detayları), bakım ve motor saati girişleri (yazdığınız veya dikte ettiğiniz metin) ve yakındaki restoran araması (hedef adı ve koordinatları). E-posta adresinizi veya hesap kimliğinizi göndermiyoruz. Gemini API'nin ücretsiz katmanını kullanıyoruz ve Google'ın ücretsiz katman koşulları, sunulan içeriğin ürünlerini geliştirmek için kullanılmasına izin verebilir. Lütfen dikte edilen metne hassas kişisel bilgiler dahil etmeyin.
+Cloudflare (data.myboatai.com): bölge paketleri, haritalar, bölge sınırları ve resmi uyarı dosyaları Cloudflare sunucularından indirilir; bu sunucular IP adresinizi ve istenen dosya adlarını alır. Hesap bilgisi gönderilmez.
 
-Google Maps Platform: harita gösterimi ve mekan araması. Google, IP adresinizi, görüntülediğiniz harita alanını ve aradığınız mekan adlarını alır.
+Open-Meteo: hava ve deniz tahminleri. Sorguladığınız yerlerin ve rota noktalarının koordinatlarını ve IP adresinizi alır.
 
-Open-Meteo: hava durumu ve deniz tahminleri. Talep ettiğiniz tam koordinatları ve IP adresinizi alır.
+Google Places: restoran ve kafe önerileri. Sunucumuz Google'a yalnızca destinasyonun koordinatlarını gönderir; IP adresiniz ve hesap bilgileriniz Google'a gönderilmez.
 
-Unsplash: hedef fotoğrafları IP adresinizi alan sunucularından yüklenir.
+Google Gemini API: yalnızca uygulamada yapay zekâ özellikleri sunulduğunda ve bunları kullandığınızda kullanılır. Yalnızca o özellik için gereken veri gönderilir; e-posta adresiniz ve hesap kimliğiniz asla gönderilmez. Gemini API'nin ücretsiz katmanını kullanıyoruz; Google'ın ücretsiz katman şartları, gönderilen içeriğin Google ürünlerini geliştirmek için kullanılmasına izin verebilir. Lütfen yazdığınız veya söylediğiniz metne hassas kişisel bilgi eklemeyin.
 
-Google Fonts: yazı tipleri IP adresinizi alan Google sunucularından yüklenir.
+Resend: hoş geldin, güvenlik ve geri bildirim e-postalarının (e-posta adresi ve mesaj) ve göndermeyi seçtiğiniz yer önerilerinin (hesap bilgisi olmadan) iletilmesi.
 
-Resend: hoş geldiniz, güvenlik ve geri bildirim e-postalarının teslimi (e-posta adresi ve mesaj).
+Unsplash: destinasyon fotoğrafları onun sunucularından yüklenir; bu sunucular IP adresinizi alır.
 
-Tarayıcınızın veya cihazınızın ses servisi: kendi gizlilik politikası kapsamında sesi metne dönüştürür.</p>
+Google Fonts: yazı tipleri Google sunucularından yüklenir; bu sunucular IP adresinizi alır.
+
+GitHub Pages: yasal belgeler ve sürüm bilgileri GitHub sunucularından yüklenir; bu sunucular IP adresinizi alır.
+
+Tarayıcınızın veya cihazınızın konuşma hizmeti: sesi kendi gizlilik politikası kapsamında metne dönüştürür.</p>
       </div>
       <div class="section">
       <h2>4a. Kamu Denizcilik Veri Kaynakları</h2>
-      <p>Hava durumu uyarıları ve seyir uyarıları, Türkiye, Finlandiya ve Yunanistan'daki denizcilik otoritelerinin herkese açık yayınlarından derlenmektedir. Resmi seyir verisi değildir.</p>
+      <p>Seyir uyarıları, sistemlerimiz tarafından Türkiye, Finlandiya ve Yunanistan denizcilik makamlarının kamuya açık yayınlarından otomatik olarak toplanır ve uygulamaya Cloudflare üzerinden iletilir. Uygulama bu makamlarla doğrudan iletişim kurmaz ve onlara veri göndermez. Bu uyarılar resmi seyir verisi değildir.</p>
       </div>
       <div class="section">
         <h2>5. Veri Kullanım Amaçları</h2>
-        <p>Veriler, kullandığınız özellikleri sağlamak için kullanılır (güvenlik bilgilendirmeleri, bakım kayıtları, restoran araması, geri bildirim ve hesap e-postaları), hizmetin güvenliğini sağlamak ve yasal yükümlülükleri yerine getirmek için. Kullanıcı verilerini reklam amacıyla satmıyoruz.</p>
+        <p>Veriler, kullandığınız özellikleri sunmak (rota planlama, hava durumu, resmi uyarılar, restoran önerileri, bakım kayıtları, yer önerileri, geri bildirim ve hesap e-postaları ve sunulduğunda yapay zekâ özellikleri), hizmetin güvenliğini sağlamak ve yasal yükümlülükleri yerine getirmek için kullanılır. Kullanıcı verilerini reklam amacıyla satmayız.</p>
       </div>
       <div class="section">
         <h2>6. Verilerinizi Silme</h2>
@@ -301,7 +313,7 @@ Sunucu günlükleri: 30 gün. Mesaj içeriği içermezler.</p>
       </div>
       <div class="section">
         <h2>11. İletişim</h2>
-        <p>Sorularınız için: uzaydeniz@gmail.com. Geçerli hukuk: Republic of Türkiye / Turkish law. Son güncelleme: 25 Ekim 2026.</p>
+        <p>Sorularınız için: uzaydeniz@gmail.com. Geçerli hukuk: Republic of Türkiye / Turkish law. Son güncelleme: 3 Kasım 2026.</p>
       </div>
       <div class="section">
         <h2>12. Haklarınız, Yasal Dayanak ve Transferler</h2>
@@ -311,7 +323,7 @@ Sunucu günlükleri: 30 gün. Mesaj içeriği içermezler.</p>
 
     <!-- Greek Block -->
     <div id="lang-el" class="lang-block">
-      <div class="version-meta">Έκδοση: 2.5.0 | Τελευταία Ενημέρωση: 25 Οκτωβρίου 2026</div>
+      <div class="version-meta">Έκδοση: 2.6.0 | Τελευταία Ενημέρωση: 3 Νοεμβρίου 2026</div>
       <div class="section">
         <h2>1. Ποιος λειτουργεί το MyBoatAI</h2>
         <p>Το MyBoatAI λειτουργεί από την uzaydenizlabs, έναν ανεξάρτητο προγραμματιστή με έδρα την Τουρκία. Επικοινωνία: uzaydeniz@gmail.com.</p>
@@ -336,7 +348,9 @@ Sunucu günlükleri: 30 gün. Mesaj içeriği içermezler.</p>
 
 Τεχνικά δεδομένα: ο πάροχος φιλοξενίας μας και οι υπηρεσίες που αναφέρονται παρακάτω λαμβάνουν τεχνικά δεδομένα όπως η διεύθυνση IP, η ώρα και η διεύθυνση που ζητήθηκε όταν χρησιμοποιείτε την εφαρμογή.
 
-Δεν χρησιμοποιούμε εργαλεία διαφήμισης, αναλυτικών στοιχείων ή παρακολούθησης.</p>
+Δεν χρησιμοποιούμε εργαλεία διαφήμισης, αναλυτικών στοιχείων ή παρακολούθησης.
+
+Προτάσεις τοποθεσιών (προαιρετικά): όταν προσθέτετε δική σας τοποθεσία και επιλέγετε «Βοηθήστε να προσθέσουμε αυτό το μέρος στον παγκόσμιο χάρτη μας», το όνομα, ο τύπος, οι συντεταγμένες και η ημερομηνία μάς αποστέλλονται με email, χωρίς τη διεύθυνση email ή το αναγνωριστικό του λογαριασμού σας. Εξετάζουμε την πρόταση και μπορεί να προσθέσουμε την τοποθεσία στη δημόσια λίστα προορισμών. Αν χρησιμοποιήσατε «Χρήση της τοποθεσίας μου», οι συντεταγμένες μπορεί να είναι η τρέχουσα θέση σας. Μην συμπεριλαμβάνετε προσωπικά στοιχεία στο όνομα της τοποθεσίας.</p>
       </div>
       <div class="section">
         <h2>3. Τοπικά vs. Δεδομένα Cloud</h2>
@@ -344,21 +358,29 @@ Sunucu günlükleri: 30 gün. Mesaj içeriği içermezler.</p>
       </div>
       <div class="section">
         <h2>4. Πάροχοι Υπηρεσιών που Λαμβάνουν Δεδομένα</h2>
-        <p>Google Firebase και Google Cloud (ταυτοποίηση, βάση δεδομένων, φιλοξενία): διεύθυνση email, ID λογαριασμού, αρχεία αποδοχής και τεχνικά αρχεία καταγραφής.
+        <p>Google Firebase και Google Cloud (σύνδεση, βάση δεδομένων, φιλοξενία του διακομιστή μας): διεύθυνση email, αναγνωριστικό λογαριασμού, αρχεία αποδοχής και τεχνικά αρχεία καταγραφής, όπως η διεύθυνση IP.
 
-Google Gemini API: ενημερώσεις ασφαλείας (τιμές καιρού και λεπτομέρειες σκάφους), καταχωρίσεις συντήρησης και ωρών κινητήρα (το κείμενο που πληκτρολογείτε ή υπαγορεύετε) και αναζήτηση κοντινών εστιατορίων (όνομα προορισμού και συντεταγμένες). Δεν στέλνουμε τη διεύθυνση email ή το ID λογαριασμού σας. Χρησιμοποιούμε τη δωρεάν βαθμίδα του Gemini API, και οι όροι της Google για τη δωρεάν βαθμίδα ενδέχεται να επιτρέπουν στην Google να χρησιμοποιεί το υποβαλλόμενο περιεχόμενο για τη βελτίωση των προϊόντων της. Παρακαλούμε μην περιλαμβάνετε ευαίσθητα προσωπικά δεδομένα στο υπαγορευμένο κείμενο.
+Cloudflare (data.myboatai.com): τα πακέτα περιοχών, οι χάρτες, τα όρια περιοχών και τα αρχεία επίσημων προειδοποιήσεων λαμβάνονται από τους διακομιστές της Cloudflare, οι οποίοι λαμβάνουν τη διεύθυνση IP σας και τα ονόματα των αρχείων. Δεν αποστέλλονται στοιχεία λογαριασμού.
 
-Google Maps Platform: εμφάνιση χάρτη και αναζήτηση μερών. Η Google λαμβάνει τη διεύθυνση IP σας, την περιοχή του χάρτη που προβάλλετε και τα ονόματα τόπων που αναζητάτε.
+Open-Meteo: προγνώσεις καιρού και θάλασσας. Λαμβάνει τις συντεταγμένες των τοποθεσιών και των σημείων διαδρομής που ζητάτε και τη διεύθυνση IP σας.
 
-Open-Meteo: προγνώσεις καιρού και θάλασσας. Λαμβάνει τις ακριβείς συντεταγμένες που ζητάτε και τη διεύθυνση IP σας.
+Google Places: προτάσεις εστιατορίων και καφέ. Ο διακομιστής μας στέλνει μόνο τις συντεταγμένες του προορισμού· η διεύθυνση IP και τα στοιχεία του λογαριασμού σας δεν αποστέλλονται στην Google.
+
+Google Gemini API: χρησιμοποιείται μόνο για λειτουργίες τεχνητής νοημοσύνης όταν είναι διαθέσιμες στην εφαρμογή και τις χρησιμοποιείτε. Αποστέλλονται μόνο τα δεδομένα που χρειάζεται η λειτουργία, ποτέ η διεύθυνση email ή το αναγνωριστικό λογαριασμού σας. Χρησιμοποιούμε τη δωρεάν βαθμίδα του Gemini API· οι όροι της Google για τη δωρεάν βαθμίδα ενδέχεται να επιτρέπουν τη χρήση του περιεχομένου για τη βελτίωση των προϊόντων της. Μην περιλαμβάνετε ευαίσθητα προσωπικά στοιχεία στο κείμενο που πληκτρολογείτε ή υπαγορεύετε.
+
+Resend: αποστολή email καλωσορίσματος, ασφάλειας και σχολίων (διεύθυνση email και μήνυμα) και των προτάσεων τοποθεσιών που επιλέγετε να στείλετε (χωρίς στοιχεία λογαριασμού).
 
 Unsplash: οι φωτογραφίες προορισμών φορτώνονται από τους διακομιστές της, οι οποίοι λαμβάνουν τη διεύθυνση IP σας.
 
 Google Fonts: οι γραμματοσειρές φορτώνονται από διακομιστές της Google, οι οποίοι λαμβάνουν τη διεύθυνση IP σας.
 
-Resend: παράδοση email καλωσορίσματος, ασφαλείας και σχολίων (διεύθυνση email και μήνυμα).
+GitHub Pages: τα νομικά έγγραφα και οι πληροφορίες έκδοσής τους φορτώνονται από διακομιστές του GitHub, οι οποίοι λαμβάνουν τη διεύθυνση IP σας.
 
-Η υπηρεσία ομιλίας της συσκευής ή του προγράμματος περιήγησης: μετατρέπει τη φωνή σε κείμενο σύμφωνα με τη δική της πολιτική απορρήτου.</p>
+Η υπηρεσία ομιλίας του προγράμματος περιήγησης ή της συσκευής σας: μετατρέπει τη φωνή σε κείμενο σύμφωνα με τη δική της πολιτική απορρήτου.</p>
+      </div>
+      <div class="section">
+        <h2>4a. Δημόσιες Πηγές Ναυτιλιακών Δεδομένων</h2>
+        <p>Οι ναυτιλιακές προειδοποιήσεις συλλέγονται αυτόματα από τα συστήματά μας από τις δημόσιες δημοσιεύσεις των ναυτιλιακών αρχών της Τουρκίας, της Φινλανδίας και της Ελλάδας και παραδίδονται στην εφαρμογή μέσω της Cloudflare. Η εφαρμογή δεν επικοινωνεί με αυτές τις αρχές και δεν τους στέλνει δεδομένα. Οι προειδοποιήσεις αυτές δεν αποτελούν επίσημα ναυτιλιακά δεδομένα.</p>
       </div>
       <div class="section">
       <h2>4α. Δημόσιες Πηγές Ναυτιλιακών Δεδομένων</h2>
@@ -366,7 +388,7 @@ Resend: παράδοση email καλωσορίσματος, ασφαλείας 
       </div>
       <div class="section">
         <h2>5. Σκόποι Χρήσης Δεδομένων</h2>
-        <p>Τα δεδομένα χρησιμοποιούνται για την παροχή των λειτουργιών που χρησιμοποιείτε (ενημερώσεις ασφαλείας, αρχεία συντήρησης, αναζήτηση εστιατορίων, σχόλια και email λογαριασμού), για τη διατήρηση της ασφάλειας της υπηρεσίας και για την εκπλήρωση νομικών υποχρεώσεων. Δεν πουλάμε δεδομένα χρηστών για διαφήμιση.</p>
+        <p>Τα δεδομένα χρησιμοποιούνται για την παροχή των λειτουργιών που χρησιμοποιείτε (σχεδιασμός διαδρομής, καιρός, επίσημες προειδοποιήσεις, προτάσεις εστιατορίων, αρχεία συντήρησης, προτάσεις τοποθεσιών, email σχολίων και λογαριασμού και, όταν είναι διαθέσιμες, λειτουργίες τεχνητής νοημοσύνης), για την ασφάλεια της υπηρεσίας και για την τήρηση νομικών υποχρεώσεων. Δεν πωλούμε δεδομένα χρηστών για διαφήμιση.</p>
       </div>
       <div class="section">
         <h2>6. Διαγραφή των Δεδομένων σας</h2>
@@ -398,7 +420,7 @@ Email σχολίων: 12 μήνες μετά τη διεκπεραίωση το�
       </div>
       <div class="section">
         <h2>11. Επικοινωνία</h2>
-        <p>Για ερωτήσεις: uzaydeniz@gmail.com. Δίκαιο: Republic of Türkiye / Turkish law. Τελευταία ενημέρωση: 25 Οκτωβρίου 2026.</p>
+        <p>Για ερωτήσεις: uzaydeniz@gmail.com. Δίκαιο: Republic of Türkiye / Turkish law. Τελευταία ενημέρωση: 3 Νοεμβρίου 2026.</p>
       </div>
       <div class="section">
         <h2>12. Τα Δικαιώματά σας, Νομική Βάση και Μεταφορές</h2>
@@ -408,7 +430,7 @@ Email σχολίων: 12 μήνες μετά τη διεκπεραίωση το�
 
     <!-- Italian Block -->
     <div id="lang-it" class="lang-block">
-      <div class="version-meta">Versione: 2.5.0 | Ultimo Aggiornamento: 25 Ottobre 2026</div>
+      <div class="version-meta">Versione: 2.6.0 | Ultimo Aggiornamento: 3 Novembre 2026</div>
       <div class="section">
         <h2>1. Chi gestisce MyBoatAI</h2>
         <p>MyBoatAI è gestito da uzaydenizlabs, uno sviluppatore individuale con sede in Turchia. Contatto: uzaydeniz@gmail.com.</p>
@@ -433,7 +455,9 @@ Registri di accettazione: per ogni documento legale accettato, archiviamo la ver
 
 Dati tecnici: il nostro provider di hosting e i servizi elencati di seguito ricevono dati tecnici come l'indirizzo IP, l'ora e l'indirizzo richiesto quando usi l'app.
 
-Non utilizziamo strumenti pubblicitari, analitici o di tracciamento.</p>
+Non utilizziamo strumenti pubblicitari, analitici o di tracciamento.
+
+Suggerimenti di luoghi (facoltativo): quando aggiungi un tuo luogo e selezioni "Aiuta ad aggiungere questo luogo alla nostra mappa globale", nome, tipo, coordinate e data del luogo ci vengono inviati via email, senza il tuo indirizzo email né l'ID account. Esaminiamo il suggerimento e possiamo aggiungere il luogo all'elenco pubblico delle destinazioni. Se hai usato "Usa la mia posizione", le coordinate possono corrispondere alla tua posizione attuale. Non inserire dati personali nel nome del luogo.</p>
       </div>
       <div class="section">
         <h2>3. Dati Locali vs. Cloud</h2>
@@ -441,29 +465,33 @@ Non utilizziamo strumenti pubblicitari, analitici o di tracciamento.</p>
       </div>
       <div class="section">
         <h2>4. Fornitori di Servizi che Ricevono Dati</h2>
-        <p>Google Firebase e Google Cloud (autenticazione, database, hosting): indirizzo email, ID account, registri di accettazione e log tecnici.
+        <p>Google Firebase e Google Cloud (accesso, database, hosting del nostro server): indirizzo email, ID account, registri di accettazione e log tecnici come l'indirizzo IP.
 
-Google Gemini API: briefing di sicurezza (valori meteo e dettagli barca), inserimenti di manutenzione e ore motore (testo digitato o dettato) e ricerca ristoranti nelle vicinanze (nome destinazione e coordinate). Non inviamo il tuo indirizzo email o ID account. Utilizziamo il piano gratuito di Gemini API e i termini di Google per il piano gratuito possono consentire a Google di utilizzare i contenuti inviati per migliorare i propri prodotti. Si prega di non includere informazioni personali sensibili nel testo dettato.
+Cloudflare (data.myboatai.com): pacchetti regionali, mappe, confini delle regioni e file degli avvisi ufficiali vengono scaricati dai server di Cloudflare, che ricevono il tuo indirizzo IP e i nomi dei file richiesti. Non vengono inviati dati dell'account.
 
-Google Maps Platform: visualizzazione mappe e ricerca luoghi. Google riceve il tuo indirizzo IP, l'area di mappa visualizzata e i nomi dei luoghi che cerchi.
+Open-Meteo: previsioni meteo e marine. Riceve le coordinate dei luoghi e dei punti di rotta richiesti e il tuo indirizzo IP.
 
-Open-Meteo: previsioni meteo e marine. Riceve le coordinate esatte richieste e il tuo indirizzo IP.
+Google Places: suggerimenti di ristoranti e caffè. Il nostro server invia solo le coordinate della destinazione; il tuo indirizzo IP e i dati dell'account non vengono inviati a Google.
 
-Unsplash: le foto delle destinazioni si caricano dai suoi server, che ricevono il tuo indirizzo IP.
+Google Gemini API: usata solo per le funzioni di intelligenza artificiale quando sono disponibili nell'app e le utilizzi. Vengono inviati solo i dati necessari a quella funzione, mai il tuo indirizzo email o l'ID account. Usiamo il livello gratuito dell'API Gemini e i termini di Google per tale livello possono consentire a Google di usare i contenuti inviati per migliorare i propri prodotti. Non includere informazioni personali sensibili nel testo che scrivi o detti.
 
-Google Fonts: i font si caricano dai server Google, che ricevono il tuo indirizzo IP.
+Resend: invio delle email di benvenuto, sicurezza e feedback (indirizzo email e messaggio) e dei suggerimenti di luoghi che scegli di inviare (senza dati dell'account).
 
-Resend: consegna di email di benvenuto, sicurezza e feedback (indirizzo email e messaggio).
+Unsplash: le foto delle destinazioni vengono caricate dai suoi server, che ricevono il tuo indirizzo IP.
 
-Il servizio vocale del browser o dispositivo: converte la voce in testo secondo la propria informativa sulla privacy.</p>
+Google Fonts: i caratteri vengono caricati dai server di Google, che ricevono il tuo indirizzo IP.
+
+GitHub Pages: i documenti legali e le relative informazioni di versione vengono caricati dai server di GitHub, che ricevono il tuo indirizzo IP.
+
+Il servizio vocale del browser o del dispositivo: converte la voce in testo secondo la propria informativa sulla privacy.</p>
       </div>
       <div class="section">
       <h2>4a. Fonti Pubbliche di Dati Marittimi</h2>
-      <p>Gli avvisi meteo e di navigazione sono compilati da pubblicazioni pubbliche delle autorità marittime di Turchia, Finlandia e Grecia. Non sono dati di navigazione ufficiali.</p>
+      <p>Gli avvisi ai naviganti vengono raccolti automaticamente dai nostri sistemi dalle pubblicazioni pubbliche delle autorità marittime di Turchia, Finlandia e Grecia e inviati all'app tramite Cloudflare. L'app non contatta queste autorità e non invia loro dati. Questi avvisi non sono dati nautici ufficiali.</p>
       </div>
       <div class="section">
         <h2>5. Scopi dell'Utilizzo dei Dati</h2>
-        <p>I dati sono utilizzati per fornire le funzioni che usi (briefing di sicurezza, registri manutenzione, ricerca ristoranti, feedback ed email dell'account), per mantenere sicuro il servizio e per adempiere agli obblighi di legge. Non vendiamo dati degli utenti per scopi pubblicitari.</p>
+        <p>I dati sono usati per fornire le funzioni che utilizzi (pianificazione delle rotte, meteo, avvisi ufficiali, suggerimenti di ristoranti, registri di manutenzione, suggerimenti di luoghi, email di feedback e dell'account e, quando disponibili, funzioni di intelligenza artificiale), per mantenere sicuro il servizio e per adempiere agli obblighi di legge. Non vendiamo i dati degli utenti per pubblicità.</p>
       </div>
       <div class="section">
         <h2>6. Cancellazione dei Dati</h2>
@@ -505,7 +533,7 @@ Log del server: 30 giorni. Non contengono il contenuto dei messaggi.</p>
 
     <!-- Spanish Block -->
     <div id="lang-es" class="lang-block">
-      <div class="version-meta">Versión: 2.5.0 | Última Actualización: 25 de Octubre de 2026</div>
+      <div class="version-meta">Versión: 2.6.0 | Última Actualización: 3 de Noviembre de 2026</div>
       <div class="section">
         <h2>1. Quién opera MyBoatAI</h2>
         <p>MyBoatAI es operado por uzaydenizlabs, un desarrollador individual con sede en Turquía. Contacto: uzaydeniz@gmail.com.</p>
@@ -530,7 +558,9 @@ Registros de aceptación: para cada documento legal que acepta, almacenamos su v
 
 Datos técnicos: nuestro proveedor de alojamiento y los servicios enumerados a continuación reciben datos técnicos como su dirección IP, la hora y la dirección solicitada cuando utiliza la aplicación.
 
-No utilizamos herramientas de publicidad, analítica ni seguimiento.</p>
+No utilizamos herramientas de publicidad, analítica ni seguimiento.
+
+Sugerencias de lugares (opcional): cuando añades un lugar propio y marcas "Ayúdanos a añadir este lugar a nuestro mapa global", el nombre, el tipo, las coordenadas y la fecha del lugar se nos envían por correo electrónico, sin tu dirección de correo ni tu ID de cuenta. Revisamos la sugerencia y podemos añadir el lugar a la lista pública de destinos. Si usaste "Usar mi ubicación", estas coordenadas pueden ser tu posición actual. No incluyas datos personales en el nombre del lugar.</p>
       </div>
       <div class="section">
         <h2>3. Datos Locales vs. en la Nube</h2>
@@ -538,29 +568,33 @@ No utilizamos herramientas de publicidad, analítica ni seguimiento.</p>
       </div>
       <div class="section">
         <h2>4. Proveedores de Servicios que Reciben Datos</h2>
-        <p>Google Firebase y Google Cloud (autenticación, base de datos, alojamiento): dirección de correo electrónico, ID de cuenta, registros de aceptación y registros técnicos.
+        <p>Google Firebase y Google Cloud (inicio de sesión, base de datos, alojamiento de nuestro servidor): dirección de correo, ID de cuenta, registros de aceptación y registros técnicos como la dirección IP.
 
-Google Gemini API: informes de seguridad (valores meteorológicos y detalles del barco), registros de mantenimiento y horas de motor (el texto que escribe o dicta) y búsqueda de restaurantes cercanos (nombre de destino y coordenadas). No enviamos su dirección de correo electrónico ni su ID de cuenta. Utilizamos la versión gratuita de la API de Gemini, y los términos de Google para la versión gratuita pueden permitir a Google utilizar el contenido enviado para mejorar sus productos. Por favor, no incluya información personal sensible en el texto dictado.
+Cloudflare (data.myboatai.com): los paquetes regionales, mapas, límites de regiones y archivos de avisos oficiales se descargan de los servidores de Cloudflare, que reciben tu dirección IP y los nombres de los archivos solicitados. No se envían datos de la cuenta.
 
-Google Maps Platform: visualización de mapas y búsqueda de lugares. Google recibe su dirección IP, el área de mapa que visualiza y los nombres de lugares que busca.
+Open-Meteo: previsiones meteorológicas y marinas. Recibe las coordenadas de los lugares y puntos de ruta que solicitas y tu dirección IP.
 
-Open-Meteo: pronósticos meteorológicos y marinos. Recibe las coordenadas exactas solicitadas y su dirección IP.
+Google Places: sugerencias de restaurantes y cafeterías. Nuestro servidor envía solo las coordenadas del destino; tu dirección IP y los datos de tu cuenta no se envían a Google.
 
-Unsplash: las fotos de destinos se cargan desde sus servidores, que reciben su dirección IP.
+Google Gemini API: se usa solo para funciones de inteligencia artificial cuando están disponibles en la app y las utilizas. Solo se envían los datos necesarios para esa función, nunca tu dirección de correo ni tu ID de cuenta. Usamos el nivel gratuito de la API de Gemini, y los términos de Google para ese nivel pueden permitirle usar el contenido enviado para mejorar sus productos. No incluyas información personal sensible en el texto que escribas o dictes.
 
-Google Fonts: las fuentes se cargan desde los servidores de Google, que reciben su dirección IP.
+Resend: envío de correos de bienvenida, seguridad y comentarios (dirección de correo y mensaje) y de las sugerencias de lugares que decidas enviar (sin datos de la cuenta).
 
-Resend: entrega de correos electrónicos de bienvenida, seguridad y comentarios (dirección de correo electrónico y mensaje).
+Unsplash: las fotos de destinos se cargan desde sus servidores, que reciben tu dirección IP.
 
-El servicio de voz de su navegador o dispositivo: convierte la voz en texto bajo su propia política de privacidad.</p>
+Google Fonts: las fuentes se cargan desde servidores de Google, que reciben tu dirección IP.
+
+GitHub Pages: los documentos legales y su información de versión se cargan desde servidores de GitHub, que reciben tu dirección IP.
+
+El servicio de voz de tu navegador o dispositivo: convierte la voz en texto según su propia política de privacidad.</p>
       </div>
       <div class="section">
       <h2>4a. Fuentes Públicas de Datos Marítimos</h2>
-      <p>Los avisos meteorológicos y de navegación se compilan a partir de publicaciones públicas de las autoridades marítimas de Turquía, Finlandia y Grecia. No son datos oficiales de navegación.</p>
+      <p>Los avisos a los navegantes son recopilados automáticamente por nuestros sistemas a partir de las publicaciones públicas de las autoridades marítimas de Türkiye, Finlandia y Grecia y se entregan a la app a través de Cloudflare. La app no contacta con estas autoridades ni les envía datos. Estos avisos no son datos náuticos oficiales.</p>
       </div>
       <div class="section">
         <h2>5. Fines del uso de datos</h2>
-        <p>Los datos se utilizan para prestar las funciones que usted utiliza (informes de seguridad, registros de mantenimiento, búsqueda de restaurantes, comentarios y correos de la cuenta), para mantener la seguridad del servicio y para cumplir con las obligaciones legales. No vendemos datos de usuarios para publicidad.</p>
+        <p>Los datos se usan para ofrecer las funciones que utilizas (planificación de rutas, meteorología, avisos oficiales, sugerencias de restaurantes, registros de mantenimiento, sugerencias de lugares, correos de comentarios y de cuenta y, cuando estén disponibles, funciones de inteligencia artificial), para mantener la seguridad del servicio y para cumplir obligaciones legales. No vendemos datos de usuarios para publicidad.</p>
       </div>
       <div class="section">
         <h2>6. Eliminación de sus Datos</h2>
@@ -602,7 +636,7 @@ Registros del servidor: 30 días. No contienen contenido de mensajes.</p>
 
     <!-- Finnish Block -->
     <div id="lang-fi" class="lang-block">
-      <div class="version-meta">Versio: 2.5.0 | Viimeksi päivitetty: 25. lokakuuta 2026</div>
+      <div class="version-meta">Versio: 2.6.0 | Viimeksi päivitetty: 3. marraskuuta 2026</div>
       <div class="section">
         <h2>1. Kuka hallinnoi MyBoatAI-palvelua</h2>
         <p>MyBoatAI-palvelua hallinnoi uzaydenizlabs, Turkkiin sijoittautunut yksityinen kehittäjä. Yhteydenotot: uzaydeniz@gmail.com.</p>
@@ -627,7 +661,9 @@ Hyväksymistiedot: jokaisesta hyväksymästäsi lakisääteisestä asiakirjasta 
 
 Tekniset tiedot: hosting-palveluntarjoajamme ja alla luetellut palvelut vastaanottavat teknisiä tietoja, kuten IP-osoitteesi, ajankohdan ja pyydetyn osoitteen sovellusta käytettäessä.
 
-Emme käytä mainos-, analytiikka- tai seurantatyökaluja.</p>
+Emme käytä mainos-, analytiikka- tai seurantatyökaluja.
+
+Paikkaehdotukset (vapaaehtoinen): kun lisäät oman paikan ja valitset "Auta lisäämään tämä paikka maailmanlaajuiseen karttaamme", paikan nimi, tyyppi, koordinaatit ja päivämäärä lähetetään meille sähköpostilla ilman sähköpostiosoitettasi tai tilisi tunnistetta. Tarkistamme ehdotuksen ja voimme lisätä paikan julkiseen kohdeluetteloon. Jos käytit "Käytä sijaintiani" -toimintoa, koordinaatit voivat olla nykyinen sijaintisi. Älä kirjoita paikan nimeen henkilötietoja.</p>
       </div>
       <div class="section">
         <h2>3. Paikalliset vs. pilvitiedot</h2>
@@ -635,29 +671,33 @@ Emme käytä mainos-, analytiikka- tai seurantatyökaluja.</p>
       </div>
       <div class="section">
         <h2>4. Tietoja vastaanottavat palveluntarjoajat</h2>
-        <p>Google Firebase ja Google Cloud (tunnistautuminen, tietokanta, hosting): sähköpostiosoite, tilitunnus, hyväksymistiedot ja tekniset lokit.
+        <p>Google Firebase ja Google Cloud (kirjautuminen, tietokanta, palvelimemme ylläpito): sähköpostiosoite, tilin tunniste, hyväksyntätiedot ja tekniset lokit, kuten IP-osoite.
 
-Google Gemini API: turvallisuusohjeet (säätiedot ja veneen yksityiskohdat), huolto- ja moottoritunti­merkinnät (kirjoittamasi tai sanelemasi teksti) ja lähiravintolahaku (kohteen nimi ja koordinaatit). Emme lähetä sähköpostiosoitettasi tai tilitunnustasi. Käytämme Gemini API:n ilmaisversiota, ja Googlen ilmaisversion ehdot voivat sallia Googlen käyttää lähetettyä sisältöä tuotteidensa kehittämiseen. Älä sisällytä sanelemaasi tekstiin arkaluonteisia henkilötietoja.
+Cloudflare (data.myboatai.com): aluepaketit, kartat, alueiden rajat ja virallisten varoitusten tiedostot ladataan Cloudflaren palvelimilta, jotka saavat IP-osoitteesi ja pyydettyjen tiedostojen nimet. Tilitietoja ei lähetetä.
 
-Google Maps Platform: karttanäyttö ja paikkahaku. Google vastaanottaa IP-osoitteesi, katsellun kartta-alueen ja hakemiesi paikannimet.
+Open-Meteo: sää- ja meriennusteet. Saa pyytämiesi paikkojen ja reittipisteiden koordinaatit sekä IP-osoitteesi.
 
-Open-Meteo: sää- ja meriennusteet. Se vastaanottaa pyytämäsi tarkan koordinaatin ja IP-osoitteesi.
+Google Places: ravintola- ja kahvilaehdotukset. Palvelimemme lähettää Googlelle vain kohteen koordinaatit; IP-osoitettasi ja tilitietojasi ei lähetetä Googlelle.
 
-Unsplash: kohdekuvat ladataan sen palvelimilta, jotka vastaanottavat IP-osoitteesi.
+Google Gemini API: käytetään vain tekoälytoimintoihin silloin, kun ne ovat sovelluksessa saatavilla ja käytät niitä. Vain toiminnon tarvitsemat tiedot lähetetään, ei koskaan sähköpostiosoitettasi tai tilisi tunnistetta. Käytämme Gemini API:n maksutonta tasoa, ja Googlen ehdot voivat sallia lähetetyn sisällön käytön Googlen tuotteiden kehittämiseen. Älä sisällytä arkaluonteisia henkilötietoja kirjoittamaasi tai sanelemaasi tekstiin.
 
-Google Fonts: fontit ladataan Googlen palvelimilta, jotka vastaanottavat IP-osoitteesi.
+Resend: tervetulo-, turvallisuus- ja palauteviestien (sähköpostiosoite ja viesti) sekä lähettämiesi paikkaehdotusten (ilman tilitietoja) toimittaminen.
 
-Resend: tervetulo-, turvallisuus- ja palautesähköpostien toimitus (sähköpostiosoite ja viesti).
+Unsplash: kohteiden kuvat ladataan sen palvelimilta, jotka saavat IP-osoitteesi.
 
-Laitteesi tai selaimesi puhepalvelu: muuntaa äänen tekstiksi oman tietosuojaselosteensa mukaisesti.</p>
+Google Fonts: fontit ladataan Googlen palvelimilta, jotka saavat IP-osoitteesi.
+
+GitHub Pages: juridiset asiakirjat ja niiden versiotiedot ladataan GitHubin palvelimilta, jotka saavat IP-osoitteesi.
+
+Selaimesi tai laitteesi puhepalvelu: muuntaa puheen tekstiksi oman tietosuojakäytäntönsä mukaisesti.</p>
       </div>
       <div class="section">
       <h2>4a. Julkiset merenkulkutietolähteet</h2>
-      <p>Sää- ja merenkulkuvaroitukset on koottu Turkin, Suomen ja Kreikan merenkulkuviranomaisten julkisista julkaisuista. Ne eivät ole virallista merenkulkutietoa.</p>
+      <p>Järjestelmämme keräävät merivaroitukset automaattisesti Turkin, Suomen ja Kreikan merenkulkuviranomaisten julkisista julkaisuista ja toimittavat ne sovellukseen Cloudflaren kautta. Sovellus ei ota yhteyttä näihin viranomaisiin eikä lähetä niille tietoja. Varoitukset eivät ole virallista merenkulkutietoa.</p>
       </div>
       <div class="section">
         <h2>5. Tietojen käyttötarkoitukset</h2>
-        <p>Tietoja käytetään käyttämiesi ominaisuuksien tarjoamiseen (turvallisuusohjeet, huoltolokit, ravintolahaku, palaute ja tilisähköpostit), palvelun turvallisuuden ylläpitämiseen ja lakisääteisten velvoitteiden täyttämiseen. Emme myy käyttäjätietoja mainostarkoituksiin.</p>
+        <p>Tietoja käytetään käyttämiesi toimintojen tarjoamiseen (reittisuunnittelu, sää, viralliset varoitukset, ravintolaehdotukset, huoltokirjaukset, paikkaehdotukset, palaute- ja tilisähköpostit sekä tekoälytoiminnot, kun niitä on saatavilla), palvelun turvallisuuden ylläpitämiseen ja lakisääteisten velvoitteiden täyttämiseen. Emme myy käyttäjätietoja mainontaan.</p>
       </div>
       <div class="section">
         <h2>6. Tietojesi poistaminen</h2>
@@ -689,7 +729,7 @@ Palvelinlokit: 30 päivää. Ne eivät sisällä viestien sisältöä.</p>
       </div>
       <div class="section">
         <h2>11. Yhteystiedot</h2>
-        <p>Yhteydenotot: uzaydeniz@gmail.com. Sovellettava laki: Republic of Türkiye / Turkish law. Viimeksi päivitetty: 25. lokakuuta 2026.</p>
+        <p>Yhteydenotot: uzaydeniz@gmail.com. Sovellettava laki: Republic of Türkiye / Turkish law. Viimeksi päivitetty: 3. marraskuuta 2026.</p>
       </div>
       <div class="section">
         <h2>12. Oikeutesi, oikeudellinen peruste ja tietojensiirrot</h2>
@@ -699,7 +739,7 @@ Palvelinlokit: 30 päivää. Ne eivät sisällä viestien sisältöä.</p>
 
     <!-- Swedish Block -->
     <div id="lang-sv" class="lang-block">
-      <div class="version-meta">Version: 2.5.0 | Senast uppdaterad: 25 oktober 2026</div>
+      <div class="version-meta">Version: 2.6.0 | Senast uppdaterad: 3 november 2026</div>
       <div class="section">
         <h2>1. Vem driver MyBoatAI</h2>
         <p>MyBoatAI drivs av uzaydenizlabs, en enskild utvecklare baserad i Turkiet. Kontakt: uzaydeniz@gmail.com.</p>
@@ -724,7 +764,9 @@ Godkännanderegister: för varje juridiskt dokument du godkänner lagrar vi dess
 
 Tekniska data: vår webbhotellsleverantör och de tjänster som listas nedan tar emot tekniska data såsom din IP-adress, tidpunkt och begärd adress när du använder appen.
 
-Vi använder inte reklam-, analys- eller spårningsverktyg.</p>
+Vi använder inte reklam-, analys- eller spårningsverktyg.
+
+Platsförslag (frivilligt): när du lägger till en egen plats och kryssar i "Hjälp oss att lägga till platsen på vår globala karta" skickas platsens namn, typ, koordinater och datum till oss via e-post, utan din e-postadress eller ditt konto-ID. Vi granskar förslaget och kan lägga till platsen i den offentliga destinationslistan. Om du använde "Använd min position" kan koordinaterna vara din nuvarande position. Skriv inga personuppgifter i platsens namn.</p>
       </div>
       <div class="section">
         <h2>3. Lokala vs. Molndata</h2>
@@ -732,29 +774,33 @@ Vi använder inte reklam-, analys- eller spårningsverktyg.</p>
       </div>
       <div class="section">
         <h2>4. Tjänsteleverantörer som tar emot data</h2>
-        <p>Google Firebase och Google Cloud (autentisering, databas, webbhotell): e-postadress, konto-ID, godkännanderegister och tekniska loggar.
+        <p>Google Firebase och Google Cloud (inloggning, databas, drift av vår server): e-postadress, konto-ID, godkännandeposter och tekniska loggar som IP-adress.
 
-Google Gemini API: säkerhetsbriefingar (värden för väder och båtdetaljer), underhålls- och motortimmesnoteringar (texten du skriver eller dikterar) och sökning efter restauranger i närheten (destinationsnamn och koordinater). Vi skickar inte din e-postadress eller ditt konto-ID. Vi använder gratisversionen av Gemini API, och Googles villkor för gratisversionen kan tillåta Google att använda skickat innehåll för att förbättra sina produkter. Vänligen inkludera inte känsliga personuppgifter i dikterad text.
+Cloudflare (data.myboatai.com): regionpaket, kartor, regiongränser och filer med officiella varningar hämtas från Cloudflares servrar, som får din IP-adress och namnen på de begärda filerna. Inga kontouppgifter skickas.
 
-Google Maps Platform: kartvisning och platssökning. Google tar emot din IP-adress, det kartområde du visar och de platsnamn du söker efter.
+Open-Meteo: väder- och sjöprognoser. Tar emot koordinaterna för de platser och ruttpunkter du begär och din IP-adress.
 
-Open-Meteo: väder- och havsprognoser. Den tar emot de exakta koordinater du begär samt din IP-adress.
+Google Places: förslag på restauranger och kaféer. Vår server skickar endast destinationens koordinater; din IP-adress och dina kontouppgifter skickas inte till Google.
 
-Unsplash: destinationsfoton laddas från dess servrar, som tar emot din IP-adress.
+Google Gemini API: används endast för AI-funktioner när de finns i appen och du använder dem. Endast de uppgifter funktionen behöver skickas, aldrig din e-postadress eller ditt konto-ID. Vi använder den kostnadsfria nivån av Gemini API, och Googles villkor för den nivån kan tillåta Google att använda inskickat innehåll för att förbättra sina produkter. Ta inte med känsliga personuppgifter i text du skriver eller dikterar.
 
-Google Fonts: typsnitt laddas från Googles servrar, som tar emot din IP-adress.
+Resend: leverans av välkomst-, säkerhets- och feedbackmejl (e-postadress och meddelande) och av platsförslag du väljer att skicka (utan kontouppgifter).
 
-Resend: leverans av välkomst-, säkerhets- och feedback-e-postmeddelanden (e-postadress och meddelande).
+Unsplash: destinationsbilder laddas från dess servrar, som får din IP-adress.
 
-Din webbläsares eller enhets rösttjänst: omvandlar röst till text under sin egen integritetspolicy.</p>
+Google Fonts: typsnitt laddas från Googles servrar, som får din IP-adress.
+
+GitHub Pages: juridiska dokument och deras versionsinformation laddas från GitHubs servrar, som får din IP-adress.
+
+Webbläsarens eller enhetens taltjänst: omvandlar tal till text enligt sin egen integritetspolicy.</p>
       </div>
       <div class="section">
       <h2>4a. Offentliga sjödatakällor</h2>
-      <p>Väder- och navigeringsvarningar sammanställs från offentliga publikationer från sjöfartsmyndigheter i Turkiet, Finland och Grekland. De är inte officiella navigationsdata.</p>
+      <p>Navigationsvarningar samlas automatiskt in av våra system från de offentliga publikationerna från sjöfartsmyndigheterna i Turkiet, Finland och Grekland och levereras till appen via Cloudflare. Appen kontaktar inte dessa myndigheter och skickar inga uppgifter till dem. Varningarna är inte officiella navigationsdata.</p>
       </div>
       <div class="section">
         <h2>5. Syfte med databehandling</h2>
-        <p>Data används för att tillhandahålla de funktioner du använder (säkerhetsbriefingar, underhållsloggar, restaurangsökning, feedback och kontomejl), för att hålla tjänsten säker och för att uppfylla rättsliga krav. Vi säljer inte användardata för reklam.</p>
+        <p>Uppgifterna används för att tillhandahålla de funktioner du använder (ruttplanering, väder, officiella varningar, restaurangförslag, underhållsloggar, platsförslag, feedback- och kontomejl samt AI-funktioner när de finns), för att hålla tjänsten säker och för att uppfylla rättsliga skyldigheter. Vi säljer inte användaruppgifter för reklam.</p>
       </div>
       <div class="section">
         <h2>6. Radera dina data</h2>
@@ -786,7 +832,7 @@ Serverloggar: 30 dagar. De innehåller inte meddelandeinnehåll.</p>
       </div>
       <div class="section">
         <h2>11. Kontakt</h2>
-        <p>Kontakt: uzaydeniz@gmail.com. Tillämplig lag: Republic of Türkiye / Turkish law. Senast uppdaterad: 25 oktober 2026.</p>
+        <p>Kontakt: uzaydeniz@gmail.com. Tillämplig lag: Republic of Türkiye / Turkish law. Senast uppdaterad: 3 november 2026.</p>
       </div>
       <div class="section">
         <h2>12. Dina rättigheter, rättslig grund och överföringar</h2>
