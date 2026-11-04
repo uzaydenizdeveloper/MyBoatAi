@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyBoatAI Safety Notice</title>
+  <style>
+    :root {
+      --bg: #0b131e;
+      --card-bg: #132235;
+      --text: #e2e8f0;
+      --text-sub: #94a3b8;
+      --accent: #ff7a45;
+      --border: #1e3a5f;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 32px 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .nav-links {
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+    .nav-links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+    .version-meta {
+      font-size: 13px;
+      color: var(--text-sub);
+      margin-bottom: 20px;
+    }
+    .lang-switcher {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 20px;
+    }
+    .lang-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text-sub);
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .lang-btn:hover, .lang-btn.active {
+      background: var(--accent);
+      color: #0b2a4a;
+      border-color: var(--accent);
+    }
+    .lang-block {
+      display: none;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    .lang-block.active {
+      display: block;
+    }
+    .section {
+      margin-bottom: 24px;
+    }
+    .section:last-child {
+      margin-bottom: 0;
+    }
+    .section h2 {
+      font-size: 18px;
+      color: var(--accent);
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+    .section p {
+      font-size: 15px;
+      color: var(--text);
+      white-space: pre-line;
+      margin: 0;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--text-sub);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="nav-links">
+        <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a>
+      </div>
+      <h1>MyBoatAI Safety Notice</h1>
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="showLang('en', this)">English</button>
+        <button class="lang-btn" onclick="showLang('tr', this)">Türkçe</button>
+        <button class="lang-btn" onclick="showLang('el', this)">Ελληνικά</button>
+        <button class="lang-btn" onclick="showLang('it', this)">Italiano</button>
+        <button class="lang-btn" onclick="showLang('es', this)">Español</button>
+        <button class="lang-btn" onclick="showLang('fi', this)">Suomi</button>
+        <button class="lang-btn" onclick="showLang('sv', this)">Svenska</button>
+      </div>
+    </header>
+
+    <!-- English Block -->
+    <div id="lang-en" class="lang-block active">
+      <div class="version-meta">Version: 2.8.0 | Last updated: November 3, 2026</div>
+      <div class="section">
+        <h2>1. Ultimate Skipper Responsibility</h2>
+        <p>The boat skipper/captain bears sole and final responsibility for all decisions, navigation safety, boat seaworthiness, and the well-being of crew and passengers. MyBoatAI output does not relieve the skipper of their legal duty.</p>
+      </div>
+      <div class="section">
+        <h2>2. AI Advisory & Non-Authoritative Status</h2>
+        <p>MyBoatAI provides automated advisory guidance based on mathematical models and third-party APIs. It is not an official navigational authority, certified pilot, or emergency rescue system. Always cross-verify advisory calculations.</p>
+      </div>
+      <div class="section">
+        <h2>3. Official Charts & Equipment Mandatory</h2>
+        <p>Always maintain and consult official up-to-date hydrographic nautical charts, certified GPS/AIS chartplotters, and VHF radio. Where applicable to your vessel, also carry a magnetic compass, echo sounder and radar. Do not rely on mobile devices as primary navigation equipment.</p>
+      </div>
+      <div class="section">
+        <h2>4. COLREGs & Maritime Rules Compliance</h2>
+        <p>Skippers must strictly comply with the International Regulations for Preventing Collisions at Sea (COLREG 1972) at all times, maintaining continuous visual and sound lookout and safe speed appropriate to prevailing visibility.</p>
+      </div>
+      <div class="section">
+        <h2>5. Pre-Departure Checks & Emergency Readiness</h2>
+        <p>Before departure, verify fuel and water reserves, bilge pumps, engine fluids, weather and barometric trends, life jackets for all souls onboard, fire extinguishers, emergency flares, and kill-switch lanyard.</p>
+      </div>
+      <div class="section">
+        <h2>6. Routes and Distances</h2>
+        <p>Routes drawn by the app are approximate paths calculated on a simplified sea network. They contain no information on depth, shallows, rocks, currents, restricted areas, traffic separation schemes or territorial waters, and may pass close to land or hazards. The route line must not be followed as a navigational track. Distances and times are estimates. On routes that change country, exit and entry port formalities are the skipper's responsibility.</p>
+      </div>
+      <div class="section">
+        <h2>7. AI, Technical Advice and Connectivity</h2>
+        <p>MyBoatAI's AI assistant can make mistakes. Passage briefings, weather information, estimates and maintenance or technical suggestions must be checked by the skipper before relying on them. They do not replace official weather warnings, manufacturer manuals or certified marine technicians. Many features need an internet connection; at sea, where there is no coverage, AI, weather and map features may not work. Do not depend on the app for safety-critical information.</p>
+      </div>
+      <div class="section">
+        <h2>8. Location, Notifications and Background Operation</h2>
+        <p>Position, live tracking and departure or arrival notifications depend on your device and its operating system. GPS may be inaccurate. Updates may be delayed or stop when the screen is off, when battery saving is active, when the operating system closes the app, or without a data connection. Do not rely on the app to report your position or to alert you to departure or arrival.</p>
+      </div>
+      <div class="section">
+        <h2>9. Official Warnings, Weather and Times</h2>
+        <p>Official navigational warnings are read automatically from the public publications of maritime authorities and matched to your route. A warning may be missed or misread, and some warnings are broadcast only by NAVTEX radio and are not published online. Always check the official sources, NAVTEX and VHF channel 16 before and during your passage. Weather information is a forecast and can change. Trip duration, arrival time and passing times are calculated at a constant speed and do not take wind, waves or currents into account. Times are shown in the local time of the place concerned.</p>
+      </div>
+    </div>
+
+    <!-- Turkish Block -->
+    <div id="lang-tr" class="lang-block">
+      <div class="version-meta">Sürüm: 2.8.0 | Son Güncelleme: 3 Kasım 2026</div>
+      <div class="section">
+        <h2>1. Kaptanın Nihai Sorumluluğu</h2>
+        <p>Tüm seyir kararlarından, tekne emniyetinden, denize elverişlilikten, mürettebat ve yolcuların güvenliğinden tamamen ve münhasıran tekne kaptanı sorumludur. MyBoatAI çıktıları kaptanın yasal sorumluluğunu hiçbir şekilde devralmaz.</p>
+      </div>
+      <div class="section">
+        <h2>2. Yapay Zeka Danışmanlığı ve Resmi Otorite Olmama</h2>
+        <p>MyBoatAI, algoritmik modeller ve harici servis verileri ile rehberlik eden bir danışma aracıdır. Resmi bir denizcilik otoritesi, sertifikalı kılavuz kaptan veya arama-kurtarma sistemi değildir. Tüm hesaplamaları teyit ediniz.</p>
+      </div>
+      <div class="section">
+        <h2>3. Resmi Haritalar ve Seyir Ekipmanları Zorunluluğu</h2>
+        <p>Seyir güvenliğinizi resmi hidrografik deniz haritaları, onaylı GPS/AIS harita çiziciler ve VHF deniz telsizi ile sürekli doğrulayınız. Teknenize uygun olduğunda manyetik pusula, iskandil ve radar da bulundurunuz. Mobil cihazları birincil seyir ekipmanı olarak kullanmayınız.</p>
+      </div>
+      <div class="section">
+        <h2>4. COLREG ve Denizde Çatışmayı Önleme Kuralları</h2>
+        <p>Kaptanlar Denizde Çatışmayı Önleme Uluslararası Kuralları'na (COLREG 1972) kesintisiz uymak, her zaman etkili gözcülük yapmak ve görüş koşullarına uygun emniyetli süratle seyretmekle yükümlüdür.</p>
+      </div>
+      <div class="section">
+        <h2>5. Seyir Öncesi Kontroller ve Acil Durum Hazırlığı</h2>
+        <p>Avara etmeden önce yakıt ve tatlı su rezervlerini, sintine pompalarını, motor sıvılarını, hava ve barometre eğilimlerini, tüm yolcular için uygun can yeleklerini, yangın tüplerini ve acil durum ekipmanlarını kontrol ediniz.</p>
+      </div>
+      <div class="section">
+        <h2>6. Rotalar ve Mesafeler</h2>
+        <p>Uygulamanın çizdiği rotalar, basitleştirilmiş bir deniz ağı üzerinde hesaplanan yaklaşık güzergâhlardır. Derinlik, sığlık, kayalık, akıntı, yasak bölge, trafik ayırım şeridi ve karasuları bilgisi içermez ve karaya veya tehlikelere yakın geçebilir. Rota çizgisi seyir rotası olarak izlenmemelidir. Mesafe ve süreler tahminidir. Ülke değiştiren rotalarda çıkış ve giriş limanı işlemleri kaptanın sorumluluğundadır.</p>
+      </div>
+      <div class="section">
+        <h2>7. Yapay Zekâ, Teknik Öneriler ve Bağlantı</h2>
+        <p>MyBoatAI'ın yapay zekâ asistanı hata yapabilir. Seyir brifingleri, hava durumu bilgileri, tahminler ile bakım ve teknik öneriler, bunlara güvenilmeden önce kaptan tarafından doğrulanmalıdır. Bu bilgiler resmi hava durumu uyarılarının, üretici kılavuzlarının veya yetkili denizcilik teknisyenlerinin yerini tutmaz. Birçok özellik internet bağlantısı gerektirir; denizde kapsama alanı dışında yapay zekâ, hava durumu ve harita özellikleri çalışmayabilir. Güvenlik açısından kritik bilgiler için uygulamaya bağımlı kalmayınız.</p>
+      </div>
+      <div class="section">
+        <h2>8. Konum, Bildirimler ve Arka Plan Çalışması</h2>
+        <p>Konum, canlı takip ve kalkış veya varış bildirimleri cihazınıza ve işletim sistemine bağlıdır. GPS hatalı olabilir. Ekran kapalıyken, pil tasarrufu etkinken, işletim sistemi uygulamayı kapattığında veya veri bağlantısı yokken güncellemeler gecikebilir ya da durabilir. Konumunuzu bildirmesi veya kalkış ya da varış için uyarı vermesi konusunda uygulamaya güvenmeyiniz.</p>
+      </div>
+      <div class="section">
+        <h2>9. Resmi Uyarılar, Hava Durumu ve Saatler</h2>
+        <p>Resmi seyir uyarıları, denizcilik makamlarının kamuya açık yayınlarından otomatik olarak okunur ve rotanızla eşleştirilir. Bir uyarı kaçırılabilir veya yanlış okunabilir; bazı uyarılar yalnızca NAVTEX radyosuyla yayınlanır ve internette yer almaz. Seyirden önce ve seyir sırasında resmi kaynakları, NAVTEX'i ve VHF 16. kanalı mutlaka kontrol edin. Hava durumu bilgisi bir tahmindir ve değişebilir. Seyir süresi, varış saati ve geçiş saatleri sabit hızla hesaplanır; rüzgâr, dalga ve akıntıyı hesaba katmaz. Saatler ilgili yerin yerel saatiyle gösterilir.</p>
+      </div>
+    </div>
+
+    <!-- Greek Block -->
+    <div id="lang-el" class="lang-block">
+      <div class="version-meta">Έκδοση: 2.8.0 | Τελευταία Ενημέρωση: 3 Νοεμβρίου 2026</div>
+      <div class="section">
+        <h2>1. Τελική Ευθύνη Κυβερνήτη</h2>
+        <p>Ο κυβερνήτης/καπετάνιος φέρει την αποκλειστική και τελική ευθύνη για όλες τις αποφάσεις, την ασφάλεια ναυσιπλοΐας και όλους τους επιβαίνοντες. Το MyBoatAI δεν υποκαθιστά τις νομικές ευθύνες του κυβερνήτη.</p>
+      </div>
+      <div class="section">
+        <h2>2. Συμβουλευτικός Ρόλος AI</h2>
+        <p>Το MyBoatAI είναι ένα βοηθητικό συμβουλευτικό εργαλείο και δεν αποτελεί επίσημη ναυτική αρχή ή σύστημα διάσωσης. Επαληθεύετε πάντοτε τους υπολογισμούς.</p>
+      </div>
+      <div class="section">
+        <h2>3. Επίσημοι Χάρτες και Όργανα</h2>
+        <p>Χρησιμοποιείτε πάντοτε επίσημους ναυτικούς χάρτες, εγκεκριμένα όργανα GPS/AIS και ασύρματο VHF. Όπου ισχύει για το σκάφος σας, έχετε επίσης πυξίδα, βυθόμετρο και ραντάρ. Μη βασίζεστε σε κινητές συσκευές ως κύριο εξοπλισμό.</p>
+      </div>
+      <div class="section">
+        <h2>4. Συμμόρφωση με ΔΚΑΣ (COLREGs)</h2>
+        <p>Τηρείτε αυστηρά τους Διεθνείς Κανονισμούς προς Αποφυγή Συγκρούσεων στη Θάλασσα (COLREG 1972) και διατηρείτε συνεχή οπτική και ακουστική επιτήρηση.</p>
+      </div>
+      <div class="section">
+        <h2>5. Έλεγχοι Πριν τον Απόπλου</h2>
+        <p>Πριν τον απόπλου, ελέγχετε καύσιμα, μπαταρίες, αντλίες σεντίνας, σωσίβια για όλους, πυροσβεστήρες και εξοπλισμό έκτακτης ανάγκης.</p>
+      </div>
+      <div class="section">
+        <h2>6. Διαδρομές και αποστάσεις</h2>
+        <p>Οι διαδρομές που σχεδιάζει η εφαρμογή είναι κατά προσέγγιση πορείες, υπολογισμένες σε ένα απλοποιημένο θαλάσσιο δίκτυο. Δεν περιέχουν πληροφορίες για βάθη, αβαθή, ξέρες, ρεύματα, απαγορευμένες περιοχές, σχήματα διαχωρισμού κυκλοφορίας ή χωρικά ύδατα και ενδέχεται να περνούν κοντά σε ξηρά ή κινδύνους. Η γραμμή της διαδρομής δεν πρέπει να ακολουθείται ως πορεία ναυσιπλοΐας. Οι αποστάσεις και οι χρόνοι είναι εκτιμήσεις. Σε διαδρομές που αλλάζουν χώρα, οι διατυπώσεις στους λιμένες εξόδου και εισόδου αποτελούν ευθύνη του κυβερνήτη.</p>
+      </div>
+      <div class="section">
+        <h2>7. Τεχνητή νοημοσύνη, τεχνικές συμβουλές και συνδεσιμότητα</h2>
+        <p>Ο βοηθός τεχνητής νοημοσύνης του MyBoatAI μπορεί να κάνει λάθη. Οι ενημερώσεις διάπλου, οι πληροφορίες καιρού, οι εκτιμήσεις και οι προτάσεις συντήρησης ή τεχνικής φύσης πρέπει να ελέγχονται από τον κυβερνήτη πριν βασιστεί σε αυτές. Δεν αντικαθιστούν τις επίσημες προειδοποιήσεις καιρού, τα εγχειρίδια του κατασκευαστή ή τους πιστοποιημένους τεχνικούς σκαφών. Πολλές λειτουργίες απαιτούν σύνδεση στο διαδίκτυο· στη θάλασσα, όπου δεν υπάρχει κάλυψη, οι λειτουργίες τεχνητής νοημοσύνης, καιρού και χαρτών ενδέχεται να μη λειτουργούν. Μην βασίζεστε στην εφαρμογή για πληροφορίες κρίσιμες για την ασφάλεια.</p>
+      </div>
+      <div class="section">
+        <h2>8. Τοποθεσία, Ειδοποιήσεις και Λειτουργία στο Παρασκήνιο</h2>
+        <p>Η θέση, η ζωντανή παρακολούθηση και οι ειδοποιήσεις απόπλου ή άφιξης εξαρτώνται από τη συσκευή σας και το λειτουργικό της σύστημα. Το GPS μπορεί να είναι ανακριβές. Οι ενημερώσεις μπορεί να καθυστερήσουν ή να σταματήσουν όταν η οθόνη είναι κλειδωμένη, όταν είναι ενεργή η εξοικονόμηση μπαταρίας, όταν το λειτουργικό σύστημα κλείσει την εφαρμογή ή χωρίς σύνδεση δεδομένων. Μην βασίζεστε στην εφαρμογή για την αναφορά της θέσης σας ή για ειδοποιήσεις απόπλου και άφιξης.</p>
+      </div>
+      <div class="section">
+        <h2>9. Επίσημες Προειδοποιήσεις, Καιρός και Ώρες</h2>
+        <p>Οι επίσημες ναυτιλιακές προειδοποιήσεις διαβάζονται αυτόματα από τις δημόσιες δημοσιεύσεις των ναυτιλιακών αρχών και αντιστοιχίζονται στη διαδρομή σας. Μια προειδοποίηση μπορεί να παραλειφθεί ή να διαβαστεί λάθος, και ορισμένες μεταδίδονται μόνο μέσω NAVTEX και δεν δημοσιεύονται στο διαδίκτυο. Ελέγχετε πάντα τις επίσημες πηγές, το NAVTEX και το κανάλι 16 VHF πριν και κατά τη διάρκεια του πλου. Οι πληροφορίες καιρού είναι πρόγνωση και μπορεί να αλλάξουν. Η διάρκεια, η ώρα άφιξης και οι ώρες διέλευσης υπολογίζονται με σταθερή ταχύτητα και δεν λαμβάνουν υπόψη άνεμο, κύματα ή ρεύματα. Οι ώρες εμφανίζονται στην τοπική ώρα του αντίστοιχου τόπου.</p>
+      </div>
+    </div>
+
+    <!-- Italian Block -->
+    <div id="lang-it" class="lang-block">
+      <div class="version-meta">Versione: 2.8.0 | Ultimo Aggiornamento: 3 Novembre 2026</div>
+      <div class="section">
+        <h2>1. Responsabilità Finale del Comandante</h2>
+        <p>Il comandante/skipper è l'unico e finale responsabile di ogni decisione, della sicurezza della navigazione, dell'imbarcazione e delle persone a bordo. MyBoatAI non solleva il comandante da tali obblighi legali.</p>
+      </div>
+      <div class="section">
+        <h2>2. Assistenza IA e Natura Non Ufficiale</h2>
+        <p>MyBoatAI fornisce supporto consultivo automatizzato. Non costituisce un'autorità marittima ufficiale né un pilota certificato. Verificare sempre i dati forniti.</p>
+      </div>
+      <div class="section">
+        <h2>3. Carte Ufficiali e Strumenti Obbligatori</h2>
+        <p>Verificare costantemente la navigazione con carte nautiche ufficiali, plotter GPS/AIS approvati e radio VHF. Ove applicabile alla vostra imbarcazione, portare anche bussola, ecoscandaglio e radar. Non utilizzare dispositivi mobili come navigazione primaria.</p>
+      </div>
+      <div class="section">
+        <h2>4. Rispetto del Regolamento COLREG</h2>
+        <p>I comandanti devono rispettare rigorosamente le Norme internazionali per prevenire gli abbordi in mare (COLREG 1972), mantenendo una vedetta continua e una velocità di sicurezza.</p>
+      </div>
+      <div class="section">
+        <h2>5. Controlli Pre-Partenza e Emergenze</h2>
+        <p>Prima di salpare, controllare riserve di carburante, batterie, pompe di sentina, livelli olio, giubbotti di salvataggio per tutti a bordo, estintori e dotazioni di soccorso.</p>
+      </div>
+      <div class="section">
+        <h2>6. Rotte e distanze</h2>
+        <p>Le rotte tracciate dall'app sono percorsi approssimativi calcolati su una rete marittima semplificata. Non contengono informazioni su profondità, bassifondi, scogli, correnti, zone interdette, schemi di separazione del traffico o acque territoriali e possono passare vicino alla costa o a pericoli. La linea della rotta non deve essere seguita come rotta di navigazione. Distanze e tempi sono stime. Nelle rotte che cambiano Paese, le formalità nei porti di uscita e di ingresso sono responsabilità dello skipper.</p>
+      </div>
+      <div class="section">
+        <h2>7. IA, consigli tecnici e connettività</h2>
+        <p>L'assistente IA di MyBoatAI può commettere errori. Briefing di navigazione, informazioni meteo, stime e suggerimenti di manutenzione o tecnici devono essere verificati dallo skipper prima di farvi affidamento. Non sostituiscono gli avvisi meteo ufficiali, i manuali del costruttore o i tecnici nautici certificati. Molte funzioni richiedono una connessione a internet; in mare, in assenza di copertura, le funzioni di IA, meteo e mappe potrebbero non funzionare. Non affidarti all'app per informazioni critiche per la sicurezza.</p>
+      </div>
+      <div class="section">
+        <h2>8. Posizione, notifiche e funzionamento in background</h2>
+        <p>La posizione, il tracciamento in tempo reale e le notifiche di partenza o arrivo dipendono dal dispositivo e dal sistema operativo. Il GPS può essere impreciso. Gli aggiornamenti possono ritardare o interrompersi quando lo schermo è spento, quando il risparmio energetico è attivo, quando il sistema operativo chiude l'app o senza connessione dati. Non affidarti all'app per segnalare la tua posizione o per avvisarti di partenza o arrivo.</p>
+      </div>
+      <div class="section">
+        <h2>9. Avvisi Ufficiali, Meteo e Orari</h2>
+        <p>Gli avvisi ai naviganti ufficiali vengono letti automaticamente dalle pubblicazioni pubbliche delle autorità marittime e abbinati alla tua rotta. Un avviso può essere perso o letto in modo errato e alcuni avvisi sono trasmessi solo via radio NAVTEX e non vengono pubblicati online. Controlla sempre le fonti ufficiali, il NAVTEX e il canale VHF 16 prima e durante la navigazione. Le informazioni meteo sono previsioni e possono cambiare. Durata, orario di arrivo e orari di passaggio sono calcolati a velocità costante e non tengono conto di vento, onde o correnti. Gli orari sono indicati nell'ora locale del luogo interessato.</p>
+      </div>
+    </div>
+
+    <!-- Spanish Block -->
+    <div id="lang-es" class="lang-block">
+      <div class="version-meta">Versión: 2.8.0 | Última Actualización: 3 de Noviembre de 2026</div>
+      <div class="section">
+        <h2>1. Responsabilidad Final del Patrón</h2>
+        <p>El patrón/capitán tiene la responsabilidad final y exclusiva de todas las decisiones, la seguridad de navegación, el estado del barco y la tripulación. MyBoatAI no exime al patrón de sus obligaciones legales.</p>
+      </div>
+      <div class="section">
+        <h2>2. Asesoramiento IA y Ausencia de Autoridad Oficial</h2>
+        <p>MyBoatAI es una herramienta de asesoramiento automatizado. No es una autoridad marítima oficial ni un sistema de rescate. Siempre contraste los cálculos del asistente.</p>
+      </div>
+      <div class="section">
+        <h2>3. Cartas Oficiales e Instrumentos de Navegación</h2>
+        <p>Utilice siempre cartas náuticas hidrográficas oficiales, plotters GPS/AIS certificados y radio VHF. Si es aplicable a su embarcación, lleve también compás, sonda y radar. No confíe en dispositivos móviles como navegación principal.</p>
+      </div>
+      <div class="section">
+        <h2>4. Cumplimiento de Normas RIPA/COLREG</h2>
+        <p>Los patrones deben cumplir estrictamente el Reglamento Internacional para Prevenir los Abordajes en la Mar (COLREG 1972), manteniendo vigilancia eficaz permanente y velocidad de seguridad.</p>
+      </div>
+      <div class="section">
+        <h2>5. Comprobaciones Previas al Zarpe</h2>
+        <p>Antes de soltar amarras, compruebe combustible, baterías, bombas de achique, niveles de motor, chalecos salvavidas para todos los ocupantes, extintores y pirotecnia de socorro.</p>
+      </div>
+      <div class="section">
+        <h2>6. Rutas y distancias</h2>
+        <p>Las rutas que traza la aplicación son trayectos aproximados calculados sobre una red marítima simplificada. No contienen información sobre profundidad, bajos, rocas, corrientes, zonas restringidas, dispositivos de separación del tráfico ni aguas territoriales, y pueden pasar cerca de tierra o de peligros. La línea de la ruta no debe seguirse como derrota de navegación. Las distancias y los tiempos son estimaciones. En las rutas que cambian de país, los trámites en los puertos de salida y de entrada son responsabilidad del patrón.</p>
+      </div>
+      <div class="section">
+        <h2>7. IA, consejos técnicos y conectividad</h2>
+        <p>El asistente de IA de MyBoatAI puede cometer errores. Los informes de travesía, la información meteorológica, las estimaciones y las sugerencias de mantenimiento o técnicas deben ser verificados por el patrón antes de confiar en ellos. No sustituyen los avisos meteorológicos oficiales, los manuales del fabricante ni a los técnicos náuticos certificados. Muchas funciones requieren conexión a internet; en el mar, sin cobertura, las funciones de IA, meteorología y mapas pueden no funcionar. No dependas de la aplicación para información crítica para la seguridad.</p>
+      </div>
+      <div class="section">
+        <h2>8. Ubicación, notificaciones y funcionamiento en segundo plano</h2>
+        <p>La ubicación, el seguimiento en vivo y las notificaciones de salida o llegada dependen de su dispositivo y de su sistema operativo. El GPS puede ser impreciso. Las actualizaciones pueden retrasarse o detenerse con la pantalla apagada, con el ahorro de batería activado, cuando el sistema operativo cierra la aplicación o sin conexión de datos. No confíe en la aplicación para informar de su posición ni para avisarle de la salida o la llegada.</p>
+      </div>
+      <div class="section">
+        <h2>9. Avisos Oficiales, Meteorología y Horarios</h2>
+        <p>Los avisos a los navegantes oficiales se leen automáticamente de las publicaciones públicas de las autoridades marítimas y se cruzan con tu ruta. Un aviso puede omitirse o leerse mal, y algunos avisos solo se emiten por radio NAVTEX y no se publican en internet. Consulta siempre las fuentes oficiales, el NAVTEX y el canal 16 de VHF antes y durante la travesía. La información meteorológica es una previsión y puede cambiar. La duración, la hora de llegada y las horas de paso se calculan a velocidad constante y no tienen en cuenta viento, olas ni corrientes. Las horas se muestran en la hora local del lugar correspondiente.</p>
+      </div>
+    </div>
+
+    <!-- Finnish Block -->
+    <div id="lang-fi" class="lang-block">
+      <div class="version-meta">Versio: 2.8.0 | Viimeksi päivitetty: 3. marraskuuta 2026</div>
+      <div class="section">
+        <h2>1. Kipparin lopullinen vastuu</h2>
+        <p>Veneen kippari/kapteeni kantaa yksinomaisen ja lopullisen vastuun kaikista päätöksistä, navigointiturvallisuudesta, veneen merikelpoisuudesta ja kaikkien aluksella olevien turvallisuudesta. MyBoatAI-sovelluksen antamat tiedot eivät vapauta kipparia lakisääteisestä vastuusta.</p>
+      </div>
+      <div class="section">
+        <h2>2. Tekoälyn neuvoa-antava rooli</h2>
+        <p>MyBoatAI tarjoaa automaattista neuvoa-antavaa ohjausta. Se ei ole virallinen merenkulkuviranomainen tai pelastusjärjestelmä. Varmista aina laskelmat virallisista lähteistä.</p>
+      </div>
+      <div class="section">
+        <h2>3. Viralliset merikortit ja varusteet</h2>
+        <p>Käytä aina ajantasaisia virallisia merikortteja, GPS/AIS-karttaplotteria ja VHF-radiota. Jos se soveltuu veneeseesi, pidä mukana myös kompassi, kaikuluotain ja tutka. Älä luota mobiililaitteisiin ensisijaisina navigointivälineinä.</p>
+      </div>
+      <div class="section">
+        <h2>4. COLREG-sääntöjen noudattaminen</h2>
+        <p>Kipparien on aina noudatettava meriteiden väistämissääntöjä (COLREG 1972), pidettävä jatkuvaa tähystystä ja käytettävä olosuhteisiin sopivaa turvallista nopeutta.</p>
+      </div>
+      <div class="section">
+        <h2>5. Lähtöä edeltävät tarkastukset</h2>
+        <p>Tarkista ennen irrottautumista polttoaine- ja vesivarannot, pilssipumput, moottoriöljyt, sää, pelastusliivit kaikille aluksella olijoille, sammuttimet ja hätäraketit.</p>
+      </div>
+      <div class="section">
+        <h2>6. Reitit ja etäisyydet</h2>
+        <p>Sovelluksen piirtämät reitit ovat likimääräisiä, yksinkertaistetun meriverkon perusteella laskettuja kulkureittejä. Ne eivät sisällä tietoa syvyyksistä, matalikoista, kivikoista, virtauksista, rajoitusalueista, liikenteen erottelujärjestelmistä tai aluevesistä, ja ne voivat kulkea lähellä maata tai vaaroja. Reittiviivaa ei saa seurata navigointireittinä. Etäisyydet ja ajat ovat arvioita. Maata vaihtavilla reiteillä lähtö- ja tulosataman muodollisuudet ovat päällikön vastuulla.</p>
+      </div>
+      <div class="section">
+        <h2>7. Tekoäly, tekniset neuvot ja yhteydet</h2>
+        <p>MyBoatAI:n tekoälyavustaja voi tehdä virheitä. Päällikön on tarkistettava matkaselvitykset, säätiedot, arviot sekä huolto- ja tekniset ehdotukset ennen niihin luottamista. Ne eivät korvaa virallisia säävaroituksia, valmistajan ohjekirjoja tai valtuutettuja veneteknikkoja. Monet toiminnot vaativat internetyhteyden; merellä katvealueilla tekoäly-, sää- ja karttatoiminnot eivät välttämättä toimi. Älä luota sovellukseen turvallisuuden kannalta kriittisissä tiedoissa.</p>
+      </div>
+      <div class="section">
+        <h2>8. Sijainti, ilmoitukset ja taustatoiminta</h2>
+        <p>Sijainti, reaaliaikainen seuranta sekä lähtö- ja saapumisilmoitukset riippuvat laitteestasi ja sen käyttöjärjestelmästä. GPS voi olla epätarkka. Päivitykset voivat viivästyä tai pysähtyä, kun näyttö on pois päältä, kun akunsäästö on käytössä, kun käyttöjärjestelmä sulkee sovelluksen tai ilman datayhteyttä. Älä luota sovellukseen sijaintisi ilmoittamisessa tai lähdön ja saapumisen hälyttämisessä.</p>
+      </div>
+      <div class="section">
+        <h2>9. Viralliset Varoitukset, Sää ja Ajat</h2>
+        <p>Viralliset merivaroitukset luetaan automaattisesti merenkulkuviranomaisten julkisista julkaisuista ja yhdistetään reittiisi. Varoitus voi jäädä huomaamatta tai tulla luetuksi väärin, ja osa varoituksista lähetetään vain NAVTEX-radiolla eikä niitä julkaista verkossa. Tarkista aina viralliset lähteet, NAVTEX ja VHF-kanava 16 ennen matkaa ja sen aikana. Säätiedot ovat ennusteita ja voivat muuttua. Matkan kesto, saapumisaika ja ohitusajat lasketaan vakionopeudella eivätkä ne huomioi tuulta, aaltoja tai virtauksia. Ajat näytetään kyseisen paikan paikallisessa ajassa.</p>
+      </div>
+    </div>
+
+    <!-- Swedish Block -->
+    <div id="lang-sv" class="lang-block">
+      <div class="version-meta">Version: 2.8.0 | Senast uppdaterad: 3 november 2026</div>
+      <div class="section">
+        <h2>1. Befälhavarens slutgiltiga ansvar</h2>
+        <p>Fartygets befälhavare/kapten bär det ensamma och slutgiltiga ansvaret för alla beslut, navigationssäkerhet, fartygets sjövärdighet samt besättningens och passagerarnas säkerhet. MyBoatAI fritar inte befälhavaren från sitt juridiska ansvar.</p>
+      </div>
+      <div class="section">
+        <h2>2. Rådgivande AI-status</h2>
+        <p>MyBoatAI tillhandahåller automatiserad rådgivning. Det är inte en officiell sjöfartsmyndighet eller räddningstjänst. Verifiera alltid alla rådgivande beräkningar.</p>
+      </div>
+      <div class="section">
+        <h2>3. Officiella sjökort och utrustning</h2>
+        <p>Använd alltid officiella aktuella sjökort, certifierade GPS/AIS-navigatorer och VHF-radio. Om det passar din båt, ha även kompass, ekolod och radar ombord. Lita inte på mobila enheter som primär navigationsutrustning.</p>
+      </div>
+      <div class="section">
+        <h2>4. Efterlevnad av Sjölagen och COLREG</h2>
+        <p>Befälhavare måste strikt följa de internationella sjövägsreglerna (COLREG 1972), hålla ständig utkik och hålla säker fart anpassad till rådande sikt.</p>
+      </div>
+      <div class="section">
+        <h2>5. Kontroller före avgång</h2>
+        <p>Kontrollera bränsle- och färskvattenreserver, länspumpar, motorvätskor, väder- och barometertrender, räddningsvästar för alla ombord, brandsläckare och nödsignaler före avgång.</p>
+      </div>
+      <div class="section">
+        <h2>6. Rutter och avstånd</h2>
+        <p>Rutterna som appen ritar är ungefärliga färdvägar beräknade på ett förenklat sjönätverk. De innehåller ingen information om djup, grund, stenar, strömmar, förbjudna områden, trafiksepareringssystem eller territorialvatten och kan passera nära land eller faror. Ruttlinjen får inte följas som navigationskurs. Avstånd och tider är uppskattningar. På rutter som byter land ansvarar befälhavaren för ut- och inklarering i avgångs- och ankomsthamnen.</p>
+      </div>
+      <div class="section">
+        <h2>7. AI, tekniska råd och uppkoppling</h2>
+        <p>MyBoatAI:s AI-assistent kan göra fel. Färdgenomgångar, väderinformation, uppskattningar samt underhålls- och tekniska förslag måste kontrolleras av befälhavaren innan man förlitar sig på dem. De ersätter inte officiella vädervarningar, tillverkarens handböcker eller certifierade båttekniker. Många funktioner kräver internetuppkoppling; till sjöss utan täckning kanske AI-, väder- och kartfunktionerna inte fungerar. Förlita dig inte på appen för säkerhetskritisk information.</p>
+      </div>
+      <div class="section">
+        <h2>8. Plats, aviseringar och bakgrundsdrift</h2>
+        <p>Position, livespårning och avgångs- eller ankomstaviseringar beror på din enhet och dess operativsystem. GPS kan vara felaktig. Uppdateringar kan försenas eller upphöra när skärmen är av, när batterisparläget är aktivt, när operativsystemet stänger appen eller utan dataanslutning. Förlita dig inte på appen för att rapportera din position eller för att larma om avgång eller ankomst.</p>
+      </div>
+      <div class="section">
+        <h2>9. Officiella Varningar, Väder och Tider</h2>
+        <p>Officiella navigationsvarningar läses automatiskt från sjöfartsmyndigheternas offentliga publikationer och matchas mot din rutt. En varning kan missas eller läsas fel, och vissa varningar sänds endast via NAVTEX-radio och publiceras inte på nätet. Kontrollera alltid de officiella källorna, NAVTEX och VHF-kanal 16 före och under färden. Väderinformationen är en prognos och kan ändras. Restid, ankomsttid och passagetider beräknas med konstant fart och tar inte hänsyn till vind, vågor eller strömmar. Tiderna visas i den aktuella platsens lokala tid.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2026 MyBoatAI. Developed by uzaydenizlabs.
+  </footer>
+
+  <script>
+    function showLang(lang, btn) {
+      document.querySelectorAll('.lang-block').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.lang-btn').forEach(bt => bt.classList.remove('active'));
+      const block = document.getElementById(`lang-${lang}`);
+      if (block) block.classList.add('active');
+      if (btn) btn.classList.add('active');
+      document.documentElement.lang = lang;
+      localStorage.setItem('myboat_safety_lang', lang);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('myboat_safety_lang');
+      if (saved) {
+        const btn = document.querySelector(`.lang-btn[onclick*="'${saved}'"]`);
+        if (btn) showLang(saved, btn);
+      }
+    });
+  </script>
+</body>
+</html>
