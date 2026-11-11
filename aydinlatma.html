@@ -1,1 +1,510 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyBoatAI – Privacy Notice / Aydınlatma Metni</title>
+  <style>
+    :root { --bg:#0b131e; --card-bg:#132235; --text:#e2e8f0; --text-sub:#94a3b8; --accent:#ff7a45; --border:#1e3a5f; }
+    body { margin:0; padding:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background-color:var(--bg); color:var(--text); line-height:1.7; }
+    .container { max-width:800px; margin:0 auto; padding:32px 20px; }
+    header { text-align:center; margin-bottom:32px; }
+    .nav-links { margin-bottom:16px; font-size:14px; }
+    .nav-links a { color:var(--accent); text-decoration:none; margin:0 8px; }
+    .nav-links a:hover { text-decoration:underline; }
+    h1 { font-size:26px; margin-bottom:8px; color:#ffffff; }
+    .version-meta { font-size:13px; color:var(--text-sub); margin-bottom:28px; text-align:center; }
+    .lang-switcher { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:20px; }
+    .lang-btn { background:var(--card-bg); border:1px solid var(--border); color:var(--text-sub); padding:8px 16px; border-radius:20px; cursor:pointer; font-size:14px; font-weight:600; transition:all 0.2s ease; }
+    .lang-btn:hover,.lang-btn.active { background:var(--accent); color:#0b2a4a; border-color:var(--accent); }
+    .lang-block { display:none; }
+    .lang-block.active { display:block; }
+    .intro-box,.card { background:var(--card-bg); border:1px solid var(--border); border-radius:16px; padding:24px 28px; box-shadow:0 10px 25px rgba(0,0,0,0.3); margin-bottom:16px; }
+    h2 { font-size:17px; color:var(--accent); margin-top:0; margin-bottom:10px; }
+    p { font-size:15px; color:var(--text); margin:0 0 10px 0; }
+    p:last-child { margin-bottom:0; }
+    ul { margin:8px 0 10px 0; padding-left:20px; font-size:15px; color:var(--text); }
+    li { margin-bottom:4px; }
+    table { width:100%; border-collapse:collapse; margin:12px 0 4px 0; font-size:14px; }
+    th,td { border:1px solid var(--border); padding:8px 12px; text-align:left; vertical-align:top; }
+    th { background:rgba(255,122,69,0.15); color:var(--accent); font-weight:600; }
+    a { color:var(--accent); }
+    footer { text-align:center; margin-top:40px; color:var(--text-sub); font-size:13px; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="nav-links">
+      <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a> | <a href="safety.html">Safety Notice</a>
+    </div>
+    <h1>MyBoatAI – Privacy Notice</h1>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="showLang('tr',this)">Türkçe</button>
+      <button class="lang-btn" onclick="showLang('en',this)">English</button>
+      <button class="lang-btn" onclick="showLang('el',this)">Ελληνικά</button>
+      <button class="lang-btn" onclick="showLang('it',this)">Italiano</button>
+      <button class="lang-btn" onclick="showLang('es',this)">Español</button>
+      <button class="lang-btn" onclick="showLang('fi',this)">Suomi</button>
+      <button class="lang-btn" onclick="showLang('sv',this)">Svenska</button>
+    </div>
+  </header>
+
+<!-- ===== TURKISH ===== -->
+<div id="lang-tr" class="lang-block active">
+<div class="version-meta">Versiyon: 1.0.0 | Son güncelleme: 11 Kasım 2026</div>
+<div class="intro-box">Bu Aydınlatma Metni, MyBoatAI uygulamalarını kullanan kişilerin kişisel verilerinin işlenmesine ilişkin olarak 6698 sayılı KVKK madde 10 ve uygulanabildiği ölçüde GDPR kapsamında bilgilendirme amacıyla hazırlanmıştır.</div>
+<div class="card"><h2>1. Veri Sorumlusu</h2><p><strong>Uygulama:</strong> MyBoatAI &nbsp;|&nbsp; <strong>Geliştirici:</strong> uzaydenizlabs &nbsp;|&nbsp; <strong>Veri sorumlusu:</strong> Uzay Deniz &nbsp;|&nbsp; <strong>Ülke:</strong> Türkiye &nbsp;|&nbsp; <strong>İletişim:</strong> support@myboatai.com</p><p>AEA kullanıcıları bakımından GDPR da uygulanır. GDPR md. 27 kapsamında temsilci atanması gerektiğinde bilgiler burada yayımlanacaktır.</p></div>
+<div class="card"><h2>2. Toplanma Yöntemleri</h2><ul><li>Android mobil ve web (PWA) uygulaması</li><li>Hesap oluşturma ve kimlik doğrulama (Firebase / Google ile giriş)</li><li>Uygulama içi formlar ve ayarlar</li><li>GPS ve cihaz konum servisleri</li><li>Yapay zekâ asistanı ve sesli etkileşim</li><li>Geri bildirim ve destek formu</li><li>Kullanıcı tarafından oluşturulan özel destinasyonlar ve avlak paylaşım bağlantıları</li><li>Üçüncü taraf API ve SDK bileşenleri ile teknik erişim kayıtları</li></ul></div>
+<div class="card"><h2>3. İşlenen Veri Kategorileri</h2><p><strong>Kimlik ve iletişim:</strong> E-posta, Firebase UID, kimlik doğrulama bilgileri.</p><p><strong>Konum ve seyir:</strong> GPS koordinatları, rota noktaları, ev limanı, özel destinasyonlar.</p><p><strong>Teknik:</strong> IP adresi, cihaz modeli, uygulama sürümü, reklam tanımlayıcıları, bildirim izin durumu.</p><p><strong>Kullanıcı içerikleri (cihazda):</strong> Tekne bilgileri, motor saati, bakım kayıtları, belge son tarihleri, avlaklar, fotoğraflar, notlar, kontrol listeleri.</p><p><strong>Yapay zekâ:</strong> Metne dönüştürülen sesli girdi, asistana gönderilen sorular ve bağlamsal metin. Ses kaydedilmez.</p><p><strong>Hukuki kayıtlar:</strong> Belge kabul tarihi, versiyonu, kullanıcı kimliği.</p><p><strong>Geri bildirim:</strong> Mesaj metni, e-posta, ekler.</p><p>Özel nitelikli kişisel veri işlenmez.</p></div>
+<div class="card"><h2>4. İşlenme Amaçları ve Hukuki Dayanaklar</h2>
+<table><tr><th>İşleme faaliyeti</th><th>KVKK</th><th>GDPR</th></tr>
+<tr><td>Hesap ve kimlik doğrulama</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Konum, rota, ev limanı</td><td>5/1 rıza</td><td>6(1)(a)</td></tr>
+<tr><td>Hava ve deniz tahminleri</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Yakın restoran önerileri</td><td>5/1 rıza</td><td>6(1)(a)</td></tr>
+<tr><td>Yapay zekâ asistanı</td><td>5/1 rıza</td><td>6(1)(a)</td></tr>
+<tr><td>İşlem e-postaları</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Kabul kayıtları</td><td>5/2-ç</td><td>6(1)(c)</td></tr>
+<tr><td>Kişiselleştirilmiş reklam</td><td>5/1 rıza</td><td>6(1)(a)</td></tr>
+<tr><td>Kişiselleştirilmemiş reklam</td><td>5/2-f</td><td>6(1)(f)</td></tr>
+<tr><td>Geri bildirim ve güvenlik</td><td>5/2-f</td><td>6(1)(f)</td></tr>
+<tr><td>Bakım ve belge bildirimleri</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Avlak paylaşımı, bakım PDF</td><td>5/1 rıza</td><td>6(1)(a)</td></tr>
+</table></div>
+<div class="card"><h2>5. Kişisel Verilerin Aktarıldığı Taraflar</h2>
+<p><strong>A) Sunucusuna veri gönderilen hizmet sağlayıcılar</strong></p>
+<table><tr><th>Hizmet sağlayıcı</th><th>Paylaşılan veriler</th><th>İşleme rolü</th></tr>
+<tr><td>Google Firebase / Google Cloud</td><td>E-posta adresi, kullanıcı kimliği (UID), kabul kayıtları, teknik erişim logları</td><td>Veri işleyen</td></tr>
+<tr><td>Open-Meteo</td><td>Hava tahmini sorgularında kullanılan koordinatlar ve IP adresi</td><td>Bağımsız veri sorumlusu</td></tr>
+<tr><td>Google Places</td><td>Yalnızca hedef koordinatları (sunucumuz üzerinden; kullanıcı IP'si ve hesap verisi iletilmez)</td><td>Bağımsız veri sorumlusu</td></tr>
+<tr><td>Google Gemini API</td><td>İlgili yapay zekâ özelliğinin çalışması için gereken metin ve bağlamsal bilgi; e-posta ve UID asla gönderilmez</td><td>Veri işleyen</td></tr>
+<tr><td>Google AdMob</td><td>Reklam kimliği, IP adresi, kaba konum, cihaz ve reklam etkileşim verileri</td><td>Bağımsız veri sorumlusu</td></tr>
+<tr><td>Resend</td><td>E-posta adresi ve mesaj içeriği (işlem e-postaları ve yer önerisi iletimi)</td><td>Veri işleyen</td></tr>
+</table>
+<p style="margin-top:14px;"><strong>B) Yalnızca teknik bağlantı verisi alan altyapı servisleri</strong> (hesap verisi iletilmez)</p>
+<p>Cloudflare (harita kartları, bölge dosyaları, uyarı dosyaları), OpenSeaMap tile sunucusu (harita görüntüleme), Unsplash (destinasyon fotoğrafları), Google Fonts (yazı tipleri), GitHub Pages (yasal belgeler) — bu servisler yalnızca IP adresini ve talep edilen dosya adını alır.</p>
+<p style="margin-top:10px;"><strong>C) Sunucuya veri göndermeyen yerel bileşenler</strong></p>
+<p>Leaflet ve Protomaps cihazda çalışan yazılım kütüphaneleridir; herhangi bir sunucuya veri göndermezler. Cihazın kendi konuşma tanıma servisi sesi yerel olarak metne dönüştürür; ses ve metin uygulamaya iletilmez.</p>
+</div>
+<div class="card"><h2>6. Yurt Dışına Veri Aktarımı</h2>
+<p><strong>Türkiye'deki kullanıcılar – KVKK</strong></p>
+<p>MyBoatAI'ın kullandığı bazı hizmet sağlayıcılar Türkiye dışında veri işleyebilir. Bu kapsamda kişisel verilerin yurt dışına aktarılması, 6698 sayılı KVKK'nın 9. maddesinde öngörülen şartlar ve uygun aktarım mekanizmaları çerçevesinde gerçekleştirilir. Aktarım yapılan hizmet sağlayıcılar ve ilgili veri işleme faaliyetleri hakkında ayrıntılı bilgi için bu metnin 5. bölümünü inceleyebilir veya support@myboatai.com adresinden bilgi talep edebilirsiniz.</p>
+<p><strong>Avrupa kullanıcıları – GDPR</strong></p>
+<p>AEA dışına yapılan aktarımlarda GDPR md. 44–49 kapsamındaki mekanizmalar uygulanır. Google ve Resend gibi sağlayıcılarla imzalanmış Standart Sözleşme Maddeleri (SCC) mevcuttur. Her sağlayıcı için geçerli aktarım mekanizması ilgili sağlayıcının veri işleme koşullarında belirtilmektedir.</p>
+</div>
+<div class="card"><h2>7. Saklama Süreleri</h2>
+<table><tr><th>Veri</th><th>Süre</th></tr>
+<tr><td>Cihazdaki kullanıcı verileri</td><td>Silinene / uygulama kaldırılana kadar</td></tr>
+<tr><td>Hesap verisi</td><td>Hesap silinene kadar</td></tr>
+<tr><td>Kabul kayıtları</td><td>Hesap silinmesinden itibaren 10 yıl</td></tr>
+<tr><td>Geri bildirim e-postaları</td><td>İşlenmesinden itibaren 12 ay</td></tr>
+<tr><td>Sunucu logları</td><td>30 gün</td></tr>
+<tr><td>Reklam tanımlayıcıları</td><td>AdMob politikası ve kullanıcı tercihine göre</td></tr>
+<tr><td>AI sorguları</td><td>Google Gemini koşullarına göre</td></tr>
+</table></div>
+<div class="card"><h2>8. Güvenlik ve İhlal Bildirimi</h2><p>TLS şifreleme, güvenli kimlik doğrulama ve veritabanı erişim kuralları uygulanır. Veri ihlali halinde yetkili kurumlar ve etkilenen kullanıcılar yasal süreler içinde bilgilendirilir.</p></div>
+<div class="card"><h2>9. Çerezler ve SDK'lar</h2><p><strong>Web:</strong> Oturum yönetimi ve tercihler için çerez ve LocalStorage kullanılır. <strong>Android:</strong> Uygulama depolama, SDK'lar ve cihaz tanımlayıcıları kullanılabilir. AdMob SDK reklam tanımlayıcılarını işler. AEA/UK/İsviçre'de Google'ın rıza gereklilikleri karşılanır. Kişiselleştirilmiş reklam tercihi: Android → Ayarlar → Gizlilik → Reklamlar.</p></div>
+<div class="card"><h2>10. Yapay Zekâ</h2><p>Asistana gönderilen sorular ve bakım bilgileri Google Gemini API'ye iletilebilir. E-posta ve UID asla gönderilmez. Ücretsiz Gemini katmanı kullanılmaktadır; Google içerikleri modellerini geliştirmek için kullanabilir. Hassas bilgi gönderilmemesi önerilir. AI yanıtları seyir kararları için tek dayanak olarak kullanılamaz.</p></div>
+<div class="card"><h2>11. Haklarınız – KVKK</h2><p>KVKK md. 11: Verilerinize erişim, düzeltme, silme, aktarım bilgisi, otomatik kararlara itiraz ve zarar giderme talep hakkınız vardır. Başvuru: <strong>support@myboatai.com</strong> (30 gün). Şikâyet: <a href="https://www.kvkk.gov.tr" target="_blank">www.kvkk.gov.tr</a></p></div>
+<div class="card"><h2>12. Haklarınız – GDPR</h2><p>Erişim, düzeltme, silme, kısıtlama, taşınabilirlik, itiraz, rıza geri çekme ve otomatik kararlara ilişkin güvenceler. Şikâyet: Yetkili veri koruma makamı — Türkiye: <a href="https://www.kvkk.gov.tr" target="_blank">KVKK</a>.</p></div>
+<div class="card"><h2>13. İletişim ve Şikâyet</h2><p><strong>support@myboatai.com</strong> — KVKK başvuruları 30 gün, GDPR başvuruları 1 ay içinde yanıtlanır.</p><p>Yetkili denetim makamı: <a href="https://www.kvkk.gov.tr" target="_blank">Kişisel Verileri Koruma Kurumu (Türkiye)</a></p></div>
+<div class="card"><h2>14. Güncelleme</h2><p>Bu metin hizmet değişikliklerine göre güncellenebilir. Önemli değişiklikler uygulama içinde bildirilir. Son güncelleme: 11 Kasım 2026 | v1.0.0</p></div>
+</div>
+
+<!-- ===== ENGLISH ===== -->
+<div id="lang-en" class="lang-block">
+<div class="version-meta">Version: 1.0.0 | Last updated: November 11, 2026</div>
+<div class="intro-box">This Privacy Notice has been prepared under Article 10 of Turkish Law No. 6698 (KVKK) and, where applicable, the EU General Data Protection Regulation (GDPR), to inform users of MyBoatAI about the processing of their personal data.</div>
+<div class="card"><h2>1. Data Controller</h2><p><strong>App:</strong> MyBoatAI &nbsp;|&nbsp; <strong>Developer:</strong> uzaydenizlabs &nbsp;|&nbsp; <strong>Data controller:</strong> Uzay Deniz &nbsp;|&nbsp; <strong>Country:</strong> Türkiye &nbsp;|&nbsp; <strong>Contact:</strong> support@myboatai.com</p><p>For EEA users, GDPR also applies. Where appointment of an EU representative is required under GDPR Article 27, their details will be published here.</p></div>
+<div class="card"><h2>2. How Data Is Collected</h2><ul><li>Android mobile app and web (PWA)</li><li>Account creation and authentication (Firebase / Sign in with Google)</li><li>In-app forms and settings</li><li>GPS and device location services</li><li>AI assistant and voice interaction features</li><li>Feedback and support form</li><li>User-created custom destinations and fishing-spot share links</li><li>Third-party API and SDK components; server access logs</li></ul></div>
+<div class="card"><h2>3. Categories of Personal Data</h2><p><strong>Identity and contact:</strong> Email address, Firebase UID, authentication data.</p><p><strong>Location and navigation:</strong> GPS coordinates, route points, home berth, custom destinations.</p><p><strong>Technical:</strong> IP address, device model, app version, advertising identifiers, notification permission status.</p><p><strong>User-generated content (on device):</strong> Boat details, engine hours, maintenance logs, document expiry dates, fishing spots, photos, notes, checklists.</p><p><strong>AI:</strong> Voice-to-text output, queries sent to the assistant, contextual text. Audio is never recorded or stored.</p><p><strong>Legal records:</strong> Document acceptance date, version, user ID.</p><p><strong>Feedback:</strong> Message text, email address, attachments.</p><p>No special-category personal data is intentionally processed.</p></div>
+<div class="card"><h2>4. Purposes and Legal Bases</h2>
+<table><tr><th>Processing activity</th><th>KVKK</th><th>GDPR</th></tr>
+<tr><td>Account and authentication</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Location, routing, home berth</td><td>5/1 consent</td><td>6(1)(a)</td></tr>
+<tr><td>Weather and marine forecasts</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Nearby restaurant suggestions</td><td>5/1 consent</td><td>6(1)(a)</td></tr>
+<tr><td>AI assistant</td><td>5/1 consent</td><td>6(1)(a)</td></tr>
+<tr><td>Transactional emails</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Acceptance records</td><td>5/2-ç</td><td>6(1)(c)</td></tr>
+<tr><td>Personalised advertising</td><td>5/1 consent</td><td>6(1)(a)</td></tr>
+<tr><td>Non-personalised advertising</td><td>5/2-f</td><td>6(1)(f)</td></tr>
+<tr><td>Feedback and security</td><td>5/2-f</td><td>6(1)(f)</td></tr>
+<tr><td>Maintenance and document notifications</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Fishing-spot sharing, maintenance PDF</td><td>5/1 consent</td><td>6(1)(a)</td></tr>
+</table></div>
+<div class="card"><h2>5. Recipients of Personal Data</h2>
+<p><strong>A) Service providers that receive data on their servers</strong></p>
+<table><tr><th>Provider</th><th>Data shared</th><th>Processing role</th></tr>
+<tr><td>Google Firebase / Google Cloud</td><td>Email address, user ID (UID), acceptance records, technical access logs</td><td>Data processor</td></tr>
+<tr><td>Open-Meteo</td><td>Coordinates and IP address used in weather forecast queries</td><td>Independent data controller</td></tr>
+<tr><td>Google Places</td><td>Destination coordinates only (via our server; user IP and account data are not passed to Google)</td><td>Independent data controller</td></tr>
+<tr><td>Google Gemini API</td><td>Text and contextual information required for the AI feature; email and UID are never transmitted</td><td>Data processor</td></tr>
+<tr><td>Google AdMob</td><td>Advertising ID, IP address, coarse location, device and ad interaction data</td><td>Independent data controller</td></tr>
+<tr><td>Resend</td><td>Email address and message content (transactional emails and place-suggestion forwarding)</td><td>Data processor</td></tr>
+</table>
+<p style="margin-top:14px;"><strong>B) Infrastructure services that receive only technical connection data</strong> (no account data transmitted)</p>
+<p>Cloudflare (map tiles, region files, warning files), OpenSeaMap tile server (map rendering), Unsplash (destination photos), Google Fonts (typefaces), GitHub Pages (legal documents) — these services receive only the IP address and the name of the requested file.</p>
+<p style="margin-top:10px;"><strong>C) Local components that send no data to any server</strong></p>
+<p>Leaflet and Protomaps are software libraries that run entirely on the device; they transmit no data to any server. The device's own speech recognition service converts voice to text locally; neither the audio nor the resulting text is passed to the app.</p>
+</div>
+<div class="card"><h2>6. International Data Transfers</h2>
+<p><strong>Users in Türkiye – KVKK</strong></p>
+<p>Some service providers used by MyBoatAI may process data outside Türkiye. Such transfers are carried out within the framework of the conditions and appropriate transfer mechanisms set out in Article 9 of Law No. 6698 (KVKK). For detailed information about the providers to which data is transferred and the related processing activities, please refer to Section 5 of this notice or contact support@myboatai.com.</p>
+<p><strong>EEA users – GDPR</strong></p>
+<p>Transfers outside the EEA are made in accordance with the mechanisms under GDPR Articles 44–49. Standard Contractual Clauses (SCC) are in place with providers such as Google and Resend. The applicable transfer mechanism for each provider is set out in that provider's data processing terms.</p>
+</div>
+<div class="card"><h2>7. Retention</h2>
+<table><tr><th>Data</th><th>Period</th></tr>
+<tr><td>On-device user data</td><td>Until deleted or app uninstalled</td></tr>
+<tr><td>Account data</td><td>Until account deleted</td></tr>
+<tr><td>Acceptance records</td><td>10 years after account deletion</td></tr>
+<tr><td>Feedback emails</td><td>12 months after handling</td></tr>
+<tr><td>Server logs</td><td>30 days</td></tr>
+<tr><td>Advertising identifiers</td><td>Per AdMob policy and user preferences</td></tr>
+<tr><td>AI queries</td><td>Per Google Gemini terms</td></tr>
+</table></div>
+<div class="card"><h2>8. Security and Breach Notification</h2><p>TLS encryption, secure authentication and database access rules are applied. In the event of a breach likely to affect your rights, the competent authority and affected users will be notified without undue delay.</p></div>
+<div class="card"><h2>9. Cookies and SDKs</h2><p><strong>Web:</strong> Cookies and LocalStorage for session management and preferences only. <strong>Android:</strong> App storage, SDKs and device identifiers may be used. AdMob SDK processes advertising identifiers. Google consent requirements are met for EEA, UK and Switzerland. Personalised ad opt-out: Android → Settings → Privacy → Ads.</p></div>
+<div class="card"><h2>10. AI Features</h2><p>Queries and maintenance entries sent to the assistant may be forwarded to Google Gemini API. Email and UID are never transmitted. The free Gemini tier is used; Google may use submitted content to improve its models. Avoid including sensitive personal information. AI responses must not be the sole basis for navigation decisions.</p></div>
+<div class="card"><h2>11. Your Rights – KVKK</h2><p>Under KVKK Article 11: access, rectification, erasure, information on transfers, objection to automated decisions, and compensation for damages. Contact: <strong>support@myboatai.com</strong> (30 days). Complaint: <a href="https://www.kvkk.gov.tr" target="_blank">www.kvkk.gov.tr</a></p></div>
+<div class="card"><h2>12. Your Rights – GDPR</h2><p>Access, rectification, erasure, restriction, portability, objection, withdrawal of consent and safeguards regarding automated decisions. Complaint to your national supervisory authority — see Section 13.</p></div>
+<div class="card"><h2>13. Contact and Complaints</h2><p><strong>support@myboatai.com</strong> — KVKK requests within 30 days; GDPR requests within 1 month.</p><p>Supervisory authority (Türkiye): <a href="https://www.kvkk.gov.tr" target="_blank">Personal Data Protection Authority (KVKK)</a><br>EEA users may also contact the supervisory authority of their country of habitual residence, workplace or place of the alleged infringement.</p></div>
+<div class="card"><h2>14. Updates</h2><p>This notice may be updated when services or applicable law change. Material changes will be notified in the app. Last updated: November 11, 2026 | v1.0.0</p></div>
+</div>
+
+<!-- ===== GREEK ===== -->
+<div id="lang-el" class="lang-block">
+<div class="version-meta">Έκδοση: 1.0.0 | Τελευταία ενημέρωση: 11 Νοεμβρίου 2026</div>
+<div class="intro-box">Η παρούσα Ενημέρωση για την Προστασία Δεδομένων έχει εκδοθεί σύμφωνα με το άρθρο 10 του τουρκικού Νόμου 6698 (KVKK) και, όπου εφαρμόζεται, τον Γενικό Κανονισμό Προστασίας Δεδομένων (ΓΚΠΔ/GDPR), για την ενημέρωση των χρηστών του MyBoatAI σχετικά με την επεξεργασία των προσωπικών τους δεδομένων.</div>
+<div class="card"><h2>1. Υπεύθυνος Επεξεργασίας</h2><p><strong>Εφαρμογή:</strong> MyBoatAI &nbsp;|&nbsp; <strong>Προγραμματιστής:</strong> uzaydenizlabs &nbsp;|&nbsp; <strong>Υπεύθυνος επεξεργασίας:</strong> Uzay Deniz &nbsp;|&nbsp; <strong>Χώρα:</strong> Τουρκία &nbsp;|&nbsp; <strong>Επικοινωνία:</strong> support@myboatai.com</p><p>Για χρήστες ΕΟΧ εφαρμόζεται επίσης ο ΓΚΠΔ. Όπου απαιτείται ο ορισμός εκπροσώπου στην ΕΕ βάσει άρθρου 27 ΓΚΠΔ, τα στοιχεία του θα δημοσιευθούν εδώ.</p></div>
+<div class="card"><h2>2. Τρόποι Συλλογής</h2><ul><li>Android εφαρμογή και web (PWA)</li><li>Δημιουργία λογαριασμού και ταυτοποίηση (Firebase / Google)</li><li>Εντός εφαρμογής φόρμες και ρυθμίσεις</li><li>Υπηρεσίες GPS και τοποθεσίας συσκευής</li><li>Βοηθός τεχνητής νοημοσύνης και φωνητική αλληλεπίδραση</li><li>Φόρμα σχολίων και υποστήριξης</li><li>Προσαρμοσμένοι προορισμοί και σύνδεσμοι κοινής χρήσης αλιευτικών σημείων</li><li>Στοιχεία API/SDK τρίτων και τεχνικά αρχεία καταγραφής</li></ul></div>
+<div class="card"><h2>3. Κατηγορίες Δεδομένων</h2><p><strong>Ταυτότητα και επικοινωνία:</strong> Email, Firebase UID, δεδομένα ταυτοποίησης.</p><p><strong>Τοποθεσία και ναυσιπλοΐα:</strong> Συντεταγμένες GPS, σημεία διαδρομής, βάση σκάφους, προσαρμοσμένοι προορισμοί.</p><p><strong>Τεχνικά:</strong> Διεύθυνση IP, μοντέλο συσκευής, έκδοση εφαρμογής, αναγνωριστικά διαφημίσεων, κατάσταση άδειας ειδοποιήσεων.</p><p><strong>Περιεχόμενο χρήστη (στη συσκευή):</strong> Στοιχεία σκάφους, ώρες κινητήρα, αρχεία συντήρησης, ημερομηνίες λήξης εγγράφων, αλιευτικά σημεία, φωτογραφίες, σημειώσεις, λίστες ελέγχου.</p><p><strong>Τεχνητή νοημοσύνη:</strong> Κείμενο από φωνή, ερωτήματα στον βοηθό, συναφές κείμενο. Ο ήχος δεν αποθηκεύεται.</p><p><strong>Νομικά αρχεία:</strong> Ημερομηνία και έκδοση αποδοχής, ID χρήστη.</p><p><strong>Σχόλια:</strong> Κείμενο μηνύματος, email, συνημμένα.</p><p>Δεν επεξεργαζόμαστε ευαίσθητα δεδομένα.</p></div>
+<div class="card"><h2>4. Σκοποί και Νομικές Βάσεις</h2>
+<table><tr><th>Δραστηριότητα</th><th>KVKK</th><th>ΓΚΠΔ</th></tr>
+<tr><td>Λογαριασμός και ταυτοποίηση</td><td>5/2-c</td><td>6(1)(β)</td></tr>
+<tr><td>Τοποθεσία, διαδρομές, βάση</td><td>5/1 συγκ.</td><td>6(1)(α)</td></tr>
+<tr><td>Καιρός και θαλάσσιες προγνώσεις</td><td>5/2-c</td><td>6(1)(β)</td></tr>
+<tr><td>Προτάσεις εστιατορίων</td><td>5/1 συγκ.</td><td>6(1)(α)</td></tr>
+<tr><td>Βοηθός AI</td><td>5/1 συγκ.</td><td>6(1)(α)</td></tr>
+<tr><td>Email συναλλαγών</td><td>5/2-c</td><td>6(1)(β)</td></tr>
+<tr><td>Αρχεία αποδοχής</td><td>5/2-ç</td><td>6(1)(γ)</td></tr>
+<tr><td>Εξατομικευμένες διαφημίσεις</td><td>5/1 συγκ.</td><td>6(1)(α)</td></tr>
+<tr><td>Μη εξατομικευμένες διαφημίσεις</td><td>5/2-f</td><td>6(1)(στ)</td></tr>
+<tr><td>Σχόλια και ασφάλεια</td><td>5/2-f</td><td>6(1)(στ)</td></tr>
+<tr><td>Ειδοποιήσεις συντήρησης και εγγράφων</td><td>5/2-c</td><td>6(1)(β)</td></tr>
+<tr><td>Κοινή χρήση αλιευτικών, PDF</td><td>5/1 συγκ.</td><td>6(1)(α)</td></tr>
+</table></div>
+<div class="card"><h2>5. Αποδέκτες Προσωπικών Δεδομένων</h2>
+<p><strong>Α) Πάροχοι υπηρεσιών που λαμβάνουν δεδομένα στους διακομιστές τους</strong></p>
+<table><tr><th>Πάροχος</th><th>Δεδομένα που διαβιβάζονται</th><th>Ρόλος επεξεργασίας</th></tr>
+<tr><td>Google Firebase / Google Cloud</td><td>Διεύθυνση email, ID χρήστη (UID), αρχεία αποδοχής, τεχνικά logs πρόσβασης</td><td>Εκτελών την επεξεργασία</td></tr>
+<tr><td>Open-Meteo</td><td>Συντεταγμένες και IP για ερωτήματα καιρού</td><td>Ανεξάρτητος υπεύθυνος επεξεργασίας</td></tr>
+<tr><td>Google Places</td><td>Μόνο συντεταγμένες προορισμού (μέσω του διακομιστή μας· IP και στοιχεία λογαριασμού δεν διαβιβάζονται)</td><td>Ανεξάρτητος υπεύθυνος επεξεργασίας</td></tr>
+<tr><td>Google Gemini API</td><td>Κείμενο και πλαίσιο για τη λειτουργία AI· email και UID δεν αποστέλλονται ποτέ</td><td>Εκτελών την επεξεργασία</td></tr>
+<tr><td>Google AdMob</td><td>Αναγνωριστικό διαφήμισης, IP, κατά προσέγγιση τοποθεσία, δεδομένα αλληλεπίδρασης</td><td>Ανεξάρτητος υπεύθυνος επεξεργασίας</td></tr>
+<tr><td>Resend</td><td>Διεύθυνση email και περιεχόμενο μηνύματος (email συναλλαγών και προώθηση προτάσεων τοποθεσιών)</td><td>Εκτελών την επεξεργασία</td></tr>
+</table>
+<p style="margin-top:14px;"><strong>Β) Υπηρεσίες υποδομής που λαμβάνουν μόνο τεχνικά δεδομένα σύνδεσης</strong> (δεν διαβιβάζονται στοιχεία λογαριασμού)</p>
+<p>Cloudflare (πλακίδια χάρτη, αρχεία περιοχών, αρχεία προειδοποιήσεων), διακομιστής tiles OpenSeaMap (απόδοση χάρτη), Unsplash (φωτογραφίες προορισμών), Google Fonts (γραμματοσειρές), GitHub Pages (νομικά έγγραφα) — αυτές οι υπηρεσίες λαμβάνουν μόνο τη διεύθυνση IP και το όνομα του αρχείου που ζητήθηκε.</p>
+<p style="margin-top:10px;"><strong>Γ) Τοπικά στοιχεία που δεν αποστέλλουν δεδομένα σε κανέναν διακομιστή</strong></p>
+<p>Τα Leaflet και Protomaps είναι βιβλιοθήκες λογισμικού που εκτελούνται αποκλειστικά στη συσκευή· δεν μεταδίδουν δεδομένα σε κανέναν διακομιστή. Η υπηρεσία αναγνώρισης ομιλίας της συσκευής μετατρέπει τη φωνή σε κείμενο τοπικά· ούτε ο ήχος ούτε το κείμενο διαβιβάζονται στην εφαρμογή.</p>
+</div>
+<div class="card"><h2>6. Διεθνείς Διαβιβάσεις Δεδομένων</h2>
+<p><strong>Χρήστες στην Τουρκία – KVKK</strong></p>
+<p>Ορισμένοι πάροχοι υπηρεσιών που χρησιμοποιεί το MyBoatAI ενδέχεται να επεξεργάζονται δεδομένα εκτός Τουρκίας. Οι εν λόγω διαβιβάσεις πραγματοποιούνται στο πλαίσιο των προϋποθέσεων και των κατάλληλων μηχανισμών διαβίβασης που προβλέπονται στο άρθρο 9 του Νόμου 6698 (KVKK). Για λεπτομερείς πληροφορίες σχετικά με τους παρόχους στους οποίους διαβιβάζονται δεδομένα, ανατρέξτε στην Ενότητα 5 ή επικοινωνήστε με το support@myboatai.com.</p>
+<p><strong>Χρήστες ΕΟΧ – ΓΚΠΔ</strong></p>
+<p>Οι διαβιβάσεις εκτός ΕΟΧ πραγματοποιούνται σύμφωνα με τους μηχανισμούς των άρθρων 44–49 ΓΚΠΔ. Τυποποιημένες Συμβατικές Ρήτρες (SCC) έχουν συναφθεί με παρόχους όπως η Google και η Resend. Ο εφαρμοστέος μηχανισμός διαβίβασης για κάθε πάροχο αναφέρεται στους όρους επεξεργασίας δεδομένων του εν λόγω παρόχου.</p>
+</div>
+<div class="card"><h2>7. Χρόνοι Διατήρησης</h2>
+<table><tr><th>Δεδομένα</th><th>Διάστημα</th></tr>
+<tr><td>Δεδομένα στη συσκευή</td><td>Έως διαγραφή ή απεγκατάσταση</td></tr>
+<tr><td>Λογαριασμός</td><td>Έως διαγραφή λογαριασμού</td></tr>
+<tr><td>Αρχεία αποδοχής</td><td>10 χρόνια μετά τη διαγραφή</td></tr>
+<tr><td>Email σχολίων</td><td>12 μήνες μετά τη διεκπεραίωση</td></tr>
+<tr><td>Logs διακομιστή</td><td>30 ημέρες</td></tr>
+<tr><td>Αναγνωριστικά διαφημίσεων</td><td>Κατά πολιτική AdMob</td></tr>
+<tr><td>Ερωτήματα AI</td><td>Κατά όρους Google Gemini</td></tr>
+</table></div>
+<div class="card"><h2>8. Ασφάλεια και Παραβιάσεις</h2><p>TLS κρυπτογράφηση, ασφαλής ταυτοποίηση και κανόνες βάσης δεδομένων. Σε περίπτωση παραβίασης, η αρμόδια αρχή και οι χρήστες ενημερώνονται χωρίς αδικαιολόγητη καθυστέρηση.</p></div>
+<div class="card"><h2>9. Cookies και SDK</h2><p><strong>Web:</strong> Cookies και LocalStorage μόνο για συνεδρία και προτιμήσεις. <strong>Android:</strong> Αποθηκευτικός χώρος εφαρμογής, SDK, αναγνωριστικά συσκευής. AdMob SDK επεξεργάζεται αναγνωριστικά διαφημίσεων. Τηρούνται απαιτήσεις συγκατάθεσης Google για ΕΟΧ/ΗΒ/Ελβετία. Εξαίρεση εξατομικευμένων διαφημίσεων: Android → Ρυθμίσεις → Απόρρητο → Διαφημίσεις.</p></div>
+<div class="card"><h2>10. Τεχνητή Νοημοσύνη</h2><p>Ερωτήματα στον βοηθό διαβιβάζονται στο Google Gemini API. Email και UID δεν αποστέλλονται ποτέ. Χρησιμοποιείται η δωρεάν βαθμίδα. Αποφεύγετε την αποστολή ευαίσθητων δεδομένων. Οι απαντήσεις AI δεν αποτελούν μοναδική βάση για αποφάσεις ναυσιπλοΐας.</p></div>
+<div class="card"><h2>11. Δικαιώματά σας – KVKK</h2><p>Άρθρο 11 KVKK: πρόσβαση, διόρθωση, διαγραφή, πληροφορίες μεταβίβασης, αντίρρηση σε αυτοματοποιημένες αποφάσεις, αποζημίωση. Επικοινωνία: <strong>support@myboatai.com</strong> (30 ημέρες). Καταγγελία: <a href="https://www.kvkk.gov.tr" target="_blank">www.kvkk.gov.tr</a></p></div>
+<div class="card"><h2>12. Δικαιώματά σας – ΓΚΠΔ</h2><p>Πρόσβαση, διόρθωση, διαγραφή, περιορισμός, φορητότητα, αντίρρηση, ανάκληση συγκατάθεσης. Καταγγελία στην αρμόδια εποπτική αρχή — βλ. Ενότητα 13.</p></div>
+<div class="card"><h2>13. Επικοινωνία και Καταγγελίες</h2><p><strong>support@myboatai.com</strong> — KVKK: 30 ημέρες · ΓΚΠΔ: 1 μήνας.</p><p>Εποπτική αρχή Ελλάδας: <a href="https://www.dpa.gr" target="_blank">Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (ΑΠΔΠΧ)</a><br>Τουρκία: <a href="https://www.kvkk.gov.tr" target="_blank">KVKK</a><br>Χρήστες ΕΟΧ μπορούν επίσης να απευθυνθούν στην αρχή της χώρας διαμονής ή εργασίας τους.</p></div>
+<div class="card"><h2>14. Ενημερώσεις</h2><p>Η παρούσα ενημέρωση μπορεί να αναθεωρηθεί. Σημαντικές αλλαγές γνωστοποιούνται εντός της εφαρμογής. Τελευταία ενημέρωση: 11 Νοεμβρίου 2026 | v1.0.0</p></div>
+</div>
+
+<!-- ===== ITALIAN ===== -->
+<div id="lang-it" class="lang-block">
+<div class="version-meta">Versione: 1.0.0 | Ultimo aggiornamento: 11 novembre 2026</div>
+<div class="intro-box">La presente Informativa sul trattamento dei dati personali è stata redatta ai sensi dell'articolo 10 della Legge turca n. 6698 (KVKK) e, ove applicabile, del Regolamento Generale sulla Protezione dei Dati (GDPR), per informare gli utenti di MyBoatAI sul trattamento dei loro dati personali.</div>
+<div class="card"><h2>1. Titolare del Trattamento</h2><p><strong>App:</strong> MyBoatAI &nbsp;|&nbsp; <strong>Sviluppatore:</strong> uzaydenizlabs &nbsp;|&nbsp; <strong>Titolare:</strong> Uzay Deniz &nbsp;|&nbsp; <strong>Paese:</strong> Turchia &nbsp;|&nbsp; <strong>Contatto:</strong> support@myboatai.com</p><p>Per gli utenti del SEE si applica anche il GDPR. Ove richiesta la nomina di un rappresentante UE ai sensi dell'art. 27 GDPR, i relativi dati saranno pubblicati qui.</p></div>
+<div class="card"><h2>2. Modalità di Raccolta</h2><ul><li>App mobile Android e web (PWA)</li><li>Creazione account e autenticazione (Firebase / Google)</li><li>Moduli e impostazioni in-app</li><li>Servizi GPS e posizione del dispositivo</li><li>Assistente IA e interazione vocale</li><li>Modulo feedback e assistenza</li><li>Destinazioni personalizzate e link di condivisione punti di pesca</li><li>Componenti API/SDK di terze parti e log di accesso tecnico</li></ul></div>
+<div class="card"><h2>3. Categorie di Dati</h2><p><strong>Identità e contatti:</strong> Email, Firebase UID, dati di autenticazione.</p><p><strong>Posizione e navigazione:</strong> Coordinate GPS, punti di rotta, porto base, destinazioni personalizzate.</p><p><strong>Tecnici:</strong> Indirizzo IP, modello dispositivo, versione app, identificativi pubblicitari, stato permesso notifiche.</p><p><strong>Contenuti utente (sul dispositivo):</strong> Dati barca, ore motore, registri manutenzione, scadenze documenti, punti di pesca, foto, note, checklist.</p><p><strong>IA:</strong> Testo da voce, domande all'assistente, testo contestuale. L'audio non viene mai registrato.</p><p><strong>Registri legali:</strong> Data e versione accettazione, ID utente.</p><p><strong>Feedback:</strong> Testo messaggio, email, allegati.</p><p>Non vengono trattati dati di categoria speciale.</p></div>
+<div class="card"><h2>4. Finalità e Basi Giuridiche</h2>
+<table><tr><th>Attività</th><th>KVKK</th><th>GDPR</th></tr>
+<tr><td>Account e autenticazione</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Posizione, rotte, porto base</td><td>5/1 cons.</td><td>6(1)(a)</td></tr>
+<tr><td>Previsioni meteo e marine</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Suggerimenti ristoranti</td><td>5/1 cons.</td><td>6(1)(a)</td></tr>
+<tr><td>Assistente AI</td><td>5/1 cons.</td><td>6(1)(a)</td></tr>
+<tr><td>Email transazionali</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Registri di accettazione</td><td>5/2-ç</td><td>6(1)(c)</td></tr>
+<tr><td>Pubblicità personalizzata</td><td>5/1 cons.</td><td>6(1)(a)</td></tr>
+<tr><td>Pubblicità non personalizzata</td><td>5/2-f</td><td>6(1)(f)</td></tr>
+<tr><td>Feedback e sicurezza</td><td>5/2-f</td><td>6(1)(f)</td></tr>
+<tr><td>Notifiche manutenzione e documenti</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Condivisione pesca, PDF manutenzione</td><td>5/1 cons.</td><td>6(1)(a)</td></tr>
+</table></div>
+<div class="card"><h2>5. Destinatari dei Dati Personali</h2>
+<p><strong>A) Fornitori di servizi che ricevono dati sui loro server</strong></p>
+<table><tr><th>Fornitore</th><th>Dati trasmessi</th><th>Ruolo nel trattamento</th></tr>
+<tr><td>Google Firebase / Google Cloud</td><td>Indirizzo email, ID utente (UID), registri di accettazione, log tecnici di accesso</td><td>Responsabile del trattamento</td></tr>
+<tr><td>Open-Meteo</td><td>Coordinate e indirizzo IP utilizzati nelle query meteo</td><td>Titolare autonomo del trattamento</td></tr>
+<tr><td>Google Places</td><td>Solo coordinate della destinazione (tramite il nostro server; IP e dati account non vengono trasmessi a Google)</td><td>Titolare autonomo del trattamento</td></tr>
+<tr><td>Google Gemini API</td><td>Testo e informazioni contestuali necessari per la funzione AI; email e UID non vengono mai trasmessi</td><td>Responsabile del trattamento</td></tr>
+<tr><td>Google AdMob</td><td>ID pubblicitario, indirizzo IP, posizione approssimativa, dati di interazione con gli annunci</td><td>Titolare autonomo del trattamento</td></tr>
+<tr><td>Resend</td><td>Indirizzo email e contenuto del messaggio (email transazionali e inoltro suggerimenti luoghi)</td><td>Responsabile del trattamento</td></tr>
+</table>
+<p style="margin-top:14px;"><strong>B) Servizi infrastrutturali che ricevono solo dati tecnici di connessione</strong> (nessun dato account trasmesso)</p>
+<p>Cloudflare (tile mappe, file regionali, file avvisi), server tile OpenSeaMap (rendering mappe), Unsplash (foto destinazioni), Google Fonts (caratteri tipografici), GitHub Pages (documenti legali) — questi servizi ricevono solo l'indirizzo IP e il nome del file richiesto.</p>
+<p style="margin-top:10px;"><strong>C) Componenti locali che non inviano dati ad alcun server</strong></p>
+<p>Leaflet e Protomaps sono librerie software che girano interamente sul dispositivo; non trasmettono dati ad alcun server. Il servizio di riconoscimento vocale del dispositivo converte la voce in testo in locale; né l'audio né il testo risultante vengono trasmessi all'app.</p>
+</div>
+<div class="card"><h2>6. Trasferimenti Internazionali di Dati</h2>
+<p><strong>Utenti in Turchia – KVKK</strong></p>
+<p>Alcuni fornitori di servizi utilizzati da MyBoatAI possono trattare dati al di fuori della Turchia. Tali trasferimenti vengono effettuati nel rispetto delle condizioni e dei meccanismi di trasferimento appropriati previsti dall'articolo 9 della Legge n. 6698 (KVKK). Per informazioni dettagliate sui fornitori a cui vengono trasferiti i dati, consultare la Sezione 5 oppure contattare support@myboatai.com.</p>
+<p><strong>Utenti SEE – GDPR</strong></p>
+<p>I trasferimenti al di fuori del SEE vengono effettuati in conformità ai meccanismi previsti dagli articoli 44–49 del GDPR. Sono in vigore Clausole Contrattuali Standard (SCC) con fornitori quali Google e Resend. Il meccanismo di trasferimento applicabile a ciascun fornitore è indicato nei relativi termini di trattamento dei dati.</p>
+</div>
+<div class="card"><h2>7. Conservazione</h2>
+<table><tr><th>Dati</th><th>Periodo</th></tr>
+<tr><td>Dati utente sul dispositivo</td><td>Fino a cancellazione o disinstallazione</td></tr>
+<tr><td>Account</td><td>Fino alla cancellazione dell'account</td></tr>
+<tr><td>Registri di accettazione</td><td>10 anni dalla cancellazione account</td></tr>
+<tr><td>Email feedback</td><td>12 mesi dalla gestione</td></tr>
+<tr><td>Log server</td><td>30 giorni</td></tr>
+<tr><td>Identificativi pubblicitari</td><td>Secondo politica AdMob</td></tr>
+<tr><td>Query AI</td><td>Secondo termini Google Gemini</td></tr>
+</table></div>
+<div class="card"><h2>8. Sicurezza e Violazioni</h2><p>Crittografia TLS, autenticazione sicura e regole database. In caso di violazione che incida sui tuoi diritti, l'autorità competente e gli utenti interessati saranno notificati senza ingiustificato ritardo.</p></div>
+<div class="card"><h2>9. Cookie e SDK</h2><p><strong>Web:</strong> Cookie e LocalStorage solo per sessione e preferenze. <strong>Android:</strong> Spazio di archiviazione app, SDK e identificativi dispositivo. AdMob SDK tratta identificativi pubblicitari. Requisiti di consenso Google rispettati per SEE, UK e Svizzera. Opt-out pubblicità personalizzata: Android → Impostazioni → Privacy → Annunci.</p></div>
+<div class="card"><h2>10. Funzioni IA</h2><p>Le domande all'assistente vengono inoltrate a Google Gemini API. Email e UID non vengono mai trasmessi. Si utilizza il livello gratuito Gemini. Non includere informazioni sensibili. Le risposte IA non devono essere l'unica base per decisioni di navigazione.</p></div>
+<div class="card"><h2>11. Diritti – KVKK</h2><p>Art. 11 KVKK: accesso, rettifica, cancellazione, informazioni sui trasferimenti, opposizione a decisioni automatizzate, risarcimento danni. Contatto: <strong>support@myboatai.com</strong> (30 giorni). Reclamo: <a href="https://www.kvkk.gov.tr" target="_blank">www.kvkk.gov.tr</a></p></div>
+<div class="card"><h2>12. Diritti – GDPR</h2><p>Accesso, rettifica, cancellazione, limitazione, portabilità, opposizione, revoca del consenso. Reclamo all'autorità di controllo competente — vedi Sezione 13.</p></div>
+<div class="card"><h2>13. Contatti e Reclami</h2><p><strong>support@myboatai.com</strong> — KVKK: 30 giorni · GDPR: 1 mese.</p><p>Autorità di controllo Italia: <a href="https://www.garanteprivacy.it" target="_blank">Garante per la protezione dei dati personali</a><br>Turchia: <a href="https://www.kvkk.gov.tr" target="_blank">KVKK</a><br>Gli utenti SEE possono rivolgersi all'autorità del proprio paese di residenza o di lavoro.</p></div>
+<div class="card"><h2>14. Aggiornamenti</h2><p>La presente informativa può essere aggiornata. Le modifiche sostanziali saranno comunicate nell'app. Ultimo aggiornamento: 11 novembre 2026 | v1.0.0</p></div>
+</div>
+
+<!-- ===== SPANISH ===== -->
+<div id="lang-es" class="lang-block">
+<div class="version-meta">Versión: 1.0.0 | Última actualización: 11 de noviembre de 2026</div>
+<div class="intro-box">Este Aviso de Privacidad ha sido elaborado de conformidad con el artículo 10 de la Ley turca n.º 6698 (KVKK) y, en su caso, el Reglamento General de Protección de Datos (RGPD), para informar a los usuarios de MyBoatAI sobre el tratamiento de sus datos personales.</div>
+<div class="card"><h2>1. Responsable del Tratamiento</h2><p><strong>App:</strong> MyBoatAI &nbsp;|&nbsp; <strong>Desarrollador:</strong> uzaydenizlabs &nbsp;|&nbsp; <strong>Responsable:</strong> Uzay Deniz &nbsp;|&nbsp; <strong>País:</strong> Turquía &nbsp;|&nbsp; <strong>Contacto:</strong> support@myboatai.com</p><p>Para usuarios del EEE también se aplica el RGPD. Cuando sea obligatorio designar un representante en la UE conforme al art. 27 RGPD, sus datos se publicarán aquí.</p></div>
+<div class="card"><h2>2. Métodos de Recogida</h2><ul><li>App Android y web (PWA)</li><li>Creación de cuenta y autenticación (Firebase / Google)</li><li>Formularios y ajustes en la app</li><li>Servicios GPS y de ubicación del dispositivo</li><li>Asistente de IA e interacción por voz</li><li>Formulario de comentarios y soporte</li><li>Destinos personalizados y enlaces para compartir puntos de pesca</li><li>Componentes API/SDK de terceros y registros de acceso técnico</li></ul></div>
+<div class="card"><h2>3. Categorías de Datos</h2><p><strong>Identidad y contacto:</strong> Correo, Firebase UID, datos de autenticación.</p><p><strong>Ubicación y navegación:</strong> Coordenadas GPS, puntos de ruta, puerto base, destinos personalizados.</p><p><strong>Técnicos:</strong> IP, modelo de dispositivo, versión de app, identificadores publicitarios, estado del permiso de notificaciones.</p><p><strong>Contenido del usuario (en dispositivo):</strong> Datos de la embarcación, horas de motor, registros de mantenimiento, fechas de vencimiento de documentos, puntos de pesca, fotos, notas, listas de control.</p><p><strong>IA:</strong> Texto convertido de voz, consultas al asistente, texto contextual. El audio nunca se graba.</p><p><strong>Registros legales:</strong> Fecha y versión de aceptación, ID de usuario.</p><p><strong>Comentarios:</strong> Texto del mensaje, correo, adjuntos.</p><p>No se tratan datos de categorías especiales.</p></div>
+<div class="card"><h2>4. Finalidades y Bases Legales</h2>
+<table><tr><th>Actividad</th><th>KVKK</th><th>RGPD</th></tr>
+<tr><td>Cuenta y autenticación</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Ubicación, rutas, puerto base</td><td>5/1 cons.</td><td>6(1)(a)</td></tr>
+<tr><td>Previsiones meteorológicas y marinas</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Sugerencias de restaurantes</td><td>5/1 cons.</td><td>6(1)(a)</td></tr>
+<tr><td>Asistente IA</td><td>5/1 cons.</td><td>6(1)(a)</td></tr>
+<tr><td>Correos transaccionales</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Registros de aceptación</td><td>5/2-ç</td><td>6(1)(c)</td></tr>
+<tr><td>Publicidad personalizada</td><td>5/1 cons.</td><td>6(1)(a)</td></tr>
+<tr><td>Publicidad no personalizada</td><td>5/2-f</td><td>6(1)(f)</td></tr>
+<tr><td>Comentarios y seguridad</td><td>5/2-f</td><td>6(1)(f)</td></tr>
+<tr><td>Notificaciones mantenimiento y documentos</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Compartir pesca, PDF mantenimiento</td><td>5/1 cons.</td><td>6(1)(a)</td></tr>
+</table></div>
+<div class="card"><h2>5. Destinatarios de los Datos Personales</h2>
+<p><strong>A) Proveedores de servicios que reciben datos en sus servidores</strong></p>
+<table><tr><th>Proveedor</th><th>Datos transmitidos</th><th>Papel en el tratamiento</th></tr>
+<tr><td>Google Firebase / Google Cloud</td><td>Dirección de correo, ID de usuario (UID), registros de aceptación, logs técnicos de acceso</td><td>Encargado del tratamiento</td></tr>
+<tr><td>Open-Meteo</td><td>Coordenadas e IP utilizadas en las consultas meteorológicas</td><td>Responsable independiente</td></tr>
+<tr><td>Google Places</td><td>Solo coordenadas del destino (a través de nuestro servidor; IP y datos de cuenta no se transmiten a Google)</td><td>Responsable independiente</td></tr>
+<tr><td>Google Gemini API</td><td>Texto e información contextual necesarios para la función IA; correo y UID nunca se transmiten</td><td>Encargado del tratamiento</td></tr>
+<tr><td>Google AdMob</td><td>ID publicitario, dirección IP, ubicación aproximada, datos de interacción con anuncios</td><td>Responsable independiente</td></tr>
+<tr><td>Resend</td><td>Dirección de correo y contenido del mensaje (correos transaccionales y reenvío de sugerencias de lugares)</td><td>Encargado del tratamiento</td></tr>
+</table>
+<p style="margin-top:14px;"><strong>B) Servicios de infraestructura que reciben solo datos técnicos de conexión</strong> (no se transmiten datos de cuenta)</p>
+<p>Cloudflare (teselas de mapa, archivos regionales, archivos de avisos), servidor de teselas OpenSeaMap (renderizado de mapas), Unsplash (fotos de destinos), Google Fonts (tipografías), GitHub Pages (documentos legales) — estos servicios reciben únicamente la dirección IP y el nombre del archivo solicitado.</p>
+<p style="margin-top:10px;"><strong>C) Componentes locales que no envían datos a ningún servidor</strong></p>
+<p>Leaflet y Protomaps son bibliotecas de software que se ejecutan íntegramente en el dispositivo; no transmiten datos a ningún servidor. El servicio de reconocimiento de voz del dispositivo convierte la voz en texto de forma local; ni el audio ni el texto resultante se transmiten a la app.</p>
+</div>
+<div class="card"><h2>6. Transferencias Internacionales de Datos</h2>
+<p><strong>Usuarios en Turquía – KVKK</strong></p>
+<p>Algunos proveedores de servicios utilizados por MyBoatAI pueden tratar datos fuera de Turquía. Dichas transferencias se realizan en el marco de las condiciones y los mecanismos de transferencia adecuados previstos en el artículo 9 de la Ley n.º 6698 (KVKK). Para información detallada sobre los proveedores a los que se transfieren datos, consulte la Sección 5 o contacte con support@myboatai.com.</p>
+<p><strong>Usuarios del EEE – RGPD</strong></p>
+<p>Las transferencias fuera del EEE se realizan de conformidad con los mecanismos previstos en los artículos 44–49 del RGPD. Se han suscrito Cláusulas Contractuales Tipo (SCC) con proveedores como Google y Resend. El mecanismo de transferencia aplicable a cada proveedor se indica en los términos de tratamiento de datos de dicho proveedor.</p>
+</div>
+<div class="card"><h2>7. Conservación</h2>
+<table><tr><th>Datos</th><th>Período</th></tr>
+<tr><td>Datos de usuario en dispositivo</td><td>Hasta eliminación o desinstalación</td></tr>
+<tr><td>Cuenta</td><td>Hasta eliminación de la cuenta</td></tr>
+<tr><td>Registros de aceptación</td><td>10 años tras la eliminación de la cuenta</td></tr>
+<tr><td>Correos de comentarios</td><td>12 meses tras la gestión</td></tr>
+<tr><td>Logs del servidor</td><td>30 días</td></tr>
+<tr><td>Identificadores publicitarios</td><td>Según política AdMob</td></tr>
+<tr><td>Consultas IA</td><td>Según términos Google Gemini</td></tr>
+</table></div>
+<div class="card"><h2>8. Seguridad y Brechas</h2><p>Cifrado TLS, autenticación segura y reglas de base de datos. En caso de brecha que afecte sus derechos, la autoridad competente y los usuarios afectados serán notificados sin demora indebida.</p></div>
+<div class="card"><h2>9. Cookies y SDK</h2><p><strong>Web:</strong> Cookies y LocalStorage solo para sesión y preferencias. <strong>Android:</strong> Almacenamiento de app, SDK e identificadores de dispositivo. AdMob SDK trata identificadores publicitarios. Requisitos de consentimiento de Google para EEE, UK y Suiza. Opt-out publicidad personalizada: Android → Ajustes → Privacidad → Anuncios.</p></div>
+<div class="card"><h2>10. Funciones de IA</h2><p>Las consultas al asistente se reenvían a Google Gemini API. El correo y el UID nunca se transmiten. Se usa el nivel gratuito de Gemini. No incluya información sensible. Las respuestas de IA no deben ser la única base para decisiones de navegación.</p></div>
+<div class="card"><h2>11. Sus Derechos – KVKK</h2><p>Art. 11 KVKK: acceso, rectificación, supresión, información sobre transferencias, oposición a decisiones automatizadas, indemnización. Contacto: <strong>support@myboatai.com</strong> (30 días). Reclamación: <a href="https://www.kvkk.gov.tr" target="_blank">www.kvkk.gov.tr</a></p></div>
+<div class="card"><h2>12. Sus Derechos – RGPD</h2><p>Acceso, rectificación, supresión, limitación, portabilidad, oposición, retirada del consentimiento. Reclamación ante la autoridad de control competente — ver Sección 13.</p></div>
+<div class="card"><h2>13. Contacto y Reclamaciones</h2><p><strong>support@myboatai.com</strong> — KVKK: 30 días · RGPD: 1 mes.</p><p>Autoridad de control España: <a href="https://www.aepd.es" target="_blank">Agencia Española de Protección de Datos (AEPD)</a><br>Turquía: <a href="https://www.kvkk.gov.tr" target="_blank">KVKK</a><br>Los usuarios del EEE pueden dirigirse también a la autoridad de su país de residencia o trabajo.</p></div>
+<div class="card"><h2>14. Actualizaciones</h2><p>Este aviso puede actualizarse. Los cambios importantes se notificarán en la app. Última actualización: 11 de noviembre de 2026 | v1.0.0</p></div>
+</div>
+
+<!-- ===== FINNISH ===== -->
+<div id="lang-fi" class="lang-block">
+<div class="version-meta">Versio: 1.0.0 | Viimeksi päivitetty: 11. marraskuuta 2026</div>
+<div class="intro-box">Tämä rekisteriseloste on laadittu Turkin lain nro 6698 (KVKK) 10 artiklan ja soveltuvin osin EU:n yleisen tietosuoja-asetuksen (GDPR) mukaisesti MyBoatAI-sovelluksen käyttäjien henkilötietojen käsittelystä tiedottamiseksi.</div>
+<div class="card"><h2>1. Rekisterinpitäjä</h2><p><strong>Sovellus:</strong> MyBoatAI &nbsp;|&nbsp; <strong>Kehittäjä:</strong> uzaydenizlabs &nbsp;|&nbsp; <strong>Rekisterinpitäjä:</strong> Uzay Deniz &nbsp;|&nbsp; <strong>Maa:</strong> Turkki &nbsp;|&nbsp; <strong>Yhteydenotot:</strong> support@myboatai.com</p><p>ETA-alueen käyttäjiin sovelletaan myös GDPR:ää. Mikäli GDPR:n 27 artiklan mukainen EU-edustajan nimeäminen on pakollista, edustajan tiedot julkaistaan tässä.</p></div>
+<div class="card"><h2>2. Tietojen Keräystavat</h2><ul><li>Android-mobiilisovellus ja web (PWA)</li><li>Tilin luominen ja todennus (Firebase / Google-kirjautuminen)</li><li>Sovelluksen sisäiset lomakkeet ja asetukset</li><li>GPS ja laitteen sijaintipalvelut</li><li>Tekoälyavustaja ja äänivuorovaikutus</li><li>Palaute- ja tukylomake</li><li>Käyttäjän luomat mukautetut kohteet ja kalastuspaikkojen jakolinkit</li><li>Kolmansien osapuolten API/SDK-komponentit ja tekniset käyttölokit</li></ul></div>
+<div class="card"><h2>3. Henkilötietoluokat</h2><p><strong>Henkilöllisyys ja yhteystiedot:</strong> Sähköposti, Firebase UID, todennustiedot.</p><p><strong>Sijainti ja navigointi:</strong> GPS-koordinaatit, reittipisteet, kotisatama, mukautetut kohteet.</p><p><strong>Tekniset tiedot:</strong> IP-osoite, laitteen malli, sovelluksen versio, mainostunnisteet, ilmoituslupastatus.</p><p><strong>Käyttäjän luoma sisältö (laitteella):</strong> Venetiedot, moottorin tunnit, huoltokirjaukset, asiakirjojen viimeistymispäivät, kalapaikat, valokuvat, muistiinpanot, tarkistuslistat.</p><p><strong>Tekoäly:</strong> Puhetta tekstiksi muunnettu syöte, avustajalle lähetetyt kyselyt, kontekstuaalinen teksti. Ääntä ei tallenneta.</p><p><strong>Oikeudelliset kirjaukset:</strong> Hyväksymisen päivämäärä ja versio, käyttäjätunnus.</p><p><strong>Palaute:</strong> Viestin teksti, sähköposti, liitteet.</p><p>Erityisiä henkilötietoryhmiä ei käsitellä tarkoituksellisesti.</p></div>
+<div class="card"><h2>4. Tarkoitukset ja Oikeusperusteet</h2>
+<table><tr><th>Toiminto</th><th>KVKK</th><th>GDPR</th></tr>
+<tr><td>Tili ja todennus</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Sijainti, reitit, kotisatama</td><td>5/1 suost.</td><td>6(1)(a)</td></tr>
+<tr><td>Sää- ja meriennusteet</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Ravintolaehdotukset</td><td>5/1 suost.</td><td>6(1)(a)</td></tr>
+<tr><td>Tekoälyavustaja</td><td>5/1 suost.</td><td>6(1)(a)</td></tr>
+<tr><td>Transaktiosähköpostit</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Hyväksymiskirjaukset</td><td>5/2-ç</td><td>6(1)(c)</td></tr>
+<tr><td>Personoidut mainokset</td><td>5/1 suost.</td><td>6(1)(a)</td></tr>
+<tr><td>Ei-personoidut mainokset</td><td>5/2-f</td><td>6(1)(f)</td></tr>
+<tr><td>Palaute ja turvallisuus</td><td>5/2-f</td><td>6(1)(f)</td></tr>
+<tr><td>Huolto- ja asiakirjailmoitukset</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Kalapaikan jakaminen, huolto-PDF</td><td>5/1 suost.</td><td>6(1)(a)</td></tr>
+</table></div>
+<div class="card"><h2>5. Henkilötietojen Vastaanottajat</h2>
+<p><strong>A) Palveluntarjoajat, jotka vastaanottavat tietoja palvelimilleen</strong></p>
+<table><tr><th>Palveluntarjoaja</th><th>Siirrettävät tiedot</th><th>Käsittelyrooli</th></tr>
+<tr><td>Google Firebase / Google Cloud</td><td>Sähköpostiosoite, käyttäjätunnus (UID), hyväksymiskirjaukset, tekniset käyttölokit</td><td>Henkilötietojen käsittelijä</td></tr>
+<tr><td>Open-Meteo</td><td>Säätiedusteluissa käytetyt koordinaatit ja IP-osoite</td><td>Itsenäinen rekisterinpitäjä</td></tr>
+<tr><td>Google Places</td><td>Ainoastaan kohteen koordinaatit (palvelimemme kautta; käyttäjän IP ja tilitiedot eivät siirry Googlelle)</td><td>Itsenäinen rekisterinpitäjä</td></tr>
+<tr><td>Google Gemini API</td><td>Tekoälyominaisuuden vaatima teksti ja kontekstuaalinen tieto; sähköpostia ja UID:tä ei koskaan lähetetä</td><td>Henkilötietojen käsittelijä</td></tr>
+<tr><td>Google AdMob</td><td>Mainostunnus, IP-osoite, karkea sijainti, mainoksen vuorovaikutustiedot</td><td>Itsenäinen rekisterinpitäjä</td></tr>
+<tr><td>Resend</td><td>Sähköpostiosoite ja viestin sisältö (transaktiosähköpostit ja paikkaehdotusten välitys)</td><td>Henkilötietojen käsittelijä</td></tr>
+</table>
+<p style="margin-top:14px;"><strong>B) Infrastruktuuripalvelut, jotka vastaanottavat vain teknisiä yhteystietoja</strong> (tilitietoja ei siirretä)</p>
+<p>Cloudflare (karttatiilet, aluetiedostot, varoitustiedostot), OpenSeaMap-tile-palvelin (kartan piirto), Unsplash (kohteiden kuvat), Google Fonts (kirjasimet), GitHub Pages (juridiset asiakirjat) — nämä palvelut vastaanottavat ainoastaan IP-osoitteen ja pyydetyn tiedoston nimen.</p>
+<p style="margin-top:10px;"><strong>C) Paikalliset komponentit, jotka eivät lähetä tietoja millekään palvelimelle</strong></p>
+<p>Leaflet ja Protomaps ovat ohjelmistokirjastoja, jotka toimivat kokonaan laitteella; ne eivät lähetä tietoja millekään palvelimelle. Laitteen oma puheentunnistuspalvelu muuntaa puheen tekstiksi paikallisesti; ääntä eikä tuloksena olevaa tekstiä välitetä sovellukselle.</p>
+</div>
+<div class="card"><h2>6. Kansainväliset Tiedonsiirrot</h2>
+<p><strong>Turkissa asuvat käyttäjät – KVKK</strong></p>
+<p>Osa MyBoatAI:n käyttämistä palveluntarjoajista voi käsitellä tietoja Turkin ulkopuolella. Tällaiset siirrot toteutetaan lain nro 6698 (KVKK) 9 artiklassa säädettyjen edellytysten ja asianmukaisten siirtomekanismien mukaisesti. Tarkempia tietoja palveluntarjoajista, joille tietoja siirretään, saat tutustumalla tämän selosteen kohtaan 5 tai ottamalla yhteyttä osoitteeseen support@myboatai.com.</p>
+<p><strong>ETA-alueen käyttäjät – GDPR</strong></p>
+<p>ETA-alueen ulkopuolelle tehtävät siirrot toteutetaan GDPR:n 44–49 artiklan mukaisten mekanismien mukaisesti. Googlella ja Resendillä on voimassa olevat vakiosopimuslausekkeet (SCC). Kullekin palveluntarjoajalle sovellettava siirtomekanismi on mainittu kyseisen palveluntarjoajan tietojenkäsittelyehdoissa.</p>
+</div>
+<div class="card"><h2>7. Säilytysajat</h2>
+<table><tr><th>Tiedot</th><th>Aika</th></tr>
+<tr><td>Laitteen käyttäjätiedot</td><td>Kunnes poistettu tai sovellus poistettu</td></tr>
+<tr><td>Tili</td><td>Kunnes tili poistettu</td></tr>
+<tr><td>Hyväksymiskirjaukset</td><td>10 vuotta tilin poistamisesta</td></tr>
+<tr><td>Palautesähköpostit</td><td>12 kuukautta käsittelystä</td></tr>
+<tr><td>Palvelinlokit</td><td>30 päivää</td></tr>
+<tr><td>Mainostunnisteet</td><td>AdMob-käytännön mukaan</td></tr>
+<tr><td>Tekoälykyselyt</td><td>Google Geminin ehtojen mukaan</td></tr>
+</table></div>
+<div class="card"><h2>8. Turvallisuus ja Tietomurrot</h2><p>TLS-salaus, turvallinen todennus ja tietokantasäännöt. Oikeuksiisi vaikuttavasta tietomurrosta ilmoitetaan toimivaltaiselle viranomaiselle ja asianosaisille ilman aiheetonta viivästystä.</p></div>
+<div class="card"><h2>9. Evästeet ja SDK:t</h2><p><strong>Web:</strong> Evästeet ja LocalStorage vain istunnon ja asetusten hallintaan. <strong>Android:</strong> Sovelluksen tallennustila, SDK:t ja laitetunnisteet. AdMob SDK käsittelee mainostunnisteita. Googlen suostumusvaatimukset täytetään ETA:n, UK:n ja Sveitsin osalta. Personoitujen mainosten esto: Android → Asetukset → Tietosuoja → Mainokset.</p></div>
+<div class="card"><h2>10. Tekoälyominaisuudet</h2><p>Avustajalle lähetetyt kyselyt välitetään Google Gemini API:lle. Sähköpostia ja UID:tä ei koskaan lähetetä. Käytetään maksutonta Gemini-tasoa. Vältä arkaluonteisten tietojen lähettämistä. Tekoälyvastauksia ei saa käyttää ainoana perusteena navigointipäätöksille.</p></div>
+<div class="card"><h2>11. Oikeutesi – KVKK</h2><p>KVKK 11 artikla: pääsy, oikaisu, poistaminen, tiedot siirroista, vastustaminen automatisoituihin päätöksiin, korvausvaatimus. Yhteydenotot: <strong>support@myboatai.com</strong> (30 päivää). Valitus: <a href="https://www.kvkk.gov.tr" target="_blank">www.kvkk.gov.tr</a></p></div>
+<div class="card"><h2>12. Oikeutesi – GDPR</h2><p>Pääsy, oikaisu, poistaminen, rajoittaminen, siirrettävyys, vastustaminen, suostumuksen peruuttaminen. Valitus toimivaltaiselle valvontaviranomaiselle — ks. Kohta 13.</p></div>
+<div class="card"><h2>13. Yhteystiedot ja Valitukset</h2><p><strong>support@myboatai.com</strong> — KVKK: 30 päivää · GDPR: 1 kuukausi.</p><p>Valvontaviranomainen Suomi: <a href="https://tietosuoja.fi" target="_blank">Tietosuojavaltuutetun toimisto</a><br>Turkki: <a href="https://www.kvkk.gov.tr" target="_blank">KVKK</a><br>ETA-alueen käyttäjät voivat ottaa yhteyttä myös asuinmaansa tai työskentelymaansa valvontaviranomaiseen.</p></div>
+<div class="card"><h2>14. Päivitykset</h2><p>Tätä selostetta voidaan päivittää. Olennaisista muutoksista ilmoitetaan sovelluksessa. Viimeksi päivitetty: 11. marraskuuta 2026 | v1.0.0</p></div>
+</div>
+
+<!-- ===== SWEDISH ===== -->
+<div id="lang-sv" class="lang-block">
+<div class="version-meta">Version: 1.0.0 | Senast uppdaterad: 11 november 2026</div>
+<div class="intro-box">Detta integritetsmeddelande har upprättats i enlighet med artikel 10 i den turkiska lagen nr 6698 (KVKK) och, där det är tillämpligt, EU:s allmänna dataskyddsförordning (GDPR), för att informera användare av MyBoatAI om behandlingen av deras personuppgifter.</div>
+<div class="card"><h2>1. Personuppgiftsansvarig</h2><p><strong>App:</strong> MyBoatAI &nbsp;|&nbsp; <strong>Utvecklare:</strong> uzaydenizlabs &nbsp;|&nbsp; <strong>Personuppgiftsansvarig:</strong> Uzay Deniz &nbsp;|&nbsp; <strong>Land:</strong> Turkiet &nbsp;|&nbsp; <strong>Kontakt:</strong> support@myboatai.com</p><p>För EES-användare gäller även GDPR. Om det krävs att en EU-representant utses enligt GDPR artikel 27 kommer deras uppgifter att publiceras här.</p></div>
+<div class="card"><h2>2. Insamlingsmetoder</h2><ul><li>Android-mobilapp och webb (PWA)</li><li>Kontoskapande och autentisering (Firebase / Google-inloggning)</li><li>Formulär och inställningar i appen</li><li>GPS och enhetens platstjänster</li><li>AI-assistent och röstinteraktion</li><li>Feedback- och supportformulär</li><li>Anpassade destinationer och delningslänkar för fiskeplatser</li><li>Tredje parts API/SDK-komponenter och tekniska åtkomstloggar</li></ul></div>
+<div class="card"><h2>3. Personuppgiftskategorier</h2><p><strong>Identitet och kontakt:</strong> E-post, Firebase UID, autentiseringsuppgifter.</p><p><strong>Plats och navigering:</strong> GPS-koordinater, ruttpunkter, hemmahamn, anpassade destinationer.</p><p><strong>Tekniska:</strong> IP-adress, enhetsmodell, appversion, annons-ID:n, status för aviseringstillstånd.</p><p><strong>Användargenererat innehåll (på enheten):</strong> Båtuppgifter, motortimmar, underhållsloggar, dokumentförfallodatum, fiskeplatser, foton, anteckningar, checklistor.</p><p><strong>AI:</strong> Röst-till-text-output, frågor till assistenten, kontextuell text. Ljud spelas aldrig in.</p><p><strong>Juridiska register:</strong> Datum och version för godkännande, användar-ID.</p><p><strong>Feedback:</strong> Meddelandetext, e-post, bilagor.</p><p>Inga känsliga personuppgifter behandlas avsiktligt.</p></div>
+<div class="card"><h2>4. Ändamål och Rättsliga Grunder</h2>
+<table><tr><th>Aktivitet</th><th>KVKK</th><th>GDPR</th></tr>
+<tr><td>Konto och autentisering</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Plats, rutter, hemmahamn</td><td>5/1 samtyck.</td><td>6(1)(a)</td></tr>
+<tr><td>Väder- och sjöprognoser</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Restaurangförslag</td><td>5/1 samtyck.</td><td>6(1)(a)</td></tr>
+<tr><td>AI-assistent</td><td>5/1 samtyck.</td><td>6(1)(a)</td></tr>
+<tr><td>Transaktionsmejl</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Godkännanderegister</td><td>5/2-ç</td><td>6(1)(c)</td></tr>
+<tr><td>Personanpassade annonser</td><td>5/1 samtyck.</td><td>6(1)(a)</td></tr>
+<tr><td>Icke-personanpassade annonser</td><td>5/2-f</td><td>6(1)(f)</td></tr>
+<tr><td>Feedback och säkerhet</td><td>5/2-f</td><td>6(1)(f)</td></tr>
+<tr><td>Underhålls- och dokumentnotiser</td><td>5/2-c</td><td>6(1)(b)</td></tr>
+<tr><td>Dela fiskeplats, underhålls-PDF</td><td>5/1 samtyck.</td><td>6(1)(a)</td></tr>
+</table></div>
+<div class="card"><h2>5. Mottagare av Personuppgifter</h2>
+<p><strong>A) Tjänsteleverantörer som tar emot uppgifter på sina servrar</strong></p>
+<table><tr><th>Leverantör</th><th>Uppgifter som överförs</th><th>Behandlingsroll</th></tr>
+<tr><td>Google Firebase / Google Cloud</td><td>E-postadress, användar-ID (UID), godkännanderegister, tekniska åtkomstloggar</td><td>Personuppgiftsbiträde</td></tr>
+<tr><td>Open-Meteo</td><td>Koordinater och IP-adress som används i väderfrågor</td><td>Självständigt personuppgiftsansvarig</td></tr>
+<tr><td>Google Places</td><td>Enbart destinationens koordinater (via vår server; användarens IP och kontouppgifter skickas inte till Google)</td><td>Självständigt personuppgiftsansvarig</td></tr>
+<tr><td>Google Gemini API</td><td>Text och kontextuell information som krävs för AI-funktionen; e-post och UID överförs aldrig</td><td>Personuppgiftsbiträde</td></tr>
+<tr><td>Google AdMob</td><td>Annons-ID, IP-adress, ungefärlig plats, data om annonsinteraktion</td><td>Självständigt personuppgiftsansvarig</td></tr>
+<tr><td>Resend</td><td>E-postadress och meddelandeinnehåll (transaktionsmejl och vidarebefordran av platsförslag)</td><td>Personuppgiftsbiträde</td></tr>
+</table>
+<p style="margin-top:14px;"><strong>B) Infrastrukturtjänster som bara tar emot tekniska anslutningsuppgifter</strong> (inga kontouppgifter överförs)</p>
+<p>Cloudflare (kartpaneler, regionfiler, varningsfiler), OpenSeaMap tile-server (kartrenderering), Unsplash (destinationsbilder), Google Fonts (typsnitt), GitHub Pages (juridiska dokument) — dessa tjänster tar enbart emot IP-adressen och namnet på den begärda filen.</p>
+<p style="margin-top:10px;"><strong>C) Lokala komponenter som inte skickar data till någon server</strong></p>
+<p>Leaflet och Protomaps är programvarubibliotek som körs helt på enheten; de skickar inga data till någon server. Enhetens taltjänst konverterar tal till text lokalt; varken ljudet eller den resulterande texten skickas till appen.</p>
+</div>
+<div class="card"><h2>6. Internationella Dataöverföringar</h2>
+<p><strong>Användare i Turkiet – KVKK</strong></p>
+<p>Vissa tjänsteleverantörer som används av MyBoatAI kan behandla uppgifter utanför Turkiet. Sådana överföringar genomförs inom ramen för de villkor och lämpliga överföringsmekanismer som anges i artikel 9 i lag nr 6698 (KVKK). För detaljerad information om de leverantörer till vilka uppgifter överförs, se avsnitt 5 i detta meddelande eller kontakta support@myboatai.com.</p>
+<p><strong>EES-användare – GDPR</strong></p>
+<p>Överföringar utanför EES genomförs i enlighet med mekanismerna i GDPR artiklarna 44–49. Standardavtalsklausuler (SCC) finns på plats med leverantörer som Google och Resend. Den tillämpliga överföringsmekanismen för varje leverantör anges i den leverantörens villkor för databehandling.</p>
+</div>
+<div class="card"><h2>7. Lagringstider</h2>
+<table><tr><th>Uppgifter</th><th>Period</th></tr>
+<tr><td>Användardata på enheten</td><td>Tills raderat eller avinstallerat</td></tr>
+<tr><td>Konto</td><td>Tills kontot raderas</td></tr>
+<tr><td>Godkännanderegister</td><td>10 år efter kontoradering</td></tr>
+<tr><td>Feedback-mejl</td><td>12 månader efter hantering</td></tr>
+<tr><td>Serverloggar</td><td>30 dagar</td></tr>
+<tr><td>Annonsidentifierare</td><td>Enligt AdMob-policy</td></tr>
+<tr><td>AI-frågor</td><td>Enligt Google Geminis villkor</td></tr>
+</table></div>
+<div class="card"><h2>8. Säkerhet och Dataintrång</h2><p>TLS-kryptering, säker autentisering och databasregler. Vid ett intrång som sannolikt påverkar dina rättigheter underrättas behörig myndighet och berörda användare utan onödigt dröjsmål.</p></div>
+<div class="card"><h2>9. Cookies och SDK:er</h2><p><strong>Webb:</strong> Cookies och LocalStorage enbart för session och inställningar. <strong>Android:</strong> Applagring, SDK:er och enhetsidentifierare. AdMob SDK behandlar annonsidentifierare. Googles samtyckskrav uppfylls för EES, UK och Schweiz. Opt-out personanpassade annonser: Android → Inställningar → Integritet → Annonser.</p></div>
+<div class="card"><h2>10. AI-funktioner</h2><p>Frågor till assistenten vidarebefordras till Google Gemini API. E-post och UID överförs aldrig. Den kostnadsfria Gemini-nivån används. Undvik känslig information. AI-svar får inte vara den enda grunden för navigeringsbeslut.</p></div>
+<div class="card"><h2>11. Dina Rättigheter – KVKK</h2><p>KVKK art. 11: tillgång, rättelse, radering, information om överföringar, invändning mot automatiserade beslut, skadestånd. Kontakt: <strong>support@myboatai.com</strong> (30 dagar). Klagomål: <a href="https://www.kvkk.gov.tr" target="_blank">www.kvkk.gov.tr</a></p></div>
+<div class="card"><h2>12. Dina Rättigheter – GDPR</h2><p>Tillgång, rättelse, radering, begränsning, portabilitet, invändning, återkallande av samtycke. Klagomål till behörig tillsynsmyndighet — se Avsnitt 13.</p></div>
+<div class="card"><h2>13. Kontakt och Klagomål</h2><p><strong>support@myboatai.com</strong> — KVKK: 30 dagar · GDPR: 1 månad.</p><p>Tillsynsmyndighet Sverige: <a href="https://www.imy.se" target="_blank">Integritetsskyddsmyndigheten (IMY)</a><br>Turkiet: <a href="https://www.kvkk.gov.tr" target="_blank">KVKK</a><br>EES-användare kan även vända sig till tillsynsmyndigheten i sitt hemland eller arbetsland.</p></div>
+<div class="card"><h2>14. Uppdateringar</h2><p>Detta meddelande kan uppdateras. Väsentliga ändringar meddelas i appen. Senast uppdaterad: 11 november 2026 | v1.0.0</p></div>
+</div>
+
+  <footer>&copy; 2026 uzaydenizlabs. Tüm hakları saklıdır / All rights reserved.</footer>
+</div>
+
+<script>
+function showLang(lang, btn) {
+  document.querySelectorAll('.lang-block').forEach(function(b){b.classList.remove('active');});
+  document.querySelectorAll('.lang-btn').forEach(function(bt){bt.classList.remove('active');});
+  var block = document.getElementById('lang-' + lang);
+  if (block) block.classList.add('active');
+  if (btn) btn.classList.add('active');
+  document.documentElement.lang = lang;
+  localStorage.setItem('myboat_aydinlatma_lang', lang);
+}
+window.addEventListener('DOMContentLoaded', function() {
+  var saved = localStorage.getItem('myboat_aydinlatma_lang');
+  if (saved) {
+    var btn = document.querySelector('.lang-btn[onclick*="\'' + saved + '\'"]');
+    if (btn) showLang(saved, btn);
+  }
+});
+</script>
+</body>
+</html>
 
