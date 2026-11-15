@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 100" fill="none">
+  <defs>
+    <clipPath id="squircle">
+      <rect x="0" y="0" width="100" height="100" rx="25" />
+    </clipPath>
+  </defs>
+
+  <!-- Emblem -->
+  <g clip-path="url(#squircle)">
+    <rect width="100" height="100" fill="#F15A24" />
+    <path d="M 0,59 C 16,53 32,65 50,59 C 68,54 84,65 100,59 L 100,100 L 0,100 Z" fill="#C9441D" />
+    <line x1="50" y1="38" x2="50" y2="79" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" />
+    <line x1="33" y1="46" x2="67" y2="46" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" />
+    <circle cx="50" cy="24" r="14" fill="none" stroke="#FFFFFF" stroke-width="6" />
+    <circle cx="50" cy="24" r="4.5" fill="#0E2038" />
+    <path d="M 23,59 C 23,79 36,84 50,84 C 64,84 77,79 77,59" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" />
+  </g>
+
+  <!-- Typography -->
+  <text x="116" y="65" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="700" letter-spacing="-1">
+    <tspan fill="#0F172A">MyBoat</tspan>
+    <tspan fill="#F15A24">AI</tspan>
+  </text>
+</svg>

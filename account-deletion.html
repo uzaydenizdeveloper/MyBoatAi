@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyBoatAI – Account Deletion</title>
+  <meta name="description" content="Sign in to permanently delete your MyBoatAI captain account, or submit an unverified request.">
+  <style>
+    :root {
+      --orange: #E8800A;
+      --orange-dark: #c46a08;
+      --bg: #FAF6EE;
+      --card: #ffffff;
+      --text: #1a1a1a;
+      --muted: #666666;
+      --border: #e0d8cc;
+      --danger: #c0392b;
+      --danger-dark: #96301f;
+      --success-color: #2d7a4a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .logo-link img { height: 36px; width: auto; }
+    .app-name { font-size: 18px; font-weight: 700; }
+    .app-name span { color: var(--orange); }
+    #lang-select {
+      border: 1px solid var(--border);
+      background: var(--card);
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      outline: none;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 32px;
+      width: 100%;
+      max-width: 440px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    h1 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+    .subtitle { color: var(--muted); font-size: 14px; margin-bottom: 24px; line-height: 1.5; }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: none;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s;
+      text-align: center;
+    }
+    .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+    .btn-google {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .btn-google:hover:not(:disabled) { background: #f5f0e8; }
+    .btn-primary { background: var(--orange); color: white; }
+    .btn-primary:hover:not(:disabled) { background: var(--orange-dark); }
+    .btn-danger { background: var(--danger); color: white; margin-top: 20px; }
+    .btn-danger:hover:not(:disabled) { background: var(--danger-dark); }
+    .btn-outline {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      display: block;
+      width: 100%;
+      padding: 11px;
+      border-radius: 10px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    .btn-outline:hover { background: var(--bg); }
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 16px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .form-group { margin-bottom: 14px; }
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: var(--muted);
+    }
+    input[type="email"], input[type="password"], textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 15px;
+      outline: none;
+      background: var(--bg);
+      color: var(--text);
+    }
+    input:focus, textarea:focus { border-color: var(--orange); }
+    textarea { resize: vertical; min-height: 80px; }
+    .link-btn {
+      background: none;
+      border: none;
+      color: var(--orange);
+      font-size: 14px;
+      cursor: pointer;
+      padding: 0;
+      text-decoration: underline;
+      display: block;
+      margin: 14px auto 0;
+      text-align: center;
+    }
+    .sign-out-link {
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+      display: block;
+      margin-top: 12px;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+    .sign-out-link:hover { color: var(--text); text-decoration: underline; }
+    .info-box {
+      background: #f5f0e8;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    .info-box h3 {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 10px;
+    }
+    .info-box ul { list-style: none; }
+    .info-box ul li {
+      font-size: 14px;
+      padding: 3px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.4;
+    }
+    .info-box ul li::before {
+      content: '✕';
+      color: var(--danger);
+      font-size: 11px;
+      margin-top: 3px;
+      flex-shrink: 0;
+      font-weight: 700;
+    }
+    .info-box.keep ul li::before {
+      content: '✓';
+      color: var(--success-color);
+    }
+    .user-email {
+      font-size: 14px;
+      color: var(--muted);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .user-email strong {
+      color: var(--text);
+      display: block;
+      font-size: 15px;
+      margin-top: 4px;
+    }
+    .error-msg {
+      color: var(--danger);
+      font-size: 13px;
+      margin-top: 10px;
+      display: none;
+      text-align: center;
+    }
+    .success-msg {
+      color: var(--success-color);
+      font-size: 16px;
+      text-align: center;
+      padding: 24px 0 8px;
+      font-weight: 600;
+    }
+    .notice-text {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 14px;
+      line-height: 1.5;
+    }
+    .back-btn {
+      background: none;
+      border: none;
+      color: var(--orange);
+      font-size: 14px;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 20px;
+      text-decoration: underline;
+    }
+    /* Confirm overlay */
+    .overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .overlay.active { display: flex; }
+    .dialog {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 28px;
+      max-width: 380px;
+      width: 100%;
+    }
+    .dialog h2 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+    .dialog p { font-size: 14px; color: var(--muted); margin-bottom: 20px; line-height: 1.5; }
+    .dialog-actions { display: flex; flex-direction: column; gap: 10px; }
+    .hidden { display: none !important; }
+    footer {
+      text-align: center;
+      padding: 24px 20px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+    footer a { color: var(--orange); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .google-icon { width: 18px; height: 18px; flex-shrink: 0; }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="https://play.google.com/store/apps/details?id=com.myboatai.app" class="logo-link" target="_blank" rel="noopener">
+    <img src="myboat-logo.svg" alt="MyBoatAI" onerror="this.style.display='none'">
+    <span class="app-name">MyBoat<span>AI</span></span>
+  </a>
+  <select id="lang-select">
+    <option value="en">English</option>
+    <option value="tr">Türkçe</option>
+    <option value="el">Ελληνικά</option>
+    <option value="it">Italiano</option>
+    <option value="es">Español</option>
+    <option value="fi">Suomi</option>
+    <option value="sv">Svenska</option>
+  </select>
+</header>
+
+<main>
+  <div class="card">
+
+    <!-- Sign-out view -->
+    <div id="view-signout">
+      <h1 id="so-heading"></h1>
+      <p class="subtitle" id="so-subtitle"></p>
+      <button class="btn btn-google" id="btn-google">
+        <svg class="google-icon" viewBox="0 0 48 48">
+          <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+          <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+          <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+          <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+        </svg>
+        <span id="so-google-label"></span>
+      </button>
+      <div class="divider"><span id="so-or"></span></div>
+      <form id="form-signin" novalidate>
+        <div class="form-group">
+          <label id="so-email-label"></label>
+          <input type="email" id="input-email" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label id="so-password-label"></label>
+          <input type="password" id="input-password" autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn btn-primary" id="so-signin-btn"></button>
+      </form>
+      <div id="signin-error" class="error-msg"></div>
+      <button class="link-btn" id="btn-cant-signin"></button>
+    </div>
+
+    <!-- Signed-in view -->
+    <div id="view-signed-in" class="hidden">
+      <h1 id="si-heading"></h1>
+      <div class="user-email">
+        <span id="si-signed-as"></span>
+        <strong id="si-user-email"></strong>
+      </div>
+      <div class="info-box">
+        <h3 id="si-will-delete"></h3>
+        <ul id="si-delete-list"></ul>
+      </div>
+      <div class="info-box keep">
+        <h3 id="si-will-keep"></h3>
+        <ul id="si-keep-list"></ul>
+      </div>
+      <button class="btn btn-danger" id="btn-delete"></button>
+      <button class="sign-out-link" id="btn-signout"></button>
+    </div>
+
+    <!-- Unverified request view -->
+    <div id="view-unverified" class="hidden">
+      <button class="back-btn" id="btn-back"></button>
+      <h1 id="uv-title"></h1>
+      <p class="subtitle" id="uv-subtitle"></p>
+      <form id="form-unverified" novalidate>
+        <div class="form-group">
+          <label id="uv-email-label"></label>
+          <input type="email" id="input-uv-email" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label id="uv-notes-label"></label>
+          <textarea id="input-uv-notes"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" id="uv-submit-btn"></button>
+      </form>
+      <div id="uv-error" class="error-msg"></div>
+      <p class="notice-text" id="uv-notice"></p>
+    </div>
+
+    <!-- Success view -->
+    <div id="view-success" class="hidden">
+      <p class="success-msg" id="success-text"></p>
+    </div>
+
+  </div>
+</main>
+
+<!-- Confirm Delete Dialog -->
+<div class="overlay" id="confirm-overlay">
+  <div class="dialog">
+    <h2 id="dlg-title"></h2>
+    <p id="dlg-text"></p>
+    <div id="dlg-reauth-wrap" class="form-group hidden">
+      <label id="dlg-password-label"></label>
+      <input type="password" id="input-confirm-pw" autocomplete="current-password">
+    </div>
+    <div id="dlg-error" class="error-msg"></div>
+    <div class="dialog-actions">
+      <button class="btn btn-danger" id="btn-confirm-delete"></button>
+      <button class="btn-outline" id="btn-cancel-delete"></button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a id="link-privacy" href="https://uzaydenizdeveloper.github.io/MyBoatAi/privacy.html" target="_blank" rel="noopener"></a>
+    <a id="link-terms" href="https://uzaydenizdeveloper.github.io/MyBoatAi/terms.html" target="_blank" rel="noopener"></a>
+    <a id="link-safety" href="https://uzaydenizdeveloper.github.io/MyBoatAi/safety.html" target="_blank" rel="noopener"></a>
+  </div>
+  <div id="footer-copyright"></div>
+</footer>
+
+<script type="module">
+  import { initializeApp }                      from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js';
+  import { getAuth, signInWithPopup, signInWithEmailAndPassword,
+           GoogleAuthProvider, signOut, deleteUser, onAuthStateChanged,
+           reauthenticateWithCredential, reauthenticateWithPopup,
+           EmailAuthProvider }                  from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js';
+  import { getFirestore, doc, deleteDoc,
+           collection, addDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js';
+
+  const firebaseConfig = {
+    apiKey:            "AIzaSyBHgLv61UiXosLJS1xbu19LHkQz_NMB5UM",
+    authDomain:        "myboatai.firebaseapp.com",
+    projectId:         "myboatai",
+    storageBucket:     "myboatai.firebasestorage.app",
+    messagingSenderId: "940341411676",
+    appId:             "1:940341411676:web:7f89329e48d44142dc0b99"
+  };
+
+  const app            = initializeApp(firebaseConfig);
+  const auth           = getAuth(app);
+  const db             = getFirestore(app);
+  const googleProvider = new GoogleAuthProvider();
+
+  // ─── TRANSLATIONS ────────────────────────────────────────────────────────────
+  const T = {
+    en: {
+      title:           "MyBoatAI – Account Deletion",
+      heading:         "Delete Your Account",
+      subtitle:        "Sign in to permanently delete your captain account.",
+      google:          "Sign in with Google",
+      or:              "or",
+      email:           "Email",
+      password:        "Password",
+      signIn:          "Sign In",
+      cantSignIn:      "I cannot sign in",
+      signedInAs:      "Signed in as",
+      willDelete:      "The following will be permanently deleted:",
+      deleteItems:     ["Captain account and credentials", "Profile data", "Cloud status records"],
+      willKeep:        "The following will be retained:",
+      keepItems:       ["Consent history (required by law)"],
+      deleteBtn:       "Delete My Account Permanently",
+      signOut:         "Sign out",
+      confirmTitle:    "Are you sure?",
+      confirmText:     "This action cannot be undone. Your account will be permanently deleted.",
+      confirmPassword: "Enter your password to confirm:",
+      confirm:         "Yes, Delete My Account",
+      cancel:          "Cancel",
+      uvTitle:         "Submit a deletion request",
+      uvSubtitle:      "If you cannot sign in, submit your email and we will process your request manually.",
+      uvEmail:         "Your account email",
+      uvNotes:         "Additional notes (optional)",
+      uvSubmit:        "Submit Request",
+      uvNotice:        "If an account with this email exists, our security team will contact you within 30 days.",
+      successDelete:   "Your account has been permanently deleted.",
+      successRequest:  "Your request has been submitted.",
+      errSignIn:       "Sign-in failed. Please check your credentials.",
+      errDelete:       "Deletion failed. Please try again.",
+      errRequest:      "Could not submit request. Please try again.",
+      privacy:         "Privacy Policy",
+      terms:           "Terms of Use",
+      safety:          "Safety Notice",
+      copyright:       "© 2026 uzaydenizlabs",
+      back:            "← Back"
+    },
+    tr: {
+      title:           "MyBoatAI – Hesap Silme",
+      heading:         "Hesabınızı Silin",
+      subtitle:        "Kaptan hesabınızı kalıcı olarak silmek için giriş yapın.",
+      google:          "Google ile Giriş Yap",
+      or:              "veya",
+      email:           "E-posta",
+      password:        "Parola",
+      signIn:          "Giriş Yap",
+      cantSignIn:      "Giriş yapamıyorum",
+      signedInAs:      "Giriş yapıldı:",
+      willDelete:      "Aşağıdakiler kalıcı olarak silinecektir:",
+      deleteItems:     ["Kaptan hesabı ve kimlik bilgileri", "Profil verileri", "Bulut durum kayıtları"],
+      willKeep:        "Aşağıdakiler saklanmaya devam edecektir:",
+      keepItems:       ["Onay geçmişi (yasal zorunluluk)"],
+      deleteBtn:       "Hesabımı Kalıcı Olarak Sil",
+      signOut:         "Çıkış yap",
+      confirmTitle:    "Emin misiniz?",
+      confirmText:     "Bu işlem geri alınamaz. Hesabınız kalıcı olarak silinecektir.",
+      confirmPassword: "Onaylamak için parolanızı girin:",
+      confirm:         "Evet, Hesabımı Sil",
+      cancel:          "İptal",
+      uvTitle:         "Silme talebi gönderin",
+      uvSubtitle:      "Giriş yapamıyorsanız e-postanızı gönderin, talebinizi elle işleyeceğiz.",
+      uvEmail:         "Hesap e-postanız",
+      uvNotes:         "Ek notlar (isteğe bağlı)",
+      uvSubmit:        "Talep Gönder",
+      uvNotice:        "Bu e-posta ile bir hesap varsa güvenlik ekibimiz 30 gün içinde sizinle iletişime geçecektir.",
+      successDelete:   "Hesabınız kalıcı olarak silindi.",
+      successRequest:  "Talebiniz iletildi.",
+      errSignIn:       "Giriş başarısız. Bilgilerinizi kontrol edin.",
+      errDelete:       "Silme işlemi başarısız. Lütfen tekrar deneyin.",
+      errRequest:      "Talep gönderilemedi. Lütfen tekrar deneyin.",
+      privacy:         "Gizlilik Politikası",
+      terms:           "Kullanım Koşulları",
+      safety:          "Güvenlik Bildirimi",
+      copyright:       "© 2026 uzaydenizlabs",
+      back:            "← Geri"
+    },
+    el: {
+      title:           "MyBoatAI – Διαγραφή Λογαριασμού",
+      heading:         "Διαγραφή Λογαριασμού",
+      subtitle:        "Συνδεθείτε για να διαγράψετε οριστικά τον λογαριασμό σας.",
+      google:          "Σύνδεση με Google",
+      or:              "ή",
+      email:           "Email",
+      password:        "Κωδικός",
+      signIn:          "Σύνδεση",
+      cantSignIn:      "Δεν μπορώ να συνδεθώ",
+      signedInAs:      "Συνδεδεμένος ως:",
+      willDelete:      "Τα παρακάτω θα διαγραφούν μόνιμα:",
+      deleteItems:     ["Λογαριασμός κυβερνήτη και διαπιστευτήρια", "Δεδομένα προφίλ", "Αρχεία κατάστασης cloud"],
+      willKeep:        "Τα παρακάτω θα διατηρηθούν:",
+      keepItems:       ["Ιστορικό συγκατάθεσης (νομική υποχρέωση)"],
+      deleteBtn:       "Μόνιμη Διαγραφή Λογαριασμού",
+      signOut:         "Αποσύνδεση",
+      confirmTitle:    "Είστε σίγουροι;",
+      confirmText:     "Αυτή η ενέργεια δεν αναιρείται. Ο λογαριασμός σας θα διαγραφεί μόνιμα.",
+      confirmPassword: "Εισάγετε τον κωδικό σας για επιβεβαίωση:",
+      confirm:         "Ναι, Διαγραφή Λογαριασμού",
+      cancel:          "Ακύρωση",
+      uvTitle:         "Υποβολή αιτήματος διαγραφής",
+      uvSubtitle:      "Εάν δεν μπορείτε να συνδεθείτε, στείλτε το email σας και θα επεξεργαστούμε το αίτημά σας χειροκίνητα.",
+      uvEmail:         "Email λογαριασμού σας",
+      uvNotes:         "Πρόσθετες σημειώσεις (προαιρετικά)",
+      uvSubmit:        "Υποβολή Αιτήματος",
+      uvNotice:        "Εάν υπάρχει λογαριασμός με αυτό το email, η ομάδα ασφαλείας μας θα επικοινωνήσει μαζί σας εντός 30 ημερών.",
+      successDelete:   "Ο λογαριασμός σας διαγράφηκε μόνιμα.",
+      successRequest:  "Το αίτημά σας υποβλήθηκε.",
+      errSignIn:       "Η σύνδεση απέτυχε. Ελέγξτε τα στοιχεία σας.",
+      errDelete:       "Η διαγραφή απέτυχε. Παρακαλώ δοκιμάστε ξανά.",
+      errRequest:      "Αδυναμία υποβολής αιτήματος. Παρακαλώ δοκιμάστε ξανά.",
+      privacy:         "Πολιτική Απορρήτου",
+      terms:           "Όροι Χρήσης",
+      safety:          "Ειδοποίηση Ασφαλείας",
+      copyright:       "© 2026 uzaydenizlabs",
+      back:            "← Πίσω"
+    },
+    it: {
+      title:           "MyBoatAI – Eliminazione Account",
+      heading:         "Elimina il Tuo Account",
+      subtitle:        "Accedi per eliminare definitivamente il tuo account capitano.",
+      google:          "Accedi con Google",
+      or:              "oppure",
+      email:           "Email",
+      password:        "Password",
+      signIn:          "Accedi",
+      cantSignIn:      "Non riesco ad accedere",
+      signedInAs:      "Connesso come:",
+      willDelete:      "Verranno eliminati definitivamente:",
+      deleteItems:     ["Account capitano e credenziali", "Dati del profilo", "Registrazioni di stato cloud"],
+      willKeep:        "Verranno conservati:",
+      keepItems:       ["Cronologia consensi (obbligo di legge)"],
+      deleteBtn:       "Elimina Definitivamente il Mio Account",
+      signOut:         "Esci",
+      confirmTitle:    "Sei sicuro?",
+      confirmText:     "Questa azione non può essere annullata. Il tuo account verrà eliminato definitivamente.",
+      confirmPassword: "Inserisci la tua password per confermare:",
+      confirm:         "Sì, Elimina il Mio Account",
+      cancel:          "Annulla",
+      uvTitle:         "Invia una richiesta di eliminazione",
+      uvSubtitle:      "Se non riesci ad accedere, invia la tua email e elaboreremo la richiesta manualmente.",
+      uvEmail:         "Email del tuo account",
+      uvNotes:         "Note aggiuntive (facoltativo)",
+      uvSubmit:        "Invia Richiesta",
+      uvNotice:        "Se esiste un account con questa email, il nostro team di sicurezza ti contatterà entro 30 giorni.",
+      successDelete:   "Il tuo account è stato eliminato definitivamente.",
+      successRequest:  "La tua richiesta è stata inviata.",
+      errSignIn:       "Accesso non riuscito. Controlla le credenziali.",
+      errDelete:       "Eliminazione non riuscita. Riprova.",
+      errRequest:      "Impossibile inviare la richiesta. Riprova.",
+      privacy:         "Informativa sulla Privacy",
+      terms:           "Termini di Utilizzo",
+      safety:          "Avviso di Sicurezza",
+      copyright:       "© 2026 uzaydenizlabs",
+      back:            "← Indietro"
+    },
+    es: {
+      title:           "MyBoatAI – Eliminación de Cuenta",
+      heading:         "Eliminar Tu Cuenta",
+      subtitle:        "Inicia sesión para eliminar permanentemente tu cuenta de capitán.",
+      google:          "Iniciar sesión con Google",
+      or:              "o",
+      email:           "Correo electrónico",
+      password:        "Contraseña",
+      signIn:          "Iniciar Sesión",
+      cantSignIn:      "No puedo iniciar sesión",
+      signedInAs:      "Sesión iniciada como:",
+      willDelete:      "Lo siguiente se eliminará permanentemente:",
+      deleteItems:     ["Cuenta de capitán y credenciales", "Datos del perfil", "Registros de estado en la nube"],
+      willKeep:        "Lo siguiente se conservará:",
+      keepItems:       ["Historial de consentimientos (obligación legal)"],
+      deleteBtn:       "Eliminar Mi Cuenta Permanentemente",
+      signOut:         "Cerrar sesión",
+      confirmTitle:    "¿Estás seguro?",
+      confirmText:     "Esta acción no se puede deshacer. Tu cuenta se eliminará permanentemente.",
+      confirmPassword: "Ingresa tu contraseña para confirmar:",
+      confirm:         "Sí, Eliminar Mi Cuenta",
+      cancel:          "Cancelar",
+      uvTitle:         "Enviar solicitud de eliminación",
+      uvSubtitle:      "Si no puedes iniciar sesión, envía tu email y procesaremos tu solicitud manualmente.",
+      uvEmail:         "Email de tu cuenta",
+      uvNotes:         "Notas adicionales (opcional)",
+      uvSubmit:        "Enviar Solicitud",
+      uvNotice:        "Si existe una cuenta con este email, nuestro equipo de seguridad se pondrá en contacto contigo en un plazo de 30 días.",
+      successDelete:   "Tu cuenta ha sido eliminada permanentemente.",
+      successRequest:  "Tu solicitud ha sido enviada.",
+      errSignIn:       "Error al iniciar sesión. Comprueba tus credenciales.",
+      errDelete:       "Error al eliminar. Inténtalo de nuevo.",
+      errRequest:      "No se pudo enviar la solicitud. Inténtalo de nuevo.",
+      privacy:         "Política de Privacidad",
+      terms:           "Términos de Uso",
+      safety:          "Aviso de Seguridad",
+      copyright:       "© 2026 uzaydenizlabs",
+      back:            "← Atrás"
+    },
+    fi: {
+      title:           "MyBoatAI – Tilin poistaminen",
+      heading:         "Poista tilisi",
+      subtitle:        "Kirjaudu sisään poistaaksesi kapteenitilin pysyvästi.",
+      google:          "Kirjaudu Googlella",
+      or:              "tai",
+      email:           "Sähköposti",
+      password:        "Salasana",
+      signIn:          "Kirjaudu",
+      cantSignIn:      "En pysty kirjautumaan",
+      signedInAs:      "Kirjautunut:",
+      willDelete:      "Seuraavat poistetaan pysyvästi:",
+      deleteItems:     ["Kapteeniitili ja tunnistetiedot", "Profiilitiedot", "Pilvitilarekisterit"],
+      willKeep:        "Seuraavat säilytetään:",
+      keepItems:       ["Suostumishistoria (lakisääteinen velvollisuus)"],
+      deleteBtn:       "Poista tilini pysyvästi",
+      signOut:         "Kirjaudu ulos",
+      confirmTitle:    "Oletko varma?",
+      confirmText:     "Tätä toimintoa ei voi kumota. Tilisi poistetaan pysyvästi.",
+      confirmPassword: "Syötä salasanasi vahvistaaksesi:",
+      confirm:         "Kyllä, poista tilini",
+      cancel:          "Peruuta",
+      uvTitle:         "Lähetä poistopyyntö",
+      uvSubtitle:      "Jos et pysty kirjautumaan, lähetä sähköpostisi ja käsittelemme pyyntösi manuaalisesti.",
+      uvEmail:         "Tilisi sähköpostiosoite",
+      uvNotes:         "Lisähuomautukset (valinnainen)",
+      uvSubmit:        "Lähetä pyyntö",
+      uvNotice:        "Jos tällä sähköpostilla on tili, turvallisuustiimimme ottaa sinuun yhteyttä 30 päivän kuluessa.",
+      successDelete:   "Tilisi on poistettu pysyvästi.",
+      successRequest:  "Pyyntösi on lähetetty.",
+      errSignIn:       "Kirjautuminen epäonnistui. Tarkista tietosi.",
+      errDelete:       "Poistaminen epäonnistui. Yritä uudelleen.",
+      errRequest:      "Pyyntöä ei voitu lähettää. Yritä uudelleen.",
+      privacy:         "Tietosuojakäytäntö",
+      terms:           "Käyttöehdot",
+      safety:          "Turvallisuusilmoitus",
+      copyright:       "© 2026 uzaydenizlabs",
+      back:            "← Takaisin"
+    },
+    sv: {
+      title:           "MyBoatAI – Radering av konto",
+      heading:         "Radera ditt konto",
+      subtitle:        "Logga in för att permanent radera ditt kaptenskonto.",
+      google:          "Logga in med Google",
+      or:              "eller",
+      email:           "E-post",
+      password:        "Lösenord",
+      signIn:          "Logga in",
+      cantSignIn:      "Jag kan inte logga in",
+      signedInAs:      "Inloggad som:",
+      willDelete:      "Följande raderas permanent:",
+      deleteItems:     ["Kaptenskonto och inloggningsuppgifter", "Profildata", "Molnstatusloggar"],
+      willKeep:        "Följande behålls:",
+      keepItems:       ["Samtyckeshistorik (lagstadgat krav)"],
+      deleteBtn:       "Radera mitt konto permanent",
+      signOut:         "Logga ut",
+      confirmTitle:    "Är du säker?",
+      confirmText:     "Den här åtgärden kan inte ångras. Ditt konto raderas permanent.",
+      confirmPassword: "Ange ditt lösenord för att bekräfta:",
+      confirm:         "Ja, radera mitt konto",
+      cancel:          "Avbryt",
+      uvTitle:         "Skicka en raderingsbegäran",
+      uvSubtitle:      "Om du inte kan logga in, skicka din e-post så behandlar vi din begäran manuellt.",
+      uvEmail:         "Ditt kontos e-postadress",
+      uvNotes:         "Ytterligare anteckningar (valfritt)",
+      uvSubmit:        "Skicka begäran",
+      uvNotice:        "Om ett konto med denna e-post finns kontaktar vårt säkerhetsteam dig inom 30 dagar.",
+      successDelete:   "Ditt konto har raderats permanent.",
+      successRequest:  "Din begäran har skickats.",
+      errSignIn:       "Inloggningen misslyckades. Kontrollera dina uppgifter.",
+      errDelete:       "Raderingen misslyckades. Försök igen.",
+      errRequest:      "Det gick inte att skicka begäran. Försök igen.",
+      privacy:         "Integritetspolicy",
+      terms:           "Användarvillkor",
+      safety:          "Säkerhetsmeddelande",
+      copyright:       "© 2026 uzaydenizlabs",
+      back:            "← Tillbaka"
+    }
+  };
+
+  // ─── LANGUAGE ────────────────────────────────────────────────────────────────
+  const $ = id => document.getElementById(id);
+
+  let lang = (() => {
+    const nav = (navigator.language || 'en').split('-')[0];
+    return T[nav] ? nav : 'en';
+  })();
+
+  function t(key) { return (T[lang] && T[lang][key] !== undefined) ? T[lang][key] : T.en[key]; }
+
+  function fillList(ulId, items) {
+    const ul = $(ulId);
+    ul.innerHTML = '';
+    items.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = item;
+      ul.appendChild(li);
+    });
+  }
+
+  function applyTranslations() {
+    document.documentElement.lang = lang;
+    document.title = t('title');
+    // sign-out view
+    $('so-heading').textContent         = t('heading');
+    $('so-subtitle').textContent        = t('subtitle');
+    $('so-google-label').textContent    = t('google');
+    $('so-or').textContent              = t('or');
+    $('so-email-label').textContent     = t('email');
+    $('so-password-label').textContent  = t('password');
+    $('so-signin-btn').textContent      = t('signIn');
+    $('btn-cant-signin').textContent    = t('cantSignIn');
+    // signed-in view
+    $('si-heading').textContent         = t('heading');
+    $('si-signed-as').textContent       = t('signedInAs');
+    $('si-will-delete').textContent     = t('willDelete');
+    $('si-will-keep').textContent       = t('willKeep');
+    $('btn-delete').textContent         = t('deleteBtn');
+    $('btn-signout').textContent        = t('signOut');
+    fillList('si-delete-list', t('deleteItems'));
+    fillList('si-keep-list',   t('keepItems'));
+    // unverified view
+    $('btn-back').textContent           = t('back');
+    $('uv-title').textContent           = t('uvTitle');
+    $('uv-subtitle').textContent        = t('uvSubtitle');
+    $('uv-email-label').textContent     = t('uvEmail');
+    $('uv-notes-label').textContent     = t('uvNotes');
+    $('uv-submit-btn').textContent      = t('uvSubmit');
+    $('uv-notice').textContent          = t('uvNotice');
+    // dialog
+    $('dlg-title').textContent          = t('confirmTitle');
+    $('dlg-text').textContent           = t('confirmText');
+    $('dlg-password-label').textContent = t('confirmPassword');
+    $('btn-confirm-delete').textContent = t('confirm');
+    $('btn-cancel-delete').textContent  = t('cancel');
+    // footer
+    $('link-privacy').textContent       = t('privacy');
+    $('link-terms').textContent         = t('terms');
+    $('link-safety').textContent        = t('safety');
+    $('footer-copyright').textContent   = t('copyright');
+  }
+
+  $('lang-select').value = lang;
+  $('lang-select').addEventListener('change', e => { lang = e.target.value; applyTranslations(); });
+  applyTranslations();
+
+  // ─── VIEW HELPERS ────────────────────────────────────────────────────────────
+  const views = ['view-signout', 'view-signed-in', 'view-unverified', 'view-success'];
+  function showView(id) { views.forEach(v => $(v).classList.toggle('hidden', v !== id)); }
+
+  function showError(id, msg) {
+    const el = $(id);
+    el.textContent = msg;
+    el.style.display = 'block';
+  }
+  function hideError(id) { $(id).style.display = 'none'; }
+
+  // ─── STATE ───────────────────────────────────────────────────────────────────
+  let currentUser  = null;
+  let isGoogleUser = false;
+
+  // ─── AUTH STATE ──────────────────────────────────────────────────────────────
+  onAuthStateChanged(auth, user => {
+    currentUser = user;
+    if (user) {
+      isGoogleUser = user.providerData.some(p => p.providerId === 'google.com');
+      $('si-user-email').textContent = user.email || user.displayName || '';
+      showView('view-signed-in');
+    } else {
+      showView('view-signout');
+    }
+  });
+
+  // ─── GOOGLE SIGN-IN ──────────────────────────────────────────────────────────
+  $('btn-google').addEventListener('click', async () => {
+    hideError('signin-error');
+    $('btn-google').disabled = true;
+    try {
+      await signInWithPopup(auth, googleProvider);
+    } catch (e) {
+      if (e.code !== 'auth/popup-closed-by-user' && e.code !== 'auth/cancelled-popup-request') {
+        showError('signin-error', t('errSignIn'));
+      }
+    } finally {
+      $('btn-google').disabled = false;
+    }
+  });
+
+  // ─── EMAIL SIGN-IN ───────────────────────────────────────────────────────────
+  $('form-signin').addEventListener('submit', async e => {
+    e.preventDefault();
+    hideError('signin-error');
+    const email    = $('input-email').value.trim();
+    const password = $('input-password').value;
+    if (!email || !password) return;
+    $('so-signin-btn').disabled = true;
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+    } catch {
+      showError('signin-error', t('errSignIn'));
+    } finally {
+      $('so-signin-btn').disabled = false;
+    }
+  });
+
+  // ─── SIGN OUT ────────────────────────────────────────────────────────────────
+  $('btn-signout').addEventListener('click', () => signOut(auth));
+
+  // ─── SHOW / HIDE UNVERIFIED ──────────────────────────────────────────────────
+  $('btn-cant-signin').addEventListener('click', () => showView('view-unverified'));
+  $('btn-back').addEventListener('click',        () => showView('view-signout'));
+
+  // ─── OPEN CONFIRM DIALOG ─────────────────────────────────────────────────────
+  $('btn-delete').addEventListener('click', () => {
+    $('dlg-reauth-wrap').classList.toggle('hidden', isGoogleUser);
+    $('input-confirm-pw').value = '';
+    hideError('dlg-error');
+    $('confirm-overlay').classList.add('active');
+  });
+
+  function closeDialog() { $('confirm-overlay').classList.remove('active'); }
+  $('btn-cancel-delete').addEventListener('click', closeDialog);
+  $('confirm-overlay').addEventListener('click', e => { if (e.target === $('confirm-overlay')) closeDialog(); });
+
+  // ─── DELETE ACCOUNT ──────────────────────────────────────────────────────────
+  $('btn-confirm-delete').addEventListener('click', async () => {
+    hideError('dlg-error');
+    $('btn-confirm-delete').disabled = true;
+    try {
+      const user = auth.currentUser;
+      if (!user) throw new Error('no-user');
+
+      // Re-authenticate
+      if (isGoogleUser) {
+        await reauthenticateWithPopup(user, googleProvider);
+      } else {
+        const pw = $('input-confirm-pw').value;
+        if (!pw) {
+          showError('dlg-error', t('confirmPassword').replace(':', ''));
+          return;
+        }
+        const cred = EmailAuthProvider.credential(user.email, pw);
+        await reauthenticateWithCredential(user, cred);
+      }
+
+      // Delete Firestore user document (subcollections like consentHistory remain)
+      try { await deleteDoc(doc(db, 'users', user.uid)); } catch { /* continue */ }
+
+      // Delete Firebase Auth account
+      await deleteUser(user);
+
+      closeDialog();
+      $('success-text').textContent = t('successDelete');
+      showView('view-success');
+
+    } catch (e) {
+      if (e.code !== 'auth/popup-closed-by-user') {
+        showError('dlg-error', t('errDelete'));
+      }
+    } finally {
+      $('btn-confirm-delete').disabled = false;
+    }
+  });
+
+  // ─── UNVERIFIED REQUEST ──────────────────────────────────────────────────────
+  $('form-unverified').addEventListener('submit', async e => {
+    e.preventDefault();
+    hideError('uv-error');
+    const email = $('input-uv-email').value.trim();
+    const notes = $('input-uv-notes').value.trim();
+    if (!email) return;
+    $('uv-submit-btn').disabled = true;
+    try {
+      await addDoc(collection(db, 'deletionRequests'), {
+        email,
+        notes:       notes || null,
+        requestedAt: serverTimestamp(),
+        lang
+      });
+      $('success-text').textContent = t('successRequest');
+      showView('view-success');
+    } catch {
+      showError('uv-error', t('errRequest'));
+    } finally {
+      $('uv-submit-btn').disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
